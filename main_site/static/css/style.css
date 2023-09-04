@@ -45,6 +45,12 @@ ul {
     font-weight: var(--bold);
 }
 
+.lgTitle {
+    font-size: 2rem;
+    font-weight: var(--bold);
+    font-family: var(--titleFont);
+}
+
 .mdTitle {
     font-size: 1.8rem;
     line-height: normal;
@@ -249,6 +255,45 @@ a, .btn {
     content: '|';
     position: absolute;
     left: 1rem;
+}
+
+/* Projects Section */
+
+.portfolioCard {
+    padding: 1.3rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.portfolioImgCol img {
+    border-radius: 6px;
+    width: 15.375rem;
+    height: 11.5rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.portfolioContentCol > p:last-child {
+    margin-bottom: 0;
+}
+
+.portfolioOption {
+    padding: 0.3rem 0 1rem;
+}
+
+.portfolioOption li {
+    display: inline-block;
+    padding-right: 1.3rem;
+}
+
+.dateLbl {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #142850;
+    border-radius: 1.2rem;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: var(--bold);
 }
 
 /* For larger screens */

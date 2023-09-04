@@ -125,4 +125,55 @@
             </div>
         </div>
     </section>
+
+    <!-- Projects Section -->
+    <section>
+        <div class="sectionSpace">
+            <div class="container">
+                <div class="portfolioCol">
+                    <div class="row pb-3">
+                        <div class="col">
+                            <h3 class="smTitle">Featured Work</h3>
+                        </div>
+                        <div class="col-auto">
+                            <a href="{% url 'main_site:portfolio' %}" class="simpleLink">
+                                View All
+                            </a>
+                        </div>
+                    </div>
+                    {% for project in projects %}
+                        <div class="portfolioCard">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-auto">
+                                    <div class="portfolioImgCol">
+                                        <img src="{{ project.image.url }}" alt="{{ project.name }}" />
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="portfolioContentCol">
+                                        <h4 class="lgTitle">
+                                        <a href="{% url 'main_site:portfolio_detail' project.slug %}">
+                                            {{ project.name }}
+                                        </a>
+                                    </h4>
+                                        <ul class="portfolioOption">
+                                            <li>
+                                                <span class="dateLbl">{{ project.date.date }}</span>
+                                            </li>
+                                            <li>
+                                                <a href="{{ project.source_code_url }}" target="_blank">
+                                                    Source Code
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <p>{{ project.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
