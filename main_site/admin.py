@@ -1,3 +1,17 @@
 from django.contrib import admin
+from . import models
 
-# Register your models here.
+
+@admin.register(models.UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = ('id', 'user')
+
+
+@admin.register(models.Skill)
+class SkillAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
+
+
+@admin.register(models.Media)
+class MediaAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
