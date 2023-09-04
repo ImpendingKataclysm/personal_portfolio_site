@@ -4,5 +4,50 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <h1>Home</h1>
+    <section>
+        <div class="bannerSection">
+        <div class="container">
+            <div class="row g-4 g-md-3 align-items-center">
+                <!-- User Avatar -->
+                <div class="col-md-auto order-md-last">
+                    <div class="bannerUserImg">
+                        <img src="{{ me.userprofile.avatar.url }}" alt="avatar" />
+                    </div>
+                </div>
+                <div class="col-md">
+                    <!-- User Info -->
+                    <div class="bannerContent">
+                        <h1 class="xlTitle pb-3">
+                            {{ me.first_name }} {{ me.last_name }}
+                            <br/>
+                            {{ me.userprofile.title }}
+                        </h1>
+                        <p>{{ me.userprofile.bio }}</p>
+                        <div class="bannerBtnCol">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <a
+                                        href="{{ me.userprofile.cv.url }}"
+                                        download
+                                        class="btn btnPrimary"
+                                    >
+                                        Download Resume
+                                    </a>
+                                </div>
+                                <div class="col-auto">
+                                    <a
+                                        href="{% url 'main_site:contact' %}"
+                                        class="btn btnOutline"
+                                    >
+                                        Contact
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
 {% endblock %}

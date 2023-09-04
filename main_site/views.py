@@ -7,3 +7,7 @@ class HomeView(generic.TemplateView):
     Display the home page
     """
     template_name = 'index.html'
+
+
+class ContactView(generic.TemplateView):
+    template_name = 'contact.html'

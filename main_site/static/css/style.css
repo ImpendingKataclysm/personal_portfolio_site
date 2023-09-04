@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Signika+Negative:wght@600&display=swap');
+
+:root {
+    --bgColor:  #21243D;
+    --lightBg: #343967;
+    --primaryColor: #5c5483;
+    --primaryDarkColor: #3c2d5c;
+    --baseColor: #cdddff;
+    --baseFont: 'Lato', sans-serif;
+    --titleFont: 'Signika Negative', sans-serif;
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+}
+
+/* General Styles */
+
+img {
+    max-width: 100%;
+}
+
+/* Links and Buttons */
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: var(--primaryDarkColor);
+}
+
+a, .btn {
+    -webkit-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+    text-decoration: none;
+}
+
+.btn {
+    font-size: 1.25rem;
+    font-weight: var(--medium);
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.1rem;
+}
+
+.btn:focus, .btn:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.btnPrimary {
+    background-color: var(--primaryColor);
+    color: var(--bs-white);
+}
+
+.btnPrimary:hover, .btnPrimary:focus {
+    background-color: var(--primaryDarkColor);
+    color: var(--bs-white);
+}
+
+.btnOutline {
+    border: 1px solid var(--baseColor);
+    color: var(--baseColor);
+}
+
+.btnOutline:hover, .btnOutline:focus {
+    border: 1px solid var(--primaryDarkColor);
+    background-color: var(--primaryDarkColor);
+    color: var(--bs-white);
+}
+
+/* Home Page */
+
+/* Banner Section */
+
+.bannerSection {
+    padding: 11.25rem 0 5rem;
+}
+
+.bannerUserImg {
+    margin-left: 2rem;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    position: relative;
+}
+
+.bannerUserImg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+.bannerBtnCol {
+    padding-top: 0.9rem;
+}
+
+/* Titles and Text */
+
+.xlTitle {
+    font-size: 2.2rem;
+    line-height: normal;
+    font-family: var(--titleFont);
+    font-weight: var(--bold);
+}
+
+/* For larger screens */
+
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 55.6rem;
+    }
+}
+
+/* For smaller screens */
+
+@media screen and (max-width: 1199px) {
+    .btn {
+        font-size: 1.1rem;
+    }
+
+    .xlTitle {
+        font-size: 2.1rem;
+    }
+
+    .bannerSection {
+        padding: 9.3rem 0 3.6rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .xlTitle {
+        font-size: 2rem;
+    }
+
+    .bannerUserImg {
+        margin-left: 1.25rem;
+        width: 13rem;
+        height: 13rem;
+    }
+
+    .bannerBtnCol {
+        padding-top: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .bannerSection {
+        padding: 7.5rem 0 3.1rem;
+    }
+
+    .bannerUserImg {
+        margin-left: 0;
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    .xlTitle {
+        font-size: 1.5rem;
+    }
+}
