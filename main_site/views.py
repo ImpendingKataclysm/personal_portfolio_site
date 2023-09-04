@@ -12,8 +12,10 @@ class HomeView(generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         skills = models.Skill.objects.all()
+        certificates = models.Certificate.objects.filter(is_active=True)
 
         context['skills'] = skills
+        context['certificates'] = certificates
 
         return context
 

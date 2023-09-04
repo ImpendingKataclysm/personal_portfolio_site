@@ -45,6 +45,13 @@ ul {
     font-weight: var(--bold);
 }
 
+.mdTitle {
+    font-size: 1.8rem;
+    line-height: normal;
+    font-family: var(--titleFont);
+    font-weight: var(--bold);
+}
+
 .smTitle {
     font-size: 1.4rem;
     line-height: normal;
@@ -142,6 +149,10 @@ a, .btn {
     padding: 7rem 0;
 }
 
+.sectionSpaceSm {
+    padding: 1.575rem 0;
+}
+
 /* Banner Section */
 
 .bannerSection {
@@ -189,6 +200,57 @@ a, .btn {
     padding-top: 0.7rem;
 }
 
+/* Certificates Section */
+
+.sliderOuter {
+    position: relative;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.cardStyle1 {
+    padding: 2.1rem;
+    background-color: var(--lightBg);
+    border-radius: 0.25rem;
+    height: 100%;
+    width: 80%;
+}
+
+.cardStyle1 > p:last-child {
+    margin-bottom: 0;
+}
+
+.cs1Title {
+    min-height: 7rem;
+}
+
+.certImage {
+    width: 80%;
+    margin: 0.9rem auto;
+}
+
+.cardOptionCol {
+    padding: 0.2rem 0 0.4rem;
+}
+
+.cardOptionCol > li {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.cardOptionCol > li + li {
+    padding-left: 2.5rem;
+}
+
+.cardOptionCol > li + li:before {
+    content: '|';
+    position: absolute;
+    left: 1rem;
+}
+
 /* For larger screens */
 
 @media screen and (min-width: 992px) {
@@ -218,6 +280,10 @@ a, .btn {
 
     .bannerSection {
         padding: 9.3rem 0 3.6rem;
+    }
+
+    .cs1Title {
+        min-height: 4.5rem;
     }
 }
 
@@ -255,6 +321,10 @@ a, .btn {
 
     .keySkillCard + .keySkillCard {
         padding-top: 1.2rem;
+    }
+
+    .cs1Title {
+        min-height: auto;
     }
 }
 
@@ -305,5 +375,9 @@ a, .btn {
 
     .sectionSpace {
         padding: 2.5rem;
+    }
+
+    .cardStyle1 {
+        padding: 0.9rem;
     }
 }

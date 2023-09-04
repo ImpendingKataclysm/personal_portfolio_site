@@ -91,4 +91,38 @@
             </div>
         </div>
     </section>
+
+    <!-- Certificates Section -->
+    <section>
+        <div class="sectionSpaceSm">
+            <div class="container">
+                <div class="row pb-3">
+                    <div class="col">
+                        <h3 class="smTitle">Certificates</h3>
+                    </div>
+                </div>
+                <div class="sliderOuter">
+                    <div class="swiper certificatesSlider">
+                        <div class="swiper-wrapper">
+                            {% for cert in certificates %}
+                                <div class="swiper-slide">
+                                    <div class="cardStyle1">
+                                        <h4 class="mdTitle cs1Title">{{ cert.name }}</h4>
+                                        <figure class="certImage">
+                                            <img src="{{ cert.image.url }}" alt="{{ cert.name }}" />
+                                        </figure>
+                                        <ul class="cardOptionCol">
+                                            <li>{{ cert.date.date }}</li>
+                                            <li>{{ cert.issued_by }}</li>
+                                        </ul>
+                                        <p>{{ cert.description }}</p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
