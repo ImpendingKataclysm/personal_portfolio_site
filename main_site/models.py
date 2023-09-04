@@ -95,3 +95,27 @@ class Media(models.Model):
 
         super(Media, self).save(*args, **kwargs)
 
+
+class Certificate(models.Model):
+    """
+    DB table that contains certificates the user has earned. Contains the
+    following columns:
+    - date: Date awarded
+    - name
+    - issued_by: Issuing authority/institution
+    - description
+    - is_active
+    """
+    class Meta:
+        verbose_name_plural = 'Certificates'
+        verbose_name = 'Certificate'
+
+    date = models.DateTimeField(blank=True, null=True)
+    name = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
+    image = models.ImageField(blank=True, null=True, upload_to='media')
+    issued_by = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
+    description = models.CharField(max_length=TEXT_MAX_LEN, blank=True, null=True)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.name

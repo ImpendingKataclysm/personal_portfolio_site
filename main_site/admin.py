@@ -15,3 +15,8 @@ class SkillAdmin(admin.ModelAdmin):
 @admin.register(models.Media)
 class MediaAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
+
+
+@admin.register(models.Certificate)
+class CertificateAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
