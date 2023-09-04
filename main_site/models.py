@@ -119,3 +119,52 @@ class Certificate(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class PortfolioProject(models.Model):
+    """
+    DB table for portfolio projects displayed on the site. Contains the
+    following columns:
+    - date
+    - name
+    - description
+    - image
+    - slug
+    - is_active
+    - source_code_url: url for the source code on GitHub
+    """
+    class Meta:
+        verbose_name_plural = 'Portfolio Projects'
+        verbose_name = 'Portfolio Project'
+        ordering = ['name']
+
+    date = models.DateTimeField(blank=True)
+    name = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
+    description = models.CharField(max_length=TEXT_MAX_LEN, blank=True, null=True)
+    image = models.ImageField(blank=True, null=True, upload_to='portfolio')
+    slug = models.SlugField(null=True, blank=True)
+    is_active = models.BooleanField(default=True)
+    source_code_url = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        """
+        If the project does not already exist, convert its name to a filename-
+        compatible format and save it.
+        @param args:
+        @param kwargs:
+        @return:
+        """
+        if not self.id:
+            self.slug = slugify(self.name)
+
+        super(PortfolioProject, self).save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        """
+        @return: The absolute url of the project including its parent directory
+        filename
+        """
+        return f'/portfolio/{self.slug}'
+
+    def __str__(self):
+        return self.name

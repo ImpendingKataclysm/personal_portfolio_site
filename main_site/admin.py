@@ -20,3 +20,8 @@ class MediaAdmin(admin.ModelAdmin):
 @admin.register(models.Certificate)
 class CertificateAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
+
+
+@admin.register(models.PortfolioProject)
+class PortfolioProjectAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
