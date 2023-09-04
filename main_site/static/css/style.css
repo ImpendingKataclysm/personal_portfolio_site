@@ -15,8 +15,27 @@
 
 /* General Styles */
 
+body {
+    background-color: #000;
+}
+
 img {
     max-width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Titles and Text */
+
+.xlTitle {
+    font-size: 2.2rem;
+    line-height: normal;
+    font-family: var(--titleFont);
+    font-weight: var(--bold);
 }
 
 /* Links and Buttons */
@@ -70,6 +89,37 @@ a, .btn {
     color: var(--bs-white);
 }
 
+/* Footer */
+
+.footerCol {
+    padding: 3.1rem 0;
+    text-align: center;
+}
+
+.socialCol li {
+    display: inline-block;
+}
+
+.socialCol li + li {
+    padding-left: 2.2rem;
+}
+
+.socialCol img {
+    max-width: 1.8rem;
+    max-height: 1.8rem;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.copyrightCol {
+    padding: 1.2rem 0 0;
+    font-size: 0.8rem;
+}
+
+.copyrightCol p {
+    margin: 0;
+}
+
 /* Home Page */
 
 /* Banner Section */
@@ -99,15 +149,6 @@ a, .btn {
     padding-top: 0.9rem;
 }
 
-/* Titles and Text */
-
-.xlTitle {
-    font-size: 2.2rem;
-    line-height: normal;
-    font-family: var(--titleFont);
-    font-weight: var(--bold);
-}
-
 /* For larger screens */
 
 @media screen and (min-width: 992px) {
@@ -119,12 +160,16 @@ a, .btn {
 /* For smaller screens */
 
 @media screen and (max-width: 1199px) {
+    .xlTitle {
+        font-size: 2.1rem;
+    }
+
     .btn {
         font-size: 1.1rem;
     }
 
-    .xlTitle {
-        font-size: 2.1rem;
+    .footerCol {
+        padding: 1.8rem;
     }
 
     .bannerSection {
@@ -154,6 +199,24 @@ a, .btn {
 }
 
 @media screen and (max-width: 767px) {
+
+    .footerCol {
+        padding: 1.2rem;
+    }
+
+    .socialCol img {
+        max-width: 1.2rem;
+        max-height: 1.2rem;
+    }
+
+    .socialCol li + li {
+        padding-left: 1.2rem;
+    }
+
+    .copyrightCol {
+        padding: 0.9rem 0 0;
+        font-size: 0.7rem;
+    }
 
     .bannerSection {
         padding: 7.5rem 0 3.1rem;
