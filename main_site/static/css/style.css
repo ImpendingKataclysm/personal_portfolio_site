@@ -15,8 +15,15 @@
 
 /* General Styles */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #000;
+    font-family: var(--baseFont);
+    background-color: var(--bgColor);
+    color: var(--baseColor);
+    line-height: normal;
 }
 
 img {
@@ -178,6 +185,10 @@ a, .btn {
 }
 
 @media screen and (max-width: 991px) {
+
+    body {
+        font-size: 0.9rem;
+    }
 
     .btn {
         font-size: 1rem;
