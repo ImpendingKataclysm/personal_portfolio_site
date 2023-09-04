@@ -4,6 +4,7 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+    <!-- User Information -->
     <section>
         <div class="bannerSection">
         <div class="container">
@@ -49,5 +50,45 @@
             </div>
         </div>
     </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+        <div class="sectionSpace pt-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-auto">
+                        <div class="keySkillCol">
+                            <h4 class="smTitle pb-3">Key Skills</h4>
+                            {% for skill in skills %}
+                                {% if skill.is_key %}
+                                    <div class="keySkillCard">
+                                        <div class="ksIconCol">
+                                            <img src="{{ skill.image.url }}" alt="..." />
+                                        </div>
+                                        <span class="ksText">{{ skill.name }}</span>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="keySkillCol">
+                            <h4 class="smTitle pb-3">Coding Skills</h4>
+                            {% for skill in skills %}
+                                {% if not skill.is_key %}
+                                    <div class="keySkillCard">
+                                        <div class="ksIconCol">
+                                            <img src="{{ skill.image.url }}" alt="..." />
+                                        </div>
+                                        <span class="ksText">{{ skill.name }}</span>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 {% endblock %}

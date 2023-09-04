@@ -45,6 +45,13 @@ ul {
     font-weight: var(--bold);
 }
 
+.smTitle {
+    font-size: 1.4rem;
+    line-height: normal;
+    font-family: var(--titleFont);
+    font-weight: var(--regular);
+}
+
 /* Links and Buttons */
 
 a {
@@ -129,6 +136,12 @@ a, .btn {
 
 /* Home Page */
 
+/* Sections */
+
+.sectionSpace {
+    padding: 7rem 0;
+}
+
 /* Banner Section */
 
 .bannerSection {
@@ -156,6 +169,26 @@ a, .btn {
     padding-top: 0.9rem;
 }
 
+/* Skills Section */
+
+.keySkillCol {
+    width: 17rem;
+}
+
+.keySkillCard {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.keySkillCard + .keySkillCard {
+    padding-top: 1.5rem;
+}
+
+.ksText {
+    display: block;
+    padding-top: 0.7rem;
+}
+
 /* For larger screens */
 
 @media screen and (min-width: 992px) {
@@ -179,6 +212,10 @@ a, .btn {
         padding: 1.8rem;
     }
 
+    .sectionSpace {
+        padding: 4rem;
+    }
+
     .bannerSection {
         padding: 9.3rem 0 3.6rem;
     }
@@ -198,6 +235,10 @@ a, .btn {
         font-size: 2rem;
     }
 
+    .smTitle {
+        font-size: 1.2rem;
+    }
+
     .bannerUserImg {
         margin-left: 1.25rem;
         width: 13rem;
@@ -206,6 +247,14 @@ a, .btn {
 
     .bannerBtnCol {
         padding-top: 0.6rem;
+    }
+
+    .keySkillCol {
+        width: 14rem;
+    }
+
+    .keySkillCard + .keySkillCard {
+        padding-top: 1.2rem;
     }
 }
 
@@ -229,6 +278,10 @@ a, .btn {
         font-size: 0.7rem;
     }
 
+    .sectionSpace {
+        padding: 3.5rem;
+    }
+
     .bannerSection {
         padding: 7.5rem 0 3.1rem;
     }
@@ -248,5 +301,9 @@ a, .btn {
 
     .xlTitle {
         font-size: 1.5rem;
+    }
+
+    .sectionSpace {
+        padding: 2.5rem;
     }
 }
