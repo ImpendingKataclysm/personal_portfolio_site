@@ -116,6 +116,141 @@ a, .btn {
     color: var(--bs-white);
 }
 
+/* Header */
+
+.headerCol {
+    padding: 1.1rem 0;
+    -webkit-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+    position: fixed;
+    z-index: 99;
+    left:0;
+    right: 0;
+    top: 0;
+}
+
+.fixedHeader .headerCol {
+    padding: 0.6rem 0;
+    -webkit-box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Bar */
+
+.navCol {
+    text-align: right;
+}
+
+.navCol a {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: var(--medium);
+    display: inline-block;
+    position: relative;
+}
+
+.navCol a:hover {
+    color: var(--primaryColor);
+}
+
+.navCol a:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--primaryColor);
+    -webkit-transition: all 500ms ease-in-out 0s;
+    -o-transition: all 500ms ease-in-out 0s;
+    transition: all 500ms ease-in-out 0s;
+    opacity: 0;
+}
+
+.navCol a.active::before {
+    opacity: 1;
+    width: 1.41rem;
+    right: auto;
+    left: 0;
+}
+
+.navCol a:hover::before, .navCol a:focus::before {
+    opacity: 1;
+    left: 0;
+    right: 0;
+}
+
+.navCol a.active {
+    color: var(--primaryColor);
+}
+
+.navCol li {
+    display: inline-block;
+}
+
+.navCol li + li {
+    padding-left: 2rem;
+}
+
+.navToggle {
+    display: block;
+    padding: 0.99rem 0.75rem;
+    width: 1.1rem;
+    height: 2px;
+    box-sizing: content-box;
+    background-clip: content-box;
+    -webkit-transition: background-color 500ms ease-in-out 250ms;
+    -o-transition: background-color 500ms ease-in-out 250ms;
+    transition: background-color 500ms ease-in-out 250ms;
+    background-color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+}
+
+.navToggle:hover {
+    cursor: pointer;
+}
+
+.navToggle:before, .navToggle:after {
+    position: relative;
+    content: "";
+    display: block;
+    width: 1.1rem;
+    height: 2px;
+    background-color: #000;
+    -webkit-transition: transform 500ms ease-in-out;
+    -o-transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
+}
+
+.navToggle:before {
+    top: -0.3rem;
+}
+
+.navToggle:after {
+    bottom: -0.2rem;
+}
+
+.navToggle__text {
+    display: none;
+}
+
+body.navToggleActive {
+    overflow: hidden;
+}
+
+.navToggleActive .navToggle {
+    background-color: rgba(255, 255, 255, 0);
+    transition-delay: 0s;
+}
+
+.navToggleActive .navToggle:before, .navToggleActive .navToggle:after {
+    -ms-transform: translateY(0.3rem) rotate(-225deg);
+    transform: translateY(0.3rem) rotate(-225deg);
+}
+
 /* Footer */
 
 .footerCol {
@@ -302,6 +437,18 @@ a, .btn {
     .container {
         max-width: 55.6rem;
     }
+
+    .headerCol .container-fluid {
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .headerCol .container-fluid {
+        padding-left: 3.4rem;
+        padding-right: 3.4rem;
+    }
 }
 
 /* For smaller screens */
@@ -313,6 +460,10 @@ a, .btn {
 
     .btn {
         font-size: 1.1rem;
+    }
+
+    .navCol a{
+        font-size: 1.12rem;
     }
 
     .footerCol {
@@ -350,6 +501,10 @@ a, .btn {
         font-size: 1.2rem;
     }
 
+    .navCol a {
+        font-size: 1rem;
+    }
+
     .bannerUserImg {
         margin-left: 1.25rem;
         width: 13rem;
@@ -374,6 +529,63 @@ a, .btn {
 }
 
 @media screen and (max-width: 767px) {
+
+    .headerCol, .fixedHeader .headerCol {
+        padding: 0.3rem 0;
+    }
+
+    .logoCol img {
+        width: 3.1rem;
+    }
+
+    .navCollapseCol {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 14.3rem;
+        padding: 1.2rem;
+        background-color: var(--primaryDarkColor);
+        z-index: 99;
+        transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -webkit-transition: all 300ms ease-in-out 0s;
+        -o-transition: all 300ms ease-in-out 0s;
+        transition: all 300ms ease-in-out 0s;
+    }
+
+    .navToggleActive .navCollapseCol {
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    .navCol {
+        text-align: left;
+    }
+
+    .navCol li + li {
+        padding-left: 0;
+    }
+
+    .navCol li {
+        padding: 0.3rem 0;
+        display: block;
+    }
+
+    .navCol a::before {
+        display: none;
+    }
+
+    .navCol a {
+        font-size: 1rem;
+        color: var(--bs-white);
+        opacity: 0.8;
+    }
+
+    .navCol a:hover, .navCol a:focus, .navCol a.active {
+        color: var(--bs-white);
+        opacity: 1;
+    }
 
     .footerCol {
         padding: 1.2rem;

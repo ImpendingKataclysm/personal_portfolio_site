@@ -1,3 +1,24 @@
+/* Nav Menu */
+
+const navBtn = document.querySelector('.navToggle')
+const body = document.querySelector('body')
+
+navBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    body.classList.toggle('navToggleActive');
+})
+
+/* Style Fixed Header on Scroll */
+
+$(window).scroll(() => {
+   if ($(this).scrollTop() > 10) {
+       body.classList.add('fixedHeader');
+   } else {
+       body.classList.remove('fixedHeader');
+   }
+});
+
+/* Certificate Swiper*/
 const swiper = new Swiper('.certificatesSlider', {
     slidesPerView: 1,
     spaceBetween: 10,
