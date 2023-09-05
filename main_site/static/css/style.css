@@ -36,6 +36,11 @@ ul {
     list-style-type: none;
 }
 
+.lightBg {
+    background-color: var(--lightBg);
+    padding: 1rem;
+}
+
 /* Titles and Text */
 
 .xlTitle {
@@ -251,6 +256,11 @@ body.navToggleActive {
     transform: translateY(0.3rem) rotate(-225deg);
 }
 
+/* Page Headings */
+.innerPageBannerCol {
+    padding: 0;
+}
+
 /* Footer */
 
 .footerCol {
@@ -431,6 +441,26 @@ body.navToggleActive {
     font-weight: var(--bold);
 }
 
+/* Portfolio Page */
+
+.portfolioContentMain {
+    position: relative;
+    z-index: 1;
+    padding: 3.1rem 0;
+}
+
+.pCol {
+    height: 100%;
+}
+
+.pImg {
+    width: 100%;
+}
+
+.portfolioRow .pColMain:nth-child(2n-1) .pCol {
+    margin-top: 6rem;
+}
+
 /* For larger screens */
 
 @media screen and (min-width: 992px) {
@@ -505,6 +535,10 @@ body.navToggleActive {
         font-size: 1rem;
     }
 
+    .innerPageBannerCol {
+        padding: 5.5rem 0 3.1rem;
+    }
+
     .bannerUserImg {
         margin-left: 1.25rem;
         width: 13rem;
@@ -525,6 +559,14 @@ body.navToggleActive {
 
     .cs1Title {
         min-height: auto;
+    }
+
+    .portfolioContentMain {
+        padding: 1.8rem;
+    }
+
+    .portfolioRow .pColMain:nth-child(2n-1) .pCol {
+        margin-top: 4.3rem;
     }
 }
 
@@ -617,6 +659,10 @@ body.navToggleActive {
         margin-left: 0;
         width: 10rem;
         height: 10rem;
+    }
+
+    .portfolioRow .pColMain:nth-child(2n-1) .pCol {
+        margin-top: 0;
     }
 }
 

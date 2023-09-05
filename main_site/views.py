@@ -5,7 +5,7 @@ from . import models
 
 class HomeView(generic.TemplateView):
     """
-    Display the home page
+    Display the user information from the database on the home page.
     """
     template_name = 'index.html'
 
@@ -26,8 +26,19 @@ class ContactView(generic.TemplateView):
     template_name = 'contact.html'
 
 
-class PortfolioView(generic.TemplateView):
+class PortfolioView(generic.ListView):
+    """
+    Display the portfolio projects in the database on the Portfolio Page
+    """
+    queryset = models.PortfolioProject.objects.filter(is_active=True)
     template_name = 'portfolio.html'
+    paginate_by = 10
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data()
+        context['heading'] = 'Here are my recent projects'
+
+        return context
 
 
 class PortfolioDetailView(generic.DetailView):
