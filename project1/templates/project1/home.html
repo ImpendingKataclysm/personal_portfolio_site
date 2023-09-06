@@ -3,10 +3,16 @@
 
 {% block title %}Home{% endblock %}
 
+{% block page_class %}home{% endblock %}
+
 
 {% block heading_class %}main_heading{% endblock %}
 {% block heading %}Best Restaurant{% endblock %}
 
 {% block content %}
-    <p>This is the home page</p>
+    <ul class="home_menu">
+        <li><a href="{% url 'project1:menu' %}">View Menu</a></li>
+        <li><a href="{% url 'project1:contact' %}">Find Location</a></li>
+        <li><a href="{% url 'project1:reserve' %}">Book Your Visit</a></li>
+    </ul>
 {% endblock %}
