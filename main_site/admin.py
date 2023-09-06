@@ -25,3 +25,8 @@ class CertificateAdmin(admin.ModelAdmin):
 @admin.register(models.PortfolioProject)
 class PortfolioProjectAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
+
+
+@admin.register(models.ContactMessage)
+class ContactMessageAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'timestamp')
