@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main_site',
-    'restaurant_site_demo',
+    'project1',
 ]
 
 MIDDLEWARE = [

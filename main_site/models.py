@@ -145,6 +145,7 @@ class PortfolioProject(models.Model):
     slug = models.SlugField(null=True, blank=True)
     is_active = models.BooleanField(default=True)
     source_code_url = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
+    live_url = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
 
     def save(self, *args, **kwargs):
         """

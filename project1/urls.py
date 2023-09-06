@@ -3,4 +3,6 @@ from . import views
 
 app_name = 'rest_demo'
 
-urlpatterns = []
+urlpatterns = [
+    path('', views.HomeView.as_view(), name='home')
+]

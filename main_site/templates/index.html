@@ -152,9 +152,15 @@
                                 <div class="col-md">
                                     <div class="portfolioContentCol">
                                         <h4 class="lgTitle">
-                                        <a href="{% url 'main_site:portfolio_detail' project.slug %}">
-                                            {{ project.name }}
-                                        </a>
+                                        {% if project.live_url %}
+                                            <a href="{{ project.live_url }}" target="_blank">
+                                                {{ project.name }}
+                                            </a>
+                                        {% else %}
+                                            <a href="{% url 'main_site:portfolio_detail' project.slug %}">
+                                                {{ project.name }}
+                                            </a>
+                                        {% endif %}
                                     </h4>
                                         <ul class="portfolioOption">
                                             <li>

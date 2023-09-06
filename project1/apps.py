@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class RestaurantSiteDemoConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'restaurant_site_demo'
+    name = 'project1'
