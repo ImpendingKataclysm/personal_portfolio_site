@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
-from . import models
+from django.contrib import messages
+from . import models, forms
 
 
 class HomeView(generic.TemplateView):
@@ -22,8 +23,29 @@ class HomeView(generic.TemplateView):
         return context
 
 
-class ContactView(generic.TemplateView):
+class ContactView(generic.FormView):
+    """
+    Display the contact page with the contact form. When a message is received
+    and successfully validated, it is stored in the Contact Messages table in
+    the database and the user is redirected to the home page with a success
+    message.
+    """
     template_name = 'contact.html'
+    form_class = forms.ContactForm
+    success_url = '/'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data()
+        context['heading'] = 'Feel free to send me a message!'
+
+        return context
+
+    def form_valid(self, form):
+        success_message = 'Thanks, I will be in touch soon!'
+        form.save()
+        messages.success(self.request, success_message)
+
+        return super().form_valid(form)
 
 
 class PortfolioView(generic.ListView):

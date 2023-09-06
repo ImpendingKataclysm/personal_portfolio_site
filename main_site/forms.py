@@ -3,6 +3,15 @@ from . import models
 
 
 class ContactForm(forms.ModelForm):
+    """
+    Defines the contact page form through which visitors may send the site
+    admin messages. Contains the following fields:
+    - name: sender name
+    - email: sender email address
+    - message: message content
+    Data send via the contact form is stored in the Contact Messages table in
+    the database.
+    """
     name = forms.CharField(
         max_length=models.NAME_MAX_LEN,
         required=True,

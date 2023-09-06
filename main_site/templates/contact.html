@@ -4,5 +4,34 @@
 {% block title %}Contact{% endblock %}
 
 {% block content %}
-    <h1>Contact</h1>
+
+    {% include 'partials/top_heading.html' %}
+
+    <section>
+        <div class="lightBg">
+            <div class="container">
+                <form id="contactForm" method="POST" action="{% url 'main_site:contact' %}">
+                    {% csrf_token %}
+                   <div class="form-row">
+                        <label for="name" class="form-label">Name</label>
+                        {{ form.name }}
+                   </div>
+                    <div class="form-row">
+                        <label for="email" class="form-label">Email</label>
+                        {{ form.email }}
+                        <small id="emailHelp" class="form-text text-muted">
+                            I won't share your email with anyone else!
+                        </small>
+                    </div>
+                    <div class="form-row">
+                        <label for="message" class="form-label">Message</label>
+                        {{ form.message }}
+                    </div>
+                    <div class="form-row">
+                        <input class="btn btnPrimary form-control" type="submit" value="Send" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 {% endblock %}
