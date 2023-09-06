@@ -1,7 +1,20 @@
 {% extends 'project1/base.html' %}
+{% load static %}
 
 {% block title %}About{% endblock %}
 
+{% block page_class %}about{% endblock %}
+
+{% block heading_class %}page_heading{% endblock %}
+{% block heading %}About Us{% endblock %}
+
 {% block content %}
-    <h1>About</h1>
+    <section class="text_block">
+        <h2>Our Mission</h2>
+        <p>{% lorem %}</p>
+        <p>{% lorem %}</p>
+        <h2>Our History</h2>
+        <p>{% lorem %}</p>
+        <p>{% lorem %}</p>
+    </section>
 {% endblock %}
