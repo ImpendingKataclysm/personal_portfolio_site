@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'Quesha';
+    src: url("../fonts/Quesha-gndR.ttf");
+}
+
+:root {
+    --bgDark: rgba(0, 25, 10, 0.8);
+    --textLight : #c8f8d3;
+    --textDark: #00190A;
+    --primaryDark: rgba(25, 20, 0, 0.8);
+    --textFocus: #74bb83;
+    --textAlt: #f7eabb;
+}
+
+/* General Styles */
+
+html, body, .page_wrap {
+    height: 100%;
+}
+
+html, body, ul, .page_wrap {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quesha', sans-serif;
+}
+
+li {
+    font-size: 1.6rem;
+}
+
+.page_wrap {
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.page_content {
+    position: relative;
+}
+
+.main_wrap {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Navigation */
+
+nav {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav li {
+    padding: 1.5rem;
+}
+
+nav a:link, nav a:visited {
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    color: var(--textAlt);
+    text-shadow: 0.1rem 0.1rem 0.5rem #191400;
+}
+
+nav a:hover, nav a:focus {
+    color: var(--textFocus);
+}
+
+nav a:active {
+    color: #fff;
+}
+
+.nav_btn {
+    display: none;
+}
+
+.nav_icon {
+    width: 3.5rem;
+    border-radius: 0.5rem;
+}
+
+/* Headings */
+
+.main_heading {
+    color: #b2f4c2;
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    text-shadow: 0.1rem 0.1rem 1.9rem #030b00;
+}
+
+.main_heading {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Footer */
+
+.icon_credit {
+    display: none;
+}
+
+/* Smaller Screens */
+
+@media screen and (max-width: 760px) {
+
+    nav {
+        display: none;
+    }
+
+    nav.show {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav_btn {
+        display: block;
+        padding: 0.5rem;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        max-width: 5%;
+    }
+
+    .main_heading {
+        font-size: 2.1rem;
+    }
+
+    .icon_credit {
+        display: block;
+        color: var(--textDark);
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .icon_credit a:link, .icon_credit a:visited {
+        color: var(--textDark);
+    }
+}
