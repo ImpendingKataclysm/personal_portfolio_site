@@ -41,6 +41,16 @@ class PortfolioView(generic.ListView):
         return context
 
 
-class PortfolioDetailView(generic.DetailView):
+class PortfolioProjectDetailView(generic.DetailView):
+    """
+    Display information from the selected Portfolio Project on the Portfolio
+    Detail Page.
+    """
     model = models.PortfolioProject
     template_name = 'portfolio_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(PortfolioProjectDetailView, self).get_context_data()
+        context['heading'] = str(self.get_object().name)
+
+        return context

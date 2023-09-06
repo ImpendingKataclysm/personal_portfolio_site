@@ -1,8 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Project{% endblock %}
+{% block title %}{{ object.name }}{% endblock %}
 
 {% block content %}
-    <h1>Project</h1>
+
+    {% include 'partials/top_heading.html' %}
+
+    <section>
+        <div class="sectionSpaceSm">
+            <div class="container">
+                <figure>
+                    <img src="{{ object.image.url }}" alt="{{ object.name }}" />
+                </figure>
+                <p>{{ object.description }}</p>
+                <p>View <a href="{{ object.source_code_url }}">source code</a></p>
+            </div>
+        </div>
+    </section>
 {% endblock %}
