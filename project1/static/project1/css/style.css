@@ -144,7 +144,10 @@ nav a:active {
     position: relative;
 }
 
-.home:before, .about:before, .menu:before {
+.home:before,
+.about:before,
+.menu:before,
+.menu_detail:before {
     content: '';
     display: block;
     position: fixed;
@@ -167,6 +170,11 @@ nav a:active {
 
 .menu:before {
     background: url("../images/pasta_bg.jpg") no-repeat;
+    background-size: cover;
+}
+
+.menu_detail:before {
+    background: url("../images/oil_bg.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -218,7 +226,7 @@ nav a:active {
     color: var(--textFocus);
 }
 
-.menu_card {
+.menu_card, .menu_item {
     color: var(--textAlt);
     border-radius: 1.2rem;
     margin: 1.1rem auto;
@@ -227,6 +235,23 @@ nav a:active {
 
 .menu_card_item {
     margin: 1.5rem auto;
+}
+
+.menu_item {
+    background-color: var(--bgDark);
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    width: 70%;
+}
+
+.menu_description p {
+    font-size: 2.2rem;
+}
+
+.menu_image img {
+    width: 100%;
+    border-radius: 1.1rem;
+    box-shadow: 0.2rem 0.2rem 1.5rem #000;
 }
 
 /* Footer */
@@ -238,7 +263,7 @@ nav a:active {
 /* Smaller Screens */
 
 @media screen and (max-width: 1160px) {
-    .text_block, .menu_card {
+    .text_block, .menu_card, .menu_item {
         width: 90%;
         padding: 1.2rem;
     }
@@ -302,6 +327,11 @@ nav a:active {
         background-size: cover;
     }
 
+    .menu_detail:before {
+        background: url("../images/mobile_bg3.jpg") center no-repeat;
+        background-size: cover;
+    }
+
     .home_menu {
         flex-direction: column;
         text-align: center;
@@ -310,5 +340,18 @@ nav a:active {
 
     .home_menu a:link, .home_menu a:visited {
         padding: 0.8rem;
+    }
+
+    .menu_item {
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr;
+    }
+
+    .menu_description p {
+        font-size: 1.7rem;
+    }
+
+    .menu_image {
+        margin: 0.5rem 0;
     }
 }

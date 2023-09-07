@@ -21,7 +21,7 @@
                                     {% if not row.is_available %}
                                         <del>{{ row.name }}</del>
                                     {% else %}
-                                        <a href="#">{{ row.name }}</a>
+                                        <a href="{% url 'project1:menu_item' row.id %}">{{ row.name }}</a>
                                     {% endif %}
                                 </dt>
                                 <dd>{{ row.description }}</dd>
