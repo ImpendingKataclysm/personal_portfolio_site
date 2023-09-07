@@ -36,13 +36,16 @@ h2 {
     letter-spacing: 0.1rem;
 }
 
-p {
+p, dt {
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
 }
 
-li {
+li, dd {
     font-size: 1.6rem;
+}
+dd {
+    margin-inline-start: 0;
 }
 
 .page_wrap {
@@ -136,12 +139,12 @@ nav a:active {
 
 /* Page Styles */
 
-.home, .about {
+.home, .about, .menu {
     height: 100vh;
     position: relative;
 }
 
-.home:before, .about:before {
+.home:before, .about:before, .menu:before {
     content: '';
     display: block;
     position: fixed;
@@ -159,6 +162,11 @@ nav a:active {
 
 .about:before {
     background: url("../images/rest_int2.jpeg");
+    background-size: cover;
+}
+
+.menu:before {
+    background: url("../images/pasta_bg.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -190,6 +198,37 @@ nav a:active {
     background-color: var(--textLight);
 }
 
+.menu_card {
+    list-style-type: none;
+}
+
+.menu_card {
+    background-color: var(--primaryDark);
+    width: 40%;
+    text-align: center;
+}
+
+.menu_card a:link, .menu_card a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--textLight);
+}
+
+.menu_card a:hover, .menu_card a:focus {
+    color: var(--textFocus);
+}
+
+.menu_card {
+    color: var(--textAlt);
+    border-radius: 1.2rem;
+    margin: 1.1rem auto;
+    padding: 1.1rem;
+}
+
+.menu_card_item {
+    margin: 1.5rem auto;
+}
+
 /* Footer */
 
 .icon_credit {
@@ -199,7 +238,7 @@ nav a:active {
 /* Smaller Screens */
 
 @media screen and (max-width: 1160px) {
-    .text_block {
+    .text_block, .menu_card {
         width: 90%;
         padding: 1.2rem;
     }
