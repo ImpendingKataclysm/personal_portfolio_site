@@ -10,3 +10,8 @@ class MenuItemAdmin(admin.ModelAdmin):
 @admin.register(models.Location)
 class LocationAdmin(admin.ModelAdmin):
     list_display = ('id', 'city', 'province')
+
+
+@admin.register(models.Reservation)
+class ReservationAdmin(admin.ModelAdmin):
+    list_display = ('id', 'location', 'date')

@@ -82,3 +82,27 @@ class Location(models.Model):
 
     def __str__(self):
         return f'{self.street_address} {self.city}, {self.province}'
+
+
+class Reservation(models.Model):
+    """
+    Defines a DB entry for a Reservation. Contains the following fields:
+    - party_name
+    - party_size
+    - contact_phone
+    - location
+    - date
+    - time
+    - booked_on: Date the reservation was made
+    """
+    party_name = models.CharField(max_length=NAME_MAX_LEN)
+    party_size = models.IntegerField()
+    phone = models.CharField(max_length=MAX_NUM)
+    email = models.EmailField()
+    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    date = models.DateField()
+    time = models.TimeField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.party_name}, {self.date}'
