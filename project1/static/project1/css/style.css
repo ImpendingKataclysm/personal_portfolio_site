@@ -267,7 +267,7 @@ nav a:active {
     border-radius: 2.5rem;
     display: flex;
     flex-direction: column;
-    max-width: 50%;
+    width: 50%;
     margin: auto;
     justify-content: space-between;
     align-items: center;
@@ -387,5 +387,9 @@ nav a:active {
 
     .menu_image {
         margin: 0.5rem 0;
+    }
+
+    .location_display {
+        width: 90%;
     }
 }
