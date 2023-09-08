@@ -78,6 +78,7 @@ class Location(models.Model):
     postal = models.CharField(max_length=6)
     province = models.CharField(max_length=NAME_MAX_LEN)
     phone = models.CharField(max_length=MAX_NUM)
+    image = models.ImageField(upload_to='project1', blank=True, null=True)
 
     def __str__(self):
         return f'{self.street_address} {self.city}, {self.province}'
