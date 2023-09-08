@@ -1,7 +1,22 @@
 {% extends 'project1/base.html' %}
+{% load static %}
 
-{% block title %}Contact{% endblock %}
+{% block title %}Locations{% endblock %}
+
+{% block page_class %}contact{% endblock %}
+
+{% block heading_class %}page_heading{% endblock %}
+{% block heading %}Locations{% endblock %}
 
 {% block content %}
-    <h1>Contact</h1>
+    <dl class="location_display">
+        {% for row in object_list %}
+            <div class="location_card">
+                <dt>{{ row.city }}</dt>
+                <dd>{{ row.street_address }}</dd>
+                <dd>{{ row.postal }}</dd>
+                <dd>{{ row.phone }}</dd>
+            </div>
+        {% endfor %}
+    </dl>
 {% endblock %}

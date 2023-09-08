@@ -147,7 +147,8 @@ nav a:active {
 .home:before,
 .about:before,
 .menu:before,
-.menu_detail:before {
+.menu_detail:before,
+.contact:before {
     content: '';
     display: block;
     position: fixed;
@@ -175,6 +176,11 @@ nav a:active {
 
 .menu_detail:before {
     background: url("../images/oil_bg.jpg") no-repeat;
+    background-size: cover;
+}
+
+.contact:before {
+    background: url("../images/rest_seating.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -216,17 +222,19 @@ nav a:active {
     text-align: center;
 }
 
-.menu_card a:link, .menu_card a:visited {
+.menu_card a:link, .menu_card a:visited,
+.location_card a:link, .location_card a:visited {
     text-decoration: none;
     font-weight: bold;
     color: var(--textLight);
 }
 
-.menu_card a:hover, .menu_card a:focus {
+.menu_card a:hover, .menu_card a:focus,
+.location_card a:hover, .location_card a:focus {
     color: var(--textFocus);
 }
 
-.menu_card, .menu_item {
+.menu_card, .menu_item, .location_card {
     color: var(--textAlt);
     border-radius: 1.2rem;
     margin: 1.1rem auto;
@@ -252,6 +260,27 @@ nav a:active {
     width: 100%;
     border-radius: 1.1rem;
     box-shadow: 0.2rem 0.2rem 1.5rem #000;
+}
+
+.location_display {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.location_card {
+    background-color: var(--primaryDark);
+    border-radius: 2.5rem;
+    letter-spacing: 0.1rem;
+    width: 70%;
+    text-align: center;
+    margin: 1.1rem;
+}
+
+.location_card dt {
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 /* Footer */
