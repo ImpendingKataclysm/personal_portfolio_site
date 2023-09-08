@@ -62,3 +62,22 @@ class MenuItem(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Location(models.Model):
+    """
+    Defines a DB entry for a restaurant location. Contains the following fields:
+    - street_address
+    - city
+    - postal
+    - province
+    - phone
+    """
+    street_address = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
+    city = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
+    postal = models.CharField(max_length=6)
+    province = models.CharField(max_length=NAME_MAX_LEN)
+    phone = models.CharField(max_length=MAX_NUM)
+
+    def __str__(self):
+        return f'{self.street_address} {self.city}, {self.province}'
