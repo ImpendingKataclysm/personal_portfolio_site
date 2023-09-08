@@ -12,10 +12,15 @@
     <dl class="location_display">
         {% for row in object_list %}
             <div class="location_card">
-                <dt>{{ row.city }}</dt>
-                <dd>{{ row.street_address }}</dd>
-                <dd>{{ row.postal }}</dd>
-                <dd>{{ row.phone }}</dd>
+                <div>
+                    <dt>{{ row.city }}</dt>
+                    <dd>{{ row.street_address }}</dd>
+                    <dd>{{ row.postal }}</dd>
+                    <dd>{{ row.phone }}</dd>
+                </div>
+{#                <figure>#}
+{#                    <img src="{{ row.image.url }}" alt="image of location">#}
+{#                </figure>#}
             </div>
         {% endfor %}
     </dl>
