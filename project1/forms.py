@@ -2,7 +2,7 @@ from django import forms
 from . import models
 
 
-class ReservationForms(forms.ModelForm):
+class ReservationForm(forms.ModelForm):
     """
     Models the Reservation Form based on the Reservation DB model.
     """

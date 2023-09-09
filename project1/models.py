@@ -89,7 +89,8 @@ class Reservation(models.Model):
     Defines a DB entry for a Reservation. Contains the following fields:
     - party_name
     - party_size
-    - contact_phone
+    - phone
+    - email
     - location
     - date
     - time

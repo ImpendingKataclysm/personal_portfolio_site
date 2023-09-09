@@ -36,7 +36,7 @@ h2 {
     letter-spacing: 0.1rem;
 }
 
-p, dt {
+p, dt, label {
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
 }
@@ -148,7 +148,8 @@ nav a:active {
 .about:before,
 .menu:before,
 .menu_detail:before,
-.contact:before {
+.contact:before,
+.reserve:before {
     content: '';
     display: block;
     position: fixed;
@@ -181,6 +182,11 @@ nav a:active {
 
 .contact:before {
     background: url("../images/rest_seating.jpg") no-repeat;
+    background-size: cover;
+}
+
+.reserve:before {
+    background: url("../images/tomato_bg.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -223,25 +229,27 @@ nav a:active {
 }
 
 .menu_card a:link, .menu_card a:visited,
-.location_card a:link, .location_card a:visited {
+.location_card a:link, .location_card a:visited,
+.form_card a:link, .form_card a:visited{
     text-decoration: none;
     font-weight: bold;
     color: var(--textLight);
 }
 
 .menu_card a:hover, .menu_card a:focus,
-.location_card a:hover, .location_card a:focus {
+.location_card a:hover, .location_card a:focus,
+.form_card a:hover, .form_card a:focus {
     color: var(--textFocus);
 }
 
-.menu_card, .menu_item, .location_card {
+.menu_card, .menu_item, .location_card, .form_card {
     color: var(--textAlt);
     border-radius: 1.2rem;
     margin: 1.1rem auto;
     padding: 1.1rem;
 }
 
-.menu_card_item {
+.menu_card_item,.form_input {
     margin: 1.5rem auto;
 }
 
@@ -263,14 +271,17 @@ nav a:active {
 }
 
 .location_display {
-    background-color: var(--primaryDark);
-    border-radius: 2.5rem;
     display: flex;
     flex-direction: column;
     width: 50%;
     margin: auto;
     justify-content: space-between;
     align-items: center;
+}
+
+.location_display, .form_card {
+    background-color: var(--primaryDark);
+    border-radius: 2.5rem;
 }
 
 .location_card {
@@ -288,6 +299,54 @@ nav a:active {
     max-width: 50rem;
 }
 
+.form_card {
+    width: 45%;
+    margin: auto;
+}
+
+.form_input {
+    padding: 0.2rem;
+}
+
+.submit_btn input {
+    font-family: "Quesha", sans-serif;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 1.9rem;
+    padding: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: var(--textLight);
+    background-color: var(--bgDark);
+}
+
+.submit_btn input:hover, .submit_btn input:focus {
+    background-color: var(--textLight);
+    color: var(--bgDark);
+}
+
+.submit_btn input:active {
+    color: var(--textFocus);
+    background-color: var(--primaryDark);
+}
+
+/* Messages */
+
+.response_message li {
+    list-style-type: none;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 25%;
+    padding: 1.5rem;
+    border-radius: 2.5rem;
+}
+
+.success {
+    color: var(--textLight);
+    background-color: var(--bgDark);
+}
+
 /* Footer */
 
 .icon_credit {
@@ -297,7 +356,7 @@ nav a:active {
 /* Smaller Screens */
 
 @media screen and (max-width: 1160px) {
-    .text_block, .menu_card, .menu_item {
+    .text_block, .menu_card, .menu_item, .form_card {
         width: 90%;
         padding: 1.2rem;
     }
@@ -366,6 +425,10 @@ nav a:active {
         background-size: cover;
     }
 
+    .reserve:before {
+        background: url("../images/mobile_bg4.jpg") center no-repeat;
+    }
+
     .home_menu {
         flex-direction: column;
         text-align: center;
@@ -391,5 +454,15 @@ nav a:active {
 
     .location_display {
         width: 90%;
+    }
+
+    .submit_btn input {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .response_message li {
+        width: 50%;
+        left: 20%;
     }
 }

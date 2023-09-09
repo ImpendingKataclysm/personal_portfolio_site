@@ -1,7 +1,54 @@
 {% extends 'project1/base.html' %}
+{% load static %}
 
 {% block title %}Reservations{% endblock %}
 
+{% block page_class %}reserve{% endblock %}
+
+{% block heading_class %}page_heading{% endblock %}
+{% block heading %}Book Your Visit Today{% endblock %}
+
 {% block content %}
-    <h1>Reservations</h1>
+    <div class="form_card">
+        <p>
+            <a href="{% url 'project1:contact' %}">
+                Call your nearest location
+            </a>
+            or book online now:
+        </p>
+        <form id="reserveForm" method="POST" action="{% url 'project1:reserve' %}">
+            {% csrf_token %}
+            <div class="form_input">
+                <label for="party_name">Name of Party</label>
+                {{ form.party_name }}
+            </div>
+            <div class="form_input">
+                <label for="party_size">Number of Persons</label>
+                {{ form.party_size }}
+            </div>
+            <div class="form_input">
+                <label for="phone">Phone Number</label>
+                {{ form.phone }}
+            </div>
+            <div class="form_input">
+                <label for="email">Email</label>
+                {{ form.email }}
+            </div>
+            <div class="form_input">
+                <label for="location">Select Location</label>
+                {{ form.location }}
+            </div>
+            <div class="form_input">
+                <label for="date">Select Date</label>
+                {{ form.date }}
+            </div>
+            <div class="form_input">
+                <label for="time">Select Time</label>
+                {{ form.time }}
+            </div>
+            <div class="form_input submit_btn">
+                <input type="submit" value="Book Now" />
+            </div>
+        </form>
+    </div>
 {% endblock %}

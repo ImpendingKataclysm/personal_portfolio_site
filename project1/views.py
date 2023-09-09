@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
-from . import models
+from django.contrib import messages
+from . import models, forms
 
 
 class HomeView(generic.TemplateView):
@@ -45,5 +46,14 @@ class MenuItemDetailView(generic.DetailView):
     template_name = 'project1/menu_item_detail.html'
 
 
-class ReserveView(generic.TemplateView):
+class ReserveView(generic.FormView):
     template_name = 'project1/reserve.html'
+    form_class = forms.ReservationForm
+    success_url = '/project1/'
+
+    def form_valid(self, form):
+        success_message = 'Thanks, we look forward to seeing you!'
+        form.save()
+        messages.success(self.request, success_message)
+
+        return super().form_valid(form)

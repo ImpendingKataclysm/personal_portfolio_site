@@ -12,8 +12,8 @@
     <div class="page_wrap {% block page_class %}{% endblock %}">
         <div class="page_content">
             <div id="nav_btn" class="nav_btn" tabindex="0">
-            <img class="nav_icon" src="{% static 'project1/images/nav_icon.png' %}" alt="nav icon" />
-        </div>
+                <img class="nav_icon" src="{% static 'project1/images/nav_icon.png' %}" alt="nav icon" />
+            </div>
             <nav id="site_nav">
                 <ul>
                     <li>
@@ -35,6 +35,7 @@
             </nav>
 
             <main>
+                {% include 'project1/partials/messages.html' %}
                 <div class="main_wrap">
                     <header class="{% block heading_class %}{% endblock %}">
                         <h1>{% block heading %}{% endblock %}</h1>
