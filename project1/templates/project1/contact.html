@@ -12,6 +12,7 @@
     <dl class="location_display">
         {% for row in object_list %}
             <div class="location_card">
+                <img src="{{ row.image.url }}" alt="location image" />
                 <div>
                     <dt>{{ row.city }}</dt>
                     <dd>{{ row.street_address }}</dd>

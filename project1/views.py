@@ -6,7 +6,7 @@ from . import models, forms
 
 class HomeView(generic.TemplateView):
     """
-    Display Home Page
+    Display the Home Page
     """
     template_name = 'project1/home.html'
 
@@ -42,6 +42,9 @@ class MenuView(generic.ListView):
 
 
 class MenuItemDetailView(generic.DetailView):
+    """
+    Display the details of the specified menu item
+    """
     model = models.MenuItem
     template_name = 'project1/menu_item_detail.html'
 

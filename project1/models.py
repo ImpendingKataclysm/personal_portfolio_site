@@ -94,7 +94,7 @@ class Reservation(models.Model):
     - location
     - date
     - time
-    - booked_on: Date the reservation was made
+    - timestamp
     """
     party_name = models.CharField(max_length=NAME_MAX_LEN)
     party_size = models.IntegerField()
