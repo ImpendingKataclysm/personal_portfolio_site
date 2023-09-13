@@ -22,7 +22,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main_site.urls', namespace='main_site')),
-    path('project1/', include('project1.urls', namespace='project1'))
+    path('project1/', include('project1.urls', namespace='project1')),
+    path('project2/', include('project2.urls', namespace='project2')),
 ]
 
 if settings.DEBUG:

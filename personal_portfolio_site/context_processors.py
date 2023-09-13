@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+from project2.models import Location
 
 
 def project_context(request):
@@ -9,6 +10,7 @@ def project_context(request):
     """
     context = {
         'me': User.objects.first(),
+        'bakery': Location.objects.first()
     }
 
     return context

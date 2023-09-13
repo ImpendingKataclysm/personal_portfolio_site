@@ -1,0 +1,49 @@
+{% extends 'project2/base.html' %}
+{% load static %}
+
+{% block title %}Jobs{% endblock %}
+
+{% block content %}
+    <header>
+        <h2>Join Our Team</h2>
+    </header>
+    <div class="card job_form">
+        <p>We're always looking for talented people! Apply now:</p>
+        <form
+            id="applicantForm"
+            method="POST"
+            action="{% url 'project2:jobs' %}"
+            enctype="multipart/form-data"
+            class="input-form"
+        >
+            {% csrf_token %}
+            <div class="input_wrap">
+                <label for="first_name">First Name</label>
+                {{ form.first_name }}
+            </div>
+            <div class="input_wrap">
+                <label for="last_name">Last Name</label>
+                {{ form.last_name }}
+            </div>
+            <div class="input_wrap">
+                <label for="email">Email Address</label>
+                {{ form.email }}
+            </div>
+            <div class="input_wrap">
+                <label for="phone">Phone Number</label>
+                {{ form.phone }}
+            </div>
+            <div class="input_wrap">
+                <label for="date_available">Date Available</label>
+                {{ form.date_available }}
+            </div>
+            <div class="input_wrap">
+                <label for="resume">Upload Your Resume</label>
+                {{ form.resume }}
+            </div>
+            <div class="input_wrap">
+                <input type="submit" value="Apply Now" class="submit-btn" />
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'project2/base.html' %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+    <header>
+        <h2>About Us</h2>
+    </header>
+    <div>
+        <section class="about_main">
+            <h3>Lorem ipsum dolor!</h3>
+            <div class="wrapper about_wrap">
+                <div class="wrap_item about_text">
+                    <p>{% lorem %}</p>
+                    <p>{% lorem %}</p>
+                    <p>{% lorem %}</p>
+                </div>
+                <div class="about_img">
+                    <figure class="wrap_item">
+                        <img
+                            class="display-img"
+                            src="{% static 'project2/images/about1.jpg' %}"
+                            alt="Bakery Product"
+                        />
+                    </figure>
+                    <figure class="wrap_item">
+                        <img
+                            class="display-img"
+                            src="{% static 'project2/images/about3.jpg' %}"
+                            alt="Bakery Product"
+                        />
+                    </figure>
+                    <figure class="wrap_item">
+                        <img
+                            class="display-img"
+                            src="{% static 'project2/images/about4.jpg' %}"
+                            alt="Bakery Product"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="wrap_item about_item">
+            <header>
+                <h3>Massa dolor</h3>
+            </header>
+            <div class="wrapper about_wrap">
+                <figure class="wrap_item about_img">
+                    <img
+                        class="display-img"
+                        src="{% static 'project2/images/about2.jpg' %}"
+                        alt="Bakery Product"
+                    />
+                </figure>
+                <div class="wrap_item about_text">
+                    <p>{% lorem %}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

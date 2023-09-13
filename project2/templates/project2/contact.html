@@ -1,0 +1,63 @@
+{% extends 'project2/base.html' %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+    <header>
+        <h2>Contact Us</h2>
+    </header>
+    <div class="wrapper contact_grid">
+        <section class="location">
+            <h3>Location</h3>
+            <ul class="styled_list">
+                <li class="contact_item">
+                    <strong>Address</strong>: {{ bakery.street_address }} {{ bakery.city }}, {{ bakery.province }}
+                </li>
+                <li class="contact_item">
+                    <strong>Phone</strong>: {{ bakery.phone }}
+                </li>
+                <li class="contact_item">
+                    <strong>Email</strong>: {{ bakery.email }}
+                </li>
+            </ul>
+            <div class="map_wrap">
+                <img class="display-img" src="{{ bakery.image.url }}" alt="bakery location" />
+{#                <iframe class="display-img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29900.272849736673!2d-122.8521813986169!3d49.239514207047016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486785f1605fd09%3A0xc000df635b32c14b!2sComo%20Lake%20Park!5e0!3m2!1sen!2sca!4v1694471419013!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>#}
+            </div>
+        </section>
+        <section>
+            <h3>Hours of Operation</h3>
+            <ul class="styled_list">
+                <li><strong>Tuesday - Saturday</strong>: 8am-6pm</li>
+                <li><strong>Sunday & Monday</strong>: Closed</li>
+                <li>Closed on statutory holidays</li>
+            </ul>
+        </section>
+        <aside class="comments card">
+            <h3>We Want To Hear From You</h3>
+            <p>Please leave any questions or comments below:</p>
+            <form
+                method="POST"
+                action="{% url 'project2:contact' %}"
+                class="input_form"
+            >
+                {% csrf_token %}
+
+                <div class="input_wrap">
+                    <label for="name">Name</label>
+                    {{ form.name }}
+                </div>
+                <div class="input_wrap">
+                    <label for="email">Email Address</label>
+                    {{ form.email }}
+                </div>
+                <div class="input_wrap">
+                    <label for="message">Your Message</label>
+                    {{ form.message }}
+                </div>
+                <div class="input_wrap">
+                    <input type="submit" value="Send" class="submit-btn" />
+                </div>
+            </form>
+        </aside>
+    </div>
+{% endblock %}

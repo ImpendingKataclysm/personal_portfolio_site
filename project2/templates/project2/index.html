@@ -1,0 +1,41 @@
+{% extends 'project2/base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <header>
+        <h2>Home</h2>
+    </header>
+    <div class="wrapper home_wrap">
+        <div class="wrap_item home_text">
+            <p>{% lorem %}</p>
+            <div class="wrapper">
+                <figure>
+                    <img
+                        class="display-img"
+                        src="{% static 'project2/images/home1.jpg' %}"
+                        alt="Bakery Product Image"
+                    />
+                </figure>
+                <figure>
+                    <img
+                        src="{% static 'project2/images/home2.jpg' %}"
+                        class="display-img"
+                        alt="Bakery Product Image"
+                    />
+                </figure>
+            </div>
+        </div>
+        <aside class="wrap_item seasonal_item">
+            <p>{% lorem %}</p>
+            <figure>
+                <img
+                    class="display-img"
+                    src="{% static 'project2/images/seasonal.jpg' %}"
+                    alt="Seasonal Item"
+                />
+            </figure>
+        </aside>
+    </div>
+{% endblock %}

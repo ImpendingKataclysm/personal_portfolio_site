@@ -72,6 +72,7 @@ class Location(models.Model):
     - postal
     - province
     - phone
+    - image
     """
     street_address = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
     city = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)

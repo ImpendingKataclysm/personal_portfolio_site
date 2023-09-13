@@ -1,0 +1,69 @@
+{% load  static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'project2/css/main.css' %}" />
+</head>
+<body>
+    {% include 'project2/partials/messages.html' %}
+    <div class="main_wrap">
+        <header>
+            <div class="main_header">
+            <div>
+                <a href="{% url 'project2:home' %}">
+                    <img src="{% static 'project2/images/logo.png' %}" alt="bakery logo" />
+                </a>
+            </div>
+            <div>
+                <h1>Best Bakery</h1>
+                <p class="subtitle">Est. 19XX</p>
+            </div>
+            <div id="nav-btn" class="nav_btn" tabindex="0">
+                <img src="{% static 'project2/images/nav_icon.png' %}" alt='nav button ivon' />
+            </div>
+        </div>
+            <nav class="main_nav" id="main_nav">
+                <ul>
+                    <li><a href="{% url 'project2:home' %}">Home</a></li>
+                    <li><a href="{% url 'project2:about' %}">About</a></li>
+                    <li><a href="{% url 'project2:products' %}">Products</a></li>
+                    <li><a href="{% url 'project2:jobs' %}">Careers</a></li>
+                    <li><a href="{% url 'project2:contact' %}">Contact</a></li>
+                </ul>
+        </nav>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <section>
+                <ul class="styled_list site_map">
+                    <li><a href="{% url 'project2:home' %}">Home</a></li>
+                    <li><a href="{% url 'project2:about' %}">About</a></li>
+                    <li><a href="{% url 'project2:products' %}">Products</a></li>
+                    <li><a href="{% url 'project2:jobs' %}">Careers</a></li>
+                    <li><a href="{% url 'project2:contact' %}">Contact</a></li>
+                </ul>
+            </section>
+            <address>
+                {{ bakery.street_address }}
+                <br/>
+                {{ bakery.city }}, {{ location.province }}
+                <br />
+                {{ bakery.postal }}
+                <br/>
+                {{ bakery.phone }}
+                <br/>
+                {{ bakery.email }}
+            </address>
+            <div class="icon_credit">
+               <a target="_blank" href="https://icons8.com/icon/82749/menu">Menu</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </div>
+        </footer>
+    </div>
+    <script src="{% static 'project2/js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{% extends 'project2/base.html' %}
+{% load static %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+    <header id="top">
+        <h2>Our Products</h2>
+        <p class="subtitle">
+            <a href="{% url 'project2:contact' %}" class="text_link">
+                Ask us
+            </a> about product availability and consider ordering in advance!
+        </p>
+    </header>
+    <div class="product_grid">
+        <div class="nav_wrap">
+            <div id="side_nav_btn" class="nav_btn" tabindex="0">
+                <img src="{% static 'project2/images/nav_icon.png' %}" alt="nav menu icon" />
+            </div>
+            <nav class="sidenav" id="side_nav">
+                <ul>
+                    {% for type in types %}
+                        <li><a class="sidenav-item" href="#{{ type.0 }}">{{ type.1 }}</a></li>
+                    {% endfor %}
+                    <li><a class="sidenav-item" href="#top">Top</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="wrapper products">
+            {% for type in types %}
+                <section id="{{ type.0 }}">
+                    <header class="product_header">
+                        <h3>{{ type.1 }}</h3>
+                    </header>
+                    <div class="col2_wrap">
+                        {% for row in object_list %}
+                            {% if row.type == type.0 %}
+                                <div class="product">
+                                    <h4 class="product_heading">
+                                    {% if row.is_available %}
+                                        {{ row.name }}
+                                    {% else %}
+                                        <del>{{ row.name }}</del>
+                                    {% endif %}
+                                </h4>
+                                    <figure>
+                                        <img
+                                            src="{{ row.image.url }}"
+                                            alt="{{ row.name }}"
+                                            class="display-img"
+                                        />
+                                    </figure>
+                                    <p class="product_description">{{ row.description }}</p>
+                                    <p class="product_description">{{ row.price }}</p>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
