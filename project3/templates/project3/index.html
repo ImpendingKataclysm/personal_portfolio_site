@@ -1,0 +1,22 @@
+{% extends 'project3/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h2>The Best Company</h2>
+    <p>{% lorem %}</p>
+    <div class="grid-container">
+        <div class="grid-item" id="about-link">
+            <a href="{% url 'project3:about' %}" class="main-link">What We Do</a>
+        </div>
+        <div class="grid-item" id="team-link">
+            <a href="{% url 'project3:team' %}" class="main-link">Who We Are</a>
+        </div>
+        <div class="grid-item" id="contact-link">
+            <a href="{% url 'project3:contact' %}" class="main-link">Contact Us</a>
+        </div>
+        <div class="grid-item" id="join-link">
+            <a href="{% url 'project3:careers' %}" class="main-link">Join Our Team</a>
+        </div>
+    </div>
+{% endblock %}

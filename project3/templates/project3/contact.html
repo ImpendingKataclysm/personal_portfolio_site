@@ -1,0 +1,37 @@
+{% extends 'project3/base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+    <section class="input-form card">
+        <header>
+            <h2>Send Us a Message</h2>
+            <p>We'd love to hear from you!</p>
+        </header>
+        <form
+            method="POST"
+            action="{% url 'project3:contact' %}"
+            class="input-form"
+        >
+            {% csrf_token %}
+            <div class="form-row">
+                <label for="name">Name</label>
+                <br />
+                {{ form.name }}
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <br />
+                {{ form.email }}
+            </div>
+            <div class="form-row">
+                <label for="message">Message</label>
+                <br />
+                {{ form.message }}
+            </div>
+            <div class="form-row">
+                <input type="submit" value="Send" class="submit-btn">
+            </div>
+        </form>
+    </section>
+{% endblock %}

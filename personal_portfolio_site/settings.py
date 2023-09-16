@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'main_site',
     'project1',
     'project2',
+    'project3',
 ]
 
 MIDDLEWARE = [

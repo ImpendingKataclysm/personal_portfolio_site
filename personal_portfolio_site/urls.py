@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('main_site.urls', namespace='main_site')),
     path('project1/', include('project1.urls', namespace='project1')),
     path('project2/', include('project2.urls', namespace='project2')),
+    path('project3/', include('project3.urls', namespace='project3')),
 ]
 
 if settings.DEBUG:

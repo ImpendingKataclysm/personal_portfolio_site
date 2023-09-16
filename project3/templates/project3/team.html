@@ -1,0 +1,25 @@
+{% extends 'project3/base.html' %}
+
+{% block title %}Team{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>Our Team</h2>
+        <div class="grid-col-3">
+            {% for employee in object_list %}
+                <div class="grid-item card">
+                    <div>
+                        <img
+                            src="{{ employee.image.url }}"
+                            alt="{{ employee.first_name }} {{ employee.last_name }}"
+                        >
+                    </div>
+                    <div>
+                        <h3>{{ employee.first_name }} {{ employee.last_name }}</h3>
+                        <p>{{ employee.role }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

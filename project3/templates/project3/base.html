@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Best Company - {% block title %}title{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'project3/css/style.css' %}">
+</head>
+<body>
+    {% include 'project3/partials/messages.html' %}
+    <nav>
+        <ul class="flex-container">
+            <li><a href="{% url 'project3:home' %}">Home</a></li>
+            <li><a href="{% url 'project3:about' %}">About</a></li>
+            <li><a href="{% url 'project3:team' %}">Team</a></li>
+            <li><a href="{% url 'project3:contact' %}">Contact</a></li>
+            <li><a href="{% url 'project3:careers' %}">Careers</a></li>
+        </ul>
+    </nav>
+    <header class="flex-container">
+        <div>
+            <a href="{% url 'project3:home' %}">
+                <img src="{% static 'project3/images/logo.jpg' %}" alt="company logo">
+            </a>
+        </div>
+        <div>
+            <h1>Best Company</h1>
+            <p>est. 19XX</p>
+        </div>
+    </header>
+    <section class="main-wrapper">
+        {% block content %}{% endblock %}
+    </section>
+    <footer>
+        <small>Copyright {% now 'Y' %}</small>
+    </footer>
+</body>
+</html>

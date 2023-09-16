@@ -1,6 +1,7 @@
 from django.urls import path
 
 import project2.views
+import project3.views
 from . import views
 
 import project1.views as project1
@@ -14,4 +15,5 @@ urlpatterns = [
     path('project/<slug:slug>', views.PortfolioProjectDetailView.as_view(), name='portfolio_detail'),
     path('portfolio/project1/', project1.HomeView.as_view(), name='project1'),
     path('portfolio/project2/', project2.views.HomePage.as_view(), name='project2'),
+    path('portfolio/project3/', project3.views.HomePage.as_view(), name='project3'),
 ]
