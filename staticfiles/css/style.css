@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Signika+Negative:wght@600&display=swap');
+
+:root {
+    --bgColor:  #21243D;
+    --lightBg: #343967;
+    --primaryColor: #5c5483;
+    --primaryDarkColor: #3c2d5c;
+    --baseColor: #cdddff;
+    --baseFont: 'Lato', sans-serif;
+    --titleFont: 'Signika Negative', sans-serif;
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+}
+
+/* General Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--baseFont);
+    background-color: var(--bgColor);
+    color: var(--baseColor);
+    line-height: normal;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.lightBg {
+    background-color: var(--lightBg);
+    padding: 1rem;
+}
+
+/* Titles and Text */
+
+.xlTitle {
+    font-size: 2.2rem;
+    line-height: normal;
+    font-family: var(--titleFont);
+    font-weight: var(--bold);
+}
+
+.lgTitle {
+    font-size: 2rem;
+    font-weight: var(--bold);
+    font-family: var(--titleFont);
+}
+
+.mdTitle {
+    font-size: 1.8rem;
+    line-height: normal;
+    font-family: var(--titleFont);
+    font-weight: var(--bold);
+}
+
+.smTitle {
+    font-size: 1.4rem;
+    line-height: normal;
+    font-family: var(--titleFont);
+    font-weight: var(--regular);
+}
+
+/* Links and Buttons */
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: var(--primaryDarkColor);
+}
+
+a, .btn {
+    -webkit-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+    text-decoration: none;
+}
+
+.btn {
+    font-size: 1.25rem;
+    font-weight: var(--medium);
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.1rem;
+}
+
+.btn:focus, .btn:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.btnPrimary {
+    background-color: var(--primaryColor);
+    color: var(--bs-white);
+}
+
+.btnPrimary:hover, .btnPrimary:focus {
+    background-color: var(--primaryDarkColor);
+    color: var(--bs-white);
+}
+
+.btnOutline {
+    border: 1px solid var(--baseColor);
+    color: var(--baseColor);
+}
+
+.btnOutline:hover, .btnOutline:focus {
+    border: 1px solid var(--primaryDarkColor);
+    background-color: var(--primaryDarkColor);
+    color: var(--bs-white);
+}
+
+/* Header */
+
+.headerCol {
+    padding: 1.1rem 0;
+    -webkit-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+    position: fixed;
+    z-index: 99;
+    left:0;
+    right: 0;
+    top: 0;
+}
+
+.fixedHeader .headerCol {
+    padding: 0.6rem 0;
+    -webkit-box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Bar */
+
+.navCol {
+    text-align: right;
+}
+
+.navCol a {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: var(--medium);
+    display: inline-block;
+    position: relative;
+}
+
+.navCol a:hover {
+    color: var(--primaryColor);
+}
+
+.navCol a:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--primaryColor);
+    -webkit-transition: all 500ms ease-in-out 0s;
+    -o-transition: all 500ms ease-in-out 0s;
+    transition: all 500ms ease-in-out 0s;
+    opacity: 0;
+}
+
+.navCol a.active::before {
+    opacity: 1;
+    width: 1.41rem;
+    right: auto;
+    left: 0;
+}
+
+.navCol a:hover::before, .navCol a:focus::before {
+    opacity: 1;
+    left: 0;
+    right: 0;
+}
+
+.navCol a.active {
+    color: var(--primaryColor);
+}
+
+.navCol li {
+    display: inline-block;
+}
+
+.navCol li + li {
+    padding-left: 2rem;
+}
+
+.navToggle {
+    display: block;
+    padding: 0.99rem 0.75rem;
+    width: 1.1rem;
+    height: 2px;
+    box-sizing: content-box;
+    background-clip: content-box;
+    -webkit-transition: background-color 500ms ease-in-out 250ms;
+    -o-transition: background-color 500ms ease-in-out 250ms;
+    transition: background-color 500ms ease-in-out 250ms;
+    background-color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+}
+
+.navToggle:hover {
+    cursor: pointer;
+}
+
+.navToggle:before, .navToggle:after {
+    position: relative;
+    content: "";
+    display: block;
+    width: 1.1rem;
+    height: 2px;
+    background-color: #000;
+    -webkit-transition: transform 500ms ease-in-out;
+    -o-transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
+}
+
+.navToggle:before {
+    top: -0.3rem;
+}
+
+.navToggle:after {
+    bottom: -0.2rem;
+}
+
+.navToggle__text {
+    display: none;
+}
+
+body.navToggleActive {
+    overflow: hidden;
+}
+
+.navToggleActive .navToggle {
+    background-color: rgba(255, 255, 255, 0);
+    transition-delay: 0s;
+}
+
+.navToggleActive .navToggle:before, .navToggleActive .navToggle:after {
+    -ms-transform: translateY(0.3rem) rotate(-225deg);
+    transform: translateY(0.3rem) rotate(-225deg);
+}
+
+/* Page Headings */
+.innerPageBannerCol {
+    padding: 0;
+}
+
+/* Footer */
+
+.footerCol {
+    padding: 3.1rem 0;
+    text-align: center;
+}
+
+.socialCol li {
+    display: inline-block;
+}
+
+.socialCol li + li {
+    padding-left: 2.2rem;
+}
+
+.socialCol img {
+    max-width: 1.8rem;
+    max-height: 1.8rem;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.copyrightCol {
+    padding: 1.2rem 0 0;
+    font-size: 0.8rem;
+}
+
+.copyrightCol p {
+    margin: 0;
+}
+
+/* Home Page */
+
+/* Sections */
+
+.sectionSpace {
+    padding: 7rem 0;
+}
+
+.sectionSpaceSm {
+    padding: 1.575rem 0;
+}
+
+/* Banner Section */
+
+.bannerSection {
+    padding: 11.25rem 0 5rem;
+}
+
+.bannerUserImg {
+    margin-left: 2rem;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    position: relative;
+}
+
+.bannerUserImg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+.bannerBtnCol {
+    padding-top: 0.9rem;
+}
+
+/* Skills Section */
+
+.keySkillCol {
+    width: 17rem;
+}
+
+.keySkillCard {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.keySkillCard + .keySkillCard {
+    padding-top: 1.5rem;
+}
+
+.ksText {
+    display: block;
+    padding-top: 0.7rem;
+}
+
+/* Certificates Section */
+
+.sliderOuter {
+    position: relative;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.cardStyle1 {
+    padding: 2.1rem;
+    background-color: var(--lightBg);
+    border-radius: 0.25rem;
+    height: 100%;
+    width: 80%;
+}
+
+.cardStyle1 > p:last-child {
+    margin-bottom: 0;
+}
+
+.cs1Title {
+    min-height: 7rem;
+}
+
+.certImage {
+    width: 80%;
+    margin: 0.9rem auto;
+}
+
+.cardOptionCol {
+    padding: 0.2rem 0 0.4rem;
+}
+
+.cardOptionCol > li {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.cardOptionCol > li + li {
+    padding-left: 2.5rem;
+}
+
+.cardOptionCol > li + li:before {
+    content: '|';
+    position: absolute;
+    left: 1rem;
+}
+
+/* Projects Section */
+
+.portfolioCard {
+    padding: 1.3rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.portfolioImgCol img {
+    border-radius: 6px;
+    width: 15.375rem;
+    height: 11.5rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.portfolioContentCol > p:last-child {
+    margin-bottom: 0;
+}
+
+.portfolioOption {
+    padding: 0.3rem 0 1rem;
+}
+
+.portfolioOption li {
+    display: inline-block;
+    padding-right: 1.3rem;
+}
+
+.dateLbl {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #142850;
+    border-radius: 1.2rem;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: var(--bold);
+}
+
+/* Portfolio Page */
+
+.portfolioContentMain {
+    position: relative;
+    z-index: 1;
+    padding: 3.1rem 0;
+}
+
+.pCol {
+    height: 100%;
+}
+
+.pImg {
+    width: 100%;
+}
+
+.portfolioRow .pColMain:nth-child(2n-1) .pCol {
+    margin-top: 6rem;
+}
+
+/* For larger screens */
+
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 55.6rem;
+    }
+
+    .headerCol .container-fluid {
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .headerCol .container-fluid {
+        padding-left: 3.4rem;
+        padding-right: 3.4rem;
+    }
+}
+
+/* For smaller screens */
+
+@media screen and (max-width: 1199px) {
+    .xlTitle {
+        font-size: 2.1rem;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+    }
+
+    .navCol a{
+        font-size: 1.12rem;
+    }
+
+    .footerCol {
+        padding: 1.8rem;
+    }
+
+    .sectionSpace {
+        padding: 4rem;
+    }
+
+    .bannerSection {
+        padding: 9.3rem 0 3.6rem;
+    }
+
+    .cs1Title {
+        min-height: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    body {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .xlTitle {
+        font-size: 2rem;
+    }
+
+    .smTitle {
+        font-size: 1.2rem;
+    }
+
+    .navCol a {
+        font-size: 1rem;
+    }
+
+    .innerPageBannerCol {
+        padding: 5.5rem 0 3.1rem;
+    }
+
+    .bannerUserImg {
+        margin-left: 1.25rem;
+        width: 13rem;
+        height: 13rem;
+    }
+
+    .bannerBtnCol {
+        padding-top: 0.6rem;
+    }
+
+    .keySkillCol {
+        width: 14rem;
+    }
+
+    .keySkillCard + .keySkillCard {
+        padding-top: 1.2rem;
+    }
+
+    .cs1Title {
+        min-height: auto;
+    }
+
+    .portfolioContentMain {
+        padding: 1.8rem;
+    }
+
+    .portfolioRow .pColMain:nth-child(2n-1) .pCol {
+        margin-top: 4.3rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .headerCol, .fixedHeader .headerCol {
+        padding: 0.3rem 0;
+    }
+
+    .logoCol img {
+        width: 3.1rem;
+    }
+
+    .navCollapseCol {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 14.3rem;
+        padding: 1.2rem;
+        background-color: var(--primaryDarkColor);
+        z-index: 99;
+        transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -webkit-transition: all 300ms ease-in-out 0s;
+        -o-transition: all 300ms ease-in-out 0s;
+        transition: all 300ms ease-in-out 0s;
+    }
+
+    .navToggleActive .navCollapseCol {
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    .navCol {
+        text-align: left;
+    }
+
+    .navCol li + li {
+        padding-left: 0;
+    }
+
+    .navCol li {
+        padding: 0.3rem 0;
+        display: block;
+    }
+
+    .navCol a::before {
+        display: none;
+    }
+
+    .navCol a {
+        font-size: 1rem;
+        color: var(--bs-white);
+        opacity: 0.8;
+    }
+
+    .navCol a:hover, .navCol a:focus, .navCol a.active {
+        color: var(--bs-white);
+        opacity: 1;
+    }
+
+    .footerCol {
+        padding: 1.2rem;
+    }
+
+    .socialCol img {
+        max-width: 1.2rem;
+        max-height: 1.2rem;
+    }
+
+    .socialCol li + li {
+        padding-left: 1.2rem;
+    }
+
+    .copyrightCol {
+        padding: 0.9rem 0 0;
+        font-size: 0.7rem;
+    }
+
+    .sectionSpace {
+        padding: 3.5rem;
+    }
+
+    .bannerSection {
+        padding: 7.5rem 0 3.1rem;
+    }
+
+    .bannerUserImg {
+        margin-left: 0;
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .portfolioRow .pColMain:nth-child(2n-1) .pCol {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    .xlTitle {
+        font-size: 1.5rem;
+    }
+
+    .sectionSpace {
+        padding: 2.5rem;
+    }
+
+    .cardStyle1 {
+        padding: 0.9rem;
+    }
+}
