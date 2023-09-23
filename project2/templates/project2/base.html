@@ -12,19 +12,19 @@
     <div class="main_wrap">
         <header>
             <div class="main_header">
-            <div>
-                <a href="{% url 'project2:home' %}">
-                    <img src="{% static 'project2/images/logo.png' %}" alt="bakery logo" />
-                </a>
+                <div>
+                    <a href="{% url 'project2:home' %}">
+                        <img src="{% static 'project2/images/logo.png' %}" alt="bakery logo" />
+                    </a>
+                </div>
+                <div>
+                    <h1>Best Bakery</h1>
+                    <p class="subtitle">Est. 19XX</p>
+                </div>
+                <div id="nav-btn" class="nav_btn" tabindex="0">
+                    <img src="{% static 'project2/images/nav_icon.png' %}" alt='nav button ivon' />
+                </div>
             </div>
-            <div>
-                <h1>Best Bakery</h1>
-                <p class="subtitle">Est. 19XX</p>
-            </div>
-            <div id="nav-btn" class="nav_btn" tabindex="0">
-                <img src="{% static 'project2/images/nav_icon.png' %}" alt='nav button ivon' />
-            </div>
-        </div>
             <nav class="main_nav" id="main_nav">
                 <ul>
                     <li><a href="{% url 'project2:home' %}">Home</a></li>
