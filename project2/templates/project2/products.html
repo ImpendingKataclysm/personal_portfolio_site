@@ -37,12 +37,12 @@
                             {% if row.type == type.0 %}
                                 <div class="product">
                                     <h4 class="product_heading">
-                                    {% if row.is_available %}
-                                        {{ row.name }}
-                                    {% else %}
-                                        <del>{{ row.name }}</del>
-                                    {% endif %}
-                                </h4>
+                                        {% if row.is_available %}
+                                            {{ row.name }}
+                                        {% else %}
+                                            <del>{{ row.name }}</del>
+                                        {% endif %}
+                                    </h4>
                                     <figure>
                                         <img
                                             src="{{ row.image.url }}"
