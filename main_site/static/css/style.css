@@ -351,7 +351,7 @@ body.navToggleActive {
     padding-top: 0.7rem;
 }
 
-/* Certificates Section */
+/* Sliders */
 
 .sliderOuter {
     position: relative;
@@ -367,6 +367,7 @@ body.navToggleActive {
     border-radius: 0.25rem;
     height: 100%;
     width: 80%;
+    margin: auto;
 }
 
 .cardStyle1 > p:last-child {
@@ -403,6 +404,22 @@ body.navToggleActive {
 }
 
 /* Projects Section */
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next {
+    right: 0;
+}
 
 .portfolioCard {
     padding: 1.3rem;

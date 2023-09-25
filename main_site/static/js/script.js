@@ -18,26 +18,45 @@ $(window).scroll(() => {
    }
 });
 
-/* Certificate Swiper*/
-const swiper = new Swiper('.certificatesSlider', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 16,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 16,
-        },
-        1024: {
-            slidesPerView: 2,
-            spaceBetween: 16,
-        },
-    },
-});
+/* Home Page Sliders */
+
+class MySlider {
+    constructor(selector) {
+        this.selector = selector;
+        this.init();
+    }
+
+    init() {
+        const swiperOptions = {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: `${this.selector} .swiper-button-next`,
+                prevEl: `${this.selector} .swiper-button-prev`,
+            },
+            pagination: {
+                el: `${this.selector} .swiper-pagination`,
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 16,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 16,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 16,
+                },
+            },
+        };
+
+        this.swiper = new Swiper(this.selector, swiperOptions);
+    }
+}
+
+const certificatesSlider = new MySlider('.certificatesSlider');
+const portfolioSlider = new MySlider('.portfolioSlider');
