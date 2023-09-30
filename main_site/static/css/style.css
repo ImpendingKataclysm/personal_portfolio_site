@@ -5,6 +5,7 @@
     --lightBg: #343967;
     --primaryColor: #5c5483;
     --primaryDarkColor: #3c2d5c;
+    --secondaryDarkColor: #142850;
     --baseColor: #cdddff;
     --baseFont: 'Lato', sans-serif;
     --titleFont: 'Signika Negative', sans-serif;
@@ -333,6 +334,49 @@ body.navToggleActive {
 
 /* Skills Section */
 
+.skillHeader .col-md {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.skillHeading {
+    background-color: var(--secondaryDarkColor);
+    border-radius: 0.2rem;
+    text-align: center;
+    max-width: 20rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.skillHeading h4 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 2.5;
+}
+
+#keySkills, #codingSkills {
+    background-color: var(--lightBg);
+    border-radius: 0.2rem;
+    border-top: var(--baseColor);
+    padding: 1.5rem;
+}
+
+#keySkills.show {
+    display: block;
+}
+
+#codingSkills.show {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.skillCol {
+    display: none;
+}
+
 .keySkillCol {
     width: 17rem;
 }
@@ -349,6 +393,9 @@ body.navToggleActive {
 .ksText {
     display: block;
     padding-top: 0.7rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-style: italic;
 }
 
 /* Sliders */
@@ -450,7 +497,7 @@ body.navToggleActive {
 .dateLbl {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background-color: #142850;
+    background-color: var(--secondaryDarkColor);
     border-radius: 1.2rem;
     color: #fff;
     font-size: 1.2rem;
