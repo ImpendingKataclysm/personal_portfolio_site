@@ -361,20 +361,23 @@ body.navToggleActive {
     border-radius: 0.2rem;
     border-top: var(--baseColor);
     padding: 1.5rem;
+    max-width: 50%;
 }
 
-#keySkills.show {
-    display: block;
-}
-
-#codingSkills.show {
+#codingSkills {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
+}
+
+#keySkills.show, #codingSkills.show {
+    visibility: visible;
+    max-height: 100%;
 }
 
 .skillCol {
-    display: none;
+    visibility: hidden;
+    max-height: 0;
 }
 
 .keySkillCol {
