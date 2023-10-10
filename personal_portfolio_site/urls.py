@@ -18,10 +18,16 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.utils.translation import gettext_lazy as _
+from django.conf.urls.i18n import i18n_patterns
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
+urlpatterns = i18n_patterns(
+    path(_('admin/'), admin.site.urls),
     path('', include('main_site.urls', namespace='main_site')),
+    path('rosetta/', include('rosetta.urls')),
+)
+
+urlpatterns += [
     path('project1/', include('project1.urls', namespace='project1')),
     path('project2/', include('project2.urls', namespace='project2')),
     path('project3/', include('project3.urls', namespace='project3')),

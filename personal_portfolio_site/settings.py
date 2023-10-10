@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'project1',
     'project2',
     'project3',
+    'rosetta',
 ]
 
 MIDDLEWARE = [
