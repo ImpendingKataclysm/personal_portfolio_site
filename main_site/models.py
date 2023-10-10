@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
+from django.utils.translation import gettext_lazy as _
 
 # Maximum character lengths for text field values
 NAME_MAX_LEN = 100
@@ -26,10 +27,9 @@ class Skill(models.Model):
         verbose_name_plural = 'Skills'
         verbose_name = 'Skill'
 
-    name = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
-    score = models.IntegerField(default=DEFAULT_INT, blank=True, null=True)
-    image = models.FileField(blank=True, null=True, upload_to='skills')
-    is_key = models.BooleanField(default=False)
+    name = models.CharField(_('name'), max_length=NAME_MAX_LEN, blank=True, null=True)
+    image = models.FileField(_('image'), blank=True, null=True, upload_to='skills')
+    is_key = models.BooleanField(_('is_key'), default=False)
 
     def __str__(self):
         """
