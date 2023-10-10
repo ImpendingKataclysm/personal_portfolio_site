@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'project2',
     'project3',
     'rosetta',
+    'parler'
 ]
 
 MIDDLEWARE = [
@@ -131,6 +132,17 @@ LANGUAGES = (
     ('en', _('English')),
     ('fr', _('French')),
 )
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'fr'},
+    ),
+    'default': {
+        'fallbacks': ['en'],
+        'hide_untranslated': False,
+    }
+}
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale/'

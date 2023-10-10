@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 from django.utils.translation import gettext_lazy as _
+from parler.models import TranslatableModel, TranslatedFields
 
 # Maximum character lengths for text field values
 NAME_MAX_LEN = 100
@@ -11,7 +12,7 @@ TEXT_MAX_LEN = 200
 DEFAULT_INT = 80
 
 
-class Skill(models.Model):
+class Skill(TranslatableModel):
     """
     Database table that contains the site user's skills. Contains the following
     columns:
@@ -27,15 +28,11 @@ class Skill(models.Model):
         verbose_name_plural = 'Skills'
         verbose_name = 'Skill'
 
-    name = models.CharField(_('name'), max_length=NAME_MAX_LEN, blank=True, null=True)
-    image = models.FileField(_('image'), blank=True, null=True, upload_to='skills')
-    is_key = models.BooleanField(_('is_key'), default=False)
-
-    def __str__(self):
-        """
-        @return: The name of the skill
-        """
-        return self.name
+    translations = TranslatedFields(
+        name=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
+        image=models.FileField(blank=True, null=True, upload_to='skills'),
+        is_key=models.BooleanField(default=False),
+    )
 
 
 class UserProfile(models.Model):
@@ -48,6 +45,7 @@ class UserProfile(models.Model):
     - skills: List of all Skills registered in the database
     - cv: User's resume available for download
     """
+
     class Meta:
         verbose_name_plural = 'User Profiles'
         verbose_name = 'User Profile'
@@ -72,6 +70,7 @@ class Media(models.Model):
     - name
     - is_image: indicates whether the file is an image
     """
+
     class Meta:
         verbose_name_plural = 'Media Files'
         verbose_name = 'Media'
@@ -106,6 +105,7 @@ class Certificate(models.Model):
     - description
     - is_active
     """
+
     class Meta:
         verbose_name_plural = 'Certificates'
         verbose_name = 'Certificate'
@@ -133,6 +133,7 @@ class PortfolioProject(models.Model):
     - is_active
     - source_code_url: url for the source code on GitHub
     """
+
     class Meta:
         verbose_name_plural = 'Portfolio Projects'
         verbose_name = 'Portfolio Project'
@@ -180,6 +181,7 @@ class ContactMessage(models.Model):
     - email: sender's email address
     - message: message content
     """
+
     class Meta:
         verbose_name_plural = 'Contact Messages'
         verbose_name = 'Contact Messages'

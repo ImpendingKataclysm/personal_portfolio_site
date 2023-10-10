@@ -1,4 +1,5 @@
 from django.contrib import admin
+from parler.admin import TranslatableAdmin
 from . import models
 
 
@@ -7,9 +8,7 @@ class UserProfileAdmin(admin.ModelAdmin):
     list_display = ('id', 'user')
 
 
-@admin.register(models.Skill)
-class SkillAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name')
+admin.site.register(models.Skill, TranslatableAdmin)
 
 
 @admin.register(models.Media)

@@ -75,7 +75,7 @@
                 <div class="skills row">
                     <div id="keySkills" class="skillCol">
                         {% for skill in skills %}
-                            {% if skill.is_key %}
+                            {% if skill.is_key and skill.name %}
                                 <div class="keySkillCard">
                                     <div class="ksIconCol">
                                         <img src="{{ skill.image.url }}" alt="..." />
@@ -87,7 +87,7 @@
                     </div>
                     <div id="codingSkills" class="skillCol">
                         {% for skill in skills %}
-                            {% if not skill.is_key %}
+                            {% if skill.name and not skill.is_key %}
                                 <div class="keySkillCard">
                                     <span class="ksText">{{ skill.name }}</span>
                                     <div class="ksIconCol">
