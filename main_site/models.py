@@ -95,7 +95,7 @@ class Certificate(models.Model):
         return self.name
 
 
-class PortfolioProject(models.Model):
+class PortfolioProject(TranslatableModel):
     """
     DB table for portfolio projects displayed on the site. Contains the
     following columns:
@@ -111,16 +111,16 @@ class PortfolioProject(models.Model):
     class Meta:
         verbose_name_plural = 'Portfolio Projects'
         verbose_name = 'Portfolio Project'
-        ordering = ['name']
 
-    date = models.DateTimeField(blank=True)
-    name = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
-    description = models.CharField(max_length=TEXT_MAX_LEN, blank=True, null=True)
-    image = models.ImageField(blank=True, null=True, upload_to='portfolio')
-    slug = models.SlugField(null=True, blank=True)
-    is_active = models.BooleanField(default=True)
-    source_code_url = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
-    live_url = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
+    translations = TranslatedFields(
+        name=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
+        description=models.CharField(max_length=TEXT_MAX_LEN, blank=True, null=True),
+        image=models.ImageField(blank=True, null=True, upload_to='portfolio'),
+        slug=models.SlugField(null=True, blank=True),
+        is_active=models.BooleanField(default=True),
+        source_code_url=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
+        live_url=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
+    )
 
     def save(self, *args, **kwargs):
         """
@@ -131,7 +131,7 @@ class PortfolioProject(models.Model):
         @return:
         """
         if not self.id:
-            self.slug = slugify(self.name)
+            self.slug = slugify(self.translations.fields.get('name'))
 
         super(PortfolioProject, self).save(*args, **kwargs)
 
@@ -141,9 +141,6 @@ class PortfolioProject(models.Model):
         filename
         """
         return f'/portfolio/{self.slug}'
-
-    def __str__(self):
-        return self.name
 
 
 class ContactMessage(models.Model):

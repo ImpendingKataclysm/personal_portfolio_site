@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 20:47-0700\n"
+"POT-Creation-Date: 2023-10-10 21:51-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,6 +41,22 @@ msgstr ""
 
 #: .\main_site\templates\index.html:71
 msgid "Coding Skills"
+msgstr ""
+
+#: .\main_site\templates\index.html:112
+msgid "Featured Work"
+msgstr ""
+
+#: .\main_site\templates\index.html:116
+msgid "View All"
+msgstr ""
+
+#: .\main_site\templates\index.html:150
+msgid "Source Code"
+msgstr ""
+
+#: .\main_site\templates\index.html:175
+msgid "Certificates"
 msgstr ""
 
 #: .\main_site\templates\partials\nav.html:27

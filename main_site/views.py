@@ -14,7 +14,7 @@ class HomeView(generic.TemplateView):
         context = super().get_context_data(**kwargs)
         skills = models.Skill.objects.all()
         certificates = models.Certificate.objects.filter(is_active=True)
-        projects = models.PortfolioProject.objects.filter(is_active=True)
+        projects = models.PortfolioProject.objects.all()
 
         context['skills'] = skills
         context['certificates'] = certificates
@@ -52,7 +52,7 @@ class PortfolioView(generic.ListView):
     """
     Display the portfolio projects in the database on the Portfolio Page
     """
-    queryset = models.PortfolioProject.objects.filter(is_active=True)
+    queryset = models.PortfolioProject.objects.all()
     template_name = 'portfolio.html'
     paginate_by = 10
 

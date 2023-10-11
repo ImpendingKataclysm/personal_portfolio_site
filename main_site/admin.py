@@ -3,6 +3,7 @@ from parler.admin import TranslatableAdmin
 from . import models
 
 admin.site.register(models.Skill, TranslatableAdmin)
+admin.site.register(models.PortfolioProject, TranslatableAdmin)
 
 
 @admin.register(models.Media)
@@ -12,11 +13,6 @@ class MediaAdmin(admin.ModelAdmin):
 
 @admin.register(models.Certificate)
 class CertificateAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name')
-
-
-@admin.register(models.PortfolioProject)
-class PortfolioProjectAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
 
 

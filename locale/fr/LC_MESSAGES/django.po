@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 20:47-0700\n"
-"PO-Revision-Date: 2023-10-10 20:49+0000\n"
+"POT-Creation-Date: 2023-10-10 21:51-0700\n"
+"PO-Revision-Date: 2023-10-10 21:51+0000\n"
 "Last-Translator: Katie Janzen <ktjanzen42@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -43,6 +43,22 @@ msgstr "Compétences fondamentales"
 #: .\main_site\templates\index.html:71
 msgid "Coding Skills"
 msgstr "Compétences en programmation"
+
+#: .\main_site\templates\index.html:112
+msgid "Featured Work"
+msgstr "Projets en vedette"
+
+#: .\main_site\templates\index.html:116
+msgid "View All"
+msgstr "Voir tout"
+
+#: .\main_site\templates\index.html:150
+msgid "Source Code"
+msgstr "Code source"
+
+#: .\main_site\templates\index.html:175
+msgid "Certificates"
+msgstr "Certificats"
 
 #: .\main_site\templates\partials\nav.html:27
 msgid "Home"
