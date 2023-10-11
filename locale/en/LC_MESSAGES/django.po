@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 22:07-0700\n"
+"POT-Creation-Date: 2023-10-10 22:40-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\main_site\templates\contact.html:15
+msgid "Feel free to send me a message!"
+msgstr ""
+
+#: .\main_site\templates\contact.html:29
+msgid "Name"
+msgstr ""
+
+#: .\main_site\templates\contact.html:33
+msgid "Email"
+msgstr ""
+
+#: .\main_site\templates\contact.html:36
+msgid "I won't share your email with anyone else!"
+msgstr ""
+
+#: .\main_site\templates\contact.html:40
+msgid "Message"
+msgstr ""
+
+#: .\main_site\templates\contact.html:44
+msgid "Send"
+msgstr ""
 
 #: .\main_site\templates\index.html:25
 msgid "Full-Stack Developer"
@@ -51,7 +75,7 @@ msgstr ""
 msgid "View All"
 msgstr ""
 
-#: .\main_site\templates\index.html:150
+#: .\main_site\templates\index.html:150 .\main_site\templates\portfolio.html:46
 msgid "Source Code"
 msgstr ""
 
@@ -77,6 +101,15 @@ msgstr ""
 
 #: .\main_site\templates\partials\nav.html:28
 msgid "Portfolio"
+msgstr ""
+
+#: .\main_site\templates\partials\top_heading.html:10
+#, python-format
+msgid "%(heading)s"
+msgstr ""
+
+#: .\main_site\templates\portfolio.html:15
+msgid "Here are some of my recent projects:"
 msgstr ""
 
 #: .\personal_portfolio_site\settings.py:132

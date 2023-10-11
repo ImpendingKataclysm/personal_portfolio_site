@@ -34,12 +34,6 @@ class ContactView(generic.FormView):
     form_class = forms.ContactForm
     success_url = '/'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data()
-        context['heading'] = 'Feel free to send me a message!'
-
-        return context
-
     def form_valid(self, form):
         success_message = 'Thanks, I will be in touch soon!'
         form.save()
@@ -55,12 +49,6 @@ class PortfolioView(generic.ListView):
     queryset = models.PortfolioProject.objects.all()
     template_name = 'portfolio.html'
     paginate_by = 10
-
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super().get_context_data()
-        context['heading'] = 'Here are my recent projects'
-
-        return context
 
 
 class PortfolioProjectDetailView(generic.DetailView):

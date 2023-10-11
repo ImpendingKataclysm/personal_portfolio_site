@@ -17,7 +17,6 @@ class ContactForm(forms.ModelForm):
         required=True,
         widget=forms.TextInput(attrs={
             'class': 'form-control',
-            'placeholder': 'Your name',
         })
     )
 
@@ -26,7 +25,6 @@ class ContactForm(forms.ModelForm):
         required=True,
         widget=forms.TextInput(attrs={
             'class': 'form-control',
-            'placeholder': 'Email',
         })
     )
 
@@ -35,7 +33,6 @@ class ContactForm(forms.ModelForm):
         required=True,
         widget=forms.Textarea(attrs={
             'class': 'form-control',
-            'placeholder': 'Message',
             'rows': 6,
         })
     )

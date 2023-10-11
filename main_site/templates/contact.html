@@ -1,11 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}Contact{% endblock %}
 
 {% block content %}
 
-    {% include 'partials/top_heading.html' %}
+    <section class="bannerSection">
+        <div class="innerPageBannerCol">
+            <div class="container">
+                <div class="row g-4 g-md-3 align-items-center">
+                    <div class="col-md-6">
+                        <div class="bannerContent">
+                            <h1 class="xlTitle pb-md-3">{% trans 'Feel free to send me a message!' %}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section>
         <div class="lightBg">
@@ -13,22 +26,22 @@
                 <form id="contactForm" method="POST" action="{% url 'main_site:contact' %}">
                     {% csrf_token %}
                    <div class="form-row">
-                        <label for="name" class="form-label">Name</label>
+                        <label for="name" class="form-label">{% trans 'Name' %}</label>
                         {{ form.name }}
                    </div>
                     <div class="form-row">
-                        <label for="email" class="form-label">Email</label>
+                        <label for="email" class="form-label">{% trans 'Email' %}</label>
                         {{ form.email }}
                         <small id="emailHelp" class="form-text text-muted">
-                            I won't share your email with anyone else!
+                            {% trans "I won't share your email with anyone else!" %}
                         </small>
                     </div>
                     <div class="form-row">
-                        <label for="message" class="form-label">Message</label>
+                        <label for="message" class="form-label">{% trans 'Message' %}</label>
                         {{ form.message }}
                     </div>
                     <div class="form-row">
-                        <input class="btn btnPrimary form-control" type="submit" value="Send" />
+                        <input class="btn btnPrimary form-control" type="submit" value="{% trans 'Send' %}" />
                     </div>
                 </form>
             </div>
