@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 20:38-0700\n"
-"PO-Revision-Date: 2023-10-10 20:41+0000\n"
+"POT-Creation-Date: 2023-10-10 20:47-0700\n"
+"PO-Revision-Date: 2023-10-10 20:49+0000\n"
 "Last-Translator: Katie Janzen <ktjanzen42@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -36,6 +36,14 @@ msgstr "Télécharger le CV"
 msgid "Contact"
 msgstr "Contact"
 
+#: .\main_site\templates\index.html:64
+msgid "Key Skills"
+msgstr "Compétences fondamentales"
+
+#: .\main_site\templates\index.html:71
+msgid "Coding Skills"
+msgstr "Compétences en programmation"
+
 #: .\main_site\templates\partials\nav.html:27
 msgid "Home"
 msgstr "Accueil"
@@ -54,7 +62,7 @@ msgstr "Français"
 
 #: .\personal_portfolio_site\urls.py:25
 msgid "admin/"
-msgstr ""
+msgstr "admin/"
 
 #~ msgid "Language"
 #~ msgstr "Langue"
