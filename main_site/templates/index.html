@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}Home{% endblock %}
 
@@ -12,23 +13,23 @@
                     <!-- User Avatar -->
                     <div class="col-md-auto order-md-last">
                         <div class="bannerUserImg">
-                            <img src="{{ me.userprofile.avatar.url }}" alt="avatar" />
+                            <img src="{% static 'images/avatar.jpg' %}" alt="avatar" />
                         </div>
                     </div>
                     <div class="col-md">
                         <!-- User Info -->
                         <div class="bannerContent">
                             <h1 class="xlTitle pb-3">
-                                {{ me.first_name }} {{ me.last_name }}
+                                Katie Janzen
                                 <br/>
-                                {{ me.userprofile.title }}
+                                Full-Stack Developer
                             </h1>
-                            <p>{{ me.userprofile.bio }}</p>
+                            <p>This is a test bio.</p>
                             <div class="bannerBtnCol">
                                 <div class="row">
                                     <div class="col-auto">
                                         <a
-                                            href="{{ me.userprofile.cv.url }}"
+                                            href="{% static 'files/resume2023.pdf' %}"
                                             download
                                             class="btn btnPrimary"
                                         >

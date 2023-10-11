@@ -35,32 +35,6 @@ class Skill(TranslatableModel):
     )
 
 
-class UserProfile(models.Model):
-    """
-    Database table that contains information about the site user (this should be
-    the only row in the table). Contains the following columns:
-    - user: Authorized site user
-    - title: User's current title/role
-    - bio
-    - skills: List of all Skills registered in the database
-    - cv: User's resume available for download
-    """
-
-    class Meta:
-        verbose_name_plural = 'User Profiles'
-        verbose_name = 'User Profile'
-
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    avatar = models.ImageField(blank=True, null=True, upload_to='avatar')
-    title = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
-    bio = models.TextField(blank=True, null=True)
-    skills = models.ManyToManyField(Skill, blank=True)
-    cv = models.FileField(blank=True, null=True, upload_to='cv')
-
-    def __str__(self):
-        return f'{self.user.first_name} {self.user.last_name}'
-
-
 class Media(models.Model):
     """
     DB table that contains media files the user has uploaded to the site. Contains
