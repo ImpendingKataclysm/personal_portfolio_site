@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 14:56-0700\n"
+"POT-Creation-Date: 2023-10-10 15:59-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\main_site\models.py:30
-msgid "name"
+#: .\main_site\templates\partials\languages.html:7
+msgid "Language"
 msgstr ""
 
-#: .\main_site\models.py:31
-msgid "image"
-msgstr ""
-
-#: .\main_site\models.py:32
-msgid "is_key"
+#: .\main_site\templates\partials\languages.html:10
+#, python-format
+msgid "%(language.name)s"
 msgstr ""
 
 #: .\main_site\templates\partials\nav.html:24
@@ -42,10 +39,14 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: .\personal_portfolio_site\settings.py:131
+#: .\personal_portfolio_site\settings.py:132
 msgid "English"
 msgstr ""
 
-#: .\personal_portfolio_site\settings.py:132
+#: .\personal_portfolio_site\settings.py:133
 msgid "French"
+msgstr ""
+
+#: .\personal_portfolio_site\urls.py:25
+msgid "admin/"
 msgstr ""

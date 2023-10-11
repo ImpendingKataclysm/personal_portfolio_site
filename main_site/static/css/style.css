@@ -142,6 +142,22 @@ a, .btn {
     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
 }
 
+/* Language Selection */
+
+.language_wrap {
+    align-self: flex-end;
+    margin-bottom: 0.5rem;
+}
+
+ul.languages {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.languages img {
+    max-width: 2rem;
+}
+
 /* Navigation Bar */
 
 .navCol {

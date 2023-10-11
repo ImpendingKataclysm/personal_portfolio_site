@@ -8,27 +8,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 14:56-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2023-10-10 15:59-0700\n"
+"PO-Revision-Date: 2023-10-10 15:55+0000\n"
+"Last-Translator: Katie Janzen <ktjanzen42@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: .\main_site\models.py:30
-msgid "name"
-msgstr "nom"
+#: .\main_site\templates\partials\languages.html:7
+msgid "Language"
+msgstr "Langue"
 
-#: .\main_site\models.py:31
-msgid "image"
-msgstr "image"
-
-#: .\main_site\models.py:32
-msgid "is_key"
-msgstr "is_key"
+#: .\main_site\templates\partials\languages.html:10
+#, python-format
+msgid "%(language.name)s"
+msgstr ""
 
 #: .\main_site\templates\partials\nav.html:24
 msgid "Home"
@@ -42,10 +40,23 @@ msgstr "Portfolio"
 msgid "Contact"
 msgstr "Contact"
 
-#: .\personal_portfolio_site\settings.py:131
+#: .\personal_portfolio_site\settings.py:132
 msgid "English"
 msgstr "Anglais"
 
-#: .\personal_portfolio_site\settings.py:132
+#: .\personal_portfolio_site\settings.py:133
 msgid "French"
 msgstr "Français"
+
+#: .\personal_portfolio_site\urls.py:25
+msgid "admin/"
+msgstr ""
+
+#~ msgid "name"
+#~ msgstr "nom"
+
+#~ msgid "image"
+#~ msgstr "image"
+
+#~ msgid "is_key"
+#~ msgstr "is_key"

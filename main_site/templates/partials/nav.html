@@ -13,18 +13,23 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="d-md-none">
-                        <button class="navToggle">
-                            <span class="navToggle__text">Toggle Menu</span>
-                        </button>
-                    </div>
-                    <div class="navCollapseCol">
-                        <div class="navCol">
-                            <ul>
-                                <li><a href="{% url 'main_site:home' %}">{% trans 'Home' %}</a></li>
-                                <li><a href="{% url 'main_site:portfolio' %}">{% trans 'Portfolio' %}</a></li>
-                                <li><a href="{% url 'main_site:contact' %}">{% trans 'Contact' %}</a></li>
-                            </ul>
+                    <div class="d-flex flex-column">
+                        {% include 'partials/languages.html' %}
+                        <div>
+                            <div class="d-md-none">
+                                <button class="navToggle">
+                                    <span class="navToggle__text">Toggle Menu</span>
+                                </button>
+                            </div>
+                            <div class="navCollapseCol">
+                                <div class="navCol">
+                                    <ul>
+                                        <li><a href="{% url 'main_site:home' %}">{% trans 'Home' %}</a></li>
+                                        <li><a href="{% url 'main_site:portfolio' %}">{% trans 'Portfolio' %}</a></li>
+                                        <li><a href="{% url 'main_site:contact' %}">{% trans 'Contact' %}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
