@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 15:59-0700\n"
+"POT-Creation-Date: 2023-10-10 20:38-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,25 +18,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\main_site\templates\partials\languages.html:7
-msgid "Language"
+#: .\main_site\templates\index.html:25
+msgid "Full-Stack Developer"
 msgstr ""
 
-#: .\main_site\templates\partials\languages.html:10
-#, python-format
-msgid "%(language.name)s"
+#: .\main_site\templates\index.html:27
+msgid "This is a test bio."
 msgstr ""
 
-#: .\main_site\templates\partials\nav.html:24
+#: .\main_site\templates\index.html:36
+msgid "Download Resume"
+msgstr ""
+
+#: .\main_site\templates\index.html:44
+#: .\main_site\templates\partials\nav.html:29
+msgid "Contact"
+msgstr ""
+
+#: .\main_site\templates\partials\nav.html:27
 msgid "Home"
 msgstr ""
 
-#: .\main_site\templates\partials\nav.html:25
+#: .\main_site\templates\partials\nav.html:28
 msgid "Portfolio"
-msgstr ""
-
-#: .\main_site\templates\partials\nav.html:26
-msgid "Contact"
 msgstr ""
 
 #: .\personal_portfolio_site\settings.py:132

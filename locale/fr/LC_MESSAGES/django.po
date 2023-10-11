@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 15:59-0700\n"
-"PO-Revision-Date: 2023-10-10 15:55+0000\n"
+"POT-Creation-Date: 2023-10-10 20:38-0700\n"
+"PO-Revision-Date: 2023-10-10 20:41+0000\n"
 "Last-Translator: Katie Janzen <ktjanzen42@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,26 +19,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: .\main_site\templates\partials\languages.html:7
-msgid "Language"
-msgstr "Langue"
+#: .\main_site\templates\index.html:25
+msgid "Full-Stack Developer"
+msgstr "Développeur full-stack"
 
-#: .\main_site\templates\partials\languages.html:10
-#, python-format
-msgid "%(language.name)s"
-msgstr ""
+#: .\main_site\templates\index.html:27
+msgid "This is a test bio."
+msgstr "C'est une biographie démo."
 
-#: .\main_site\templates\partials\nav.html:24
+#: .\main_site\templates\index.html:36
+msgid "Download Resume"
+msgstr "Télécharger le CV"
+
+#: .\main_site\templates\index.html:44
+#: .\main_site\templates\partials\nav.html:29
+msgid "Contact"
+msgstr "Contact"
+
+#: .\main_site\templates\partials\nav.html:27
 msgid "Home"
 msgstr "Accueil"
 
-#: .\main_site\templates\partials\nav.html:25
+#: .\main_site\templates\partials\nav.html:28
 msgid "Portfolio"
 msgstr "Portfolio"
-
-#: .\main_site\templates\partials\nav.html:26
-msgid "Contact"
-msgstr "Contact"
 
 #: .\personal_portfolio_site\settings.py:132
 msgid "English"
@@ -51,6 +55,9 @@ msgstr "Français"
 #: .\personal_portfolio_site\urls.py:25
 msgid "admin/"
 msgstr ""
+
+#~ msgid "Language"
+#~ msgstr "Langue"
 
 #~ msgid "name"
 #~ msgstr "nom"
