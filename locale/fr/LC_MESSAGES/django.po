@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 21:51-0700\n"
-"PO-Revision-Date: 2023-10-10 21:51+0000\n"
+"POT-Creation-Date: 2023-10-10 22:07-0700\n"
+"PO-Revision-Date: 2023-10-10 22:08+0000\n"
 "Last-Translator: Katie Janzen <ktjanzen42@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -59,6 +59,18 @@ msgstr "Code source"
 #: .\main_site\templates\index.html:175
 msgid "Certificates"
 msgstr "Certificats"
+
+#: .\main_site\templates\partials\footer.html:15
+msgid "Copyright"
+msgstr "Droits d'auteur"
+
+#: .\main_site\templates\partials\footer.html:15
+msgid "All rights reserved"
+msgstr "Tous drois réservés"
+
+#: .\main_site\templates\partials\footer.html:15
+msgid "Created by"
+msgstr "Créé par"
 
 #: .\main_site\templates\partials\nav.html:27
 msgid "Home"
