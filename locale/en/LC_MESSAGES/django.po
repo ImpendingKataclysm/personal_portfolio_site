@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 22:40-0700\n"
+"POT-Creation-Date: 2023-10-12 13:52-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\main_site\templates\contact.html:15
+#: .\main_site\templates\contact.html:16
 msgid "Feel free to send me a message!"
 msgstr ""
 
-#: .\main_site\templates\contact.html:29
+#: .\main_site\templates\contact.html:31
 msgid "Name"
 msgstr ""
 
-#: .\main_site\templates\contact.html:33
+#: .\main_site\templates\contact.html:35
 msgid "Email"
 msgstr ""
 
-#: .\main_site\templates\contact.html:36
+#: .\main_site\templates\contact.html:38
 msgid "I won't share your email with anyone else!"
 msgstr ""
 
-#: .\main_site\templates\contact.html:40
+#: .\main_site\templates\contact.html:42
 msgid "Message"
 msgstr ""
 
-#: .\main_site\templates\contact.html:44
+#: .\main_site\templates\contact.html:49
 msgid "Send"
 msgstr ""
 
@@ -75,7 +75,7 @@ msgstr ""
 msgid "View All"
 msgstr ""
 
-#: .\main_site\templates\index.html:150 .\main_site\templates\portfolio.html:46
+#: .\main_site\templates\index.html:150 .\main_site\templates\portfolio.html:49
 msgid "Source Code"
 msgstr ""
 
@@ -83,15 +83,15 @@ msgstr ""
 msgid "Certificates"
 msgstr ""
 
-#: .\main_site\templates\partials\footer.html:15
+#: .\main_site\templates\partials\footer.html:16
 msgid "Copyright"
 msgstr ""
 
-#: .\main_site\templates\partials\footer.html:15
+#: .\main_site\templates\partials\footer.html:18
 msgid "All rights reserved"
 msgstr ""
 
-#: .\main_site\templates\partials\footer.html:15
+#: .\main_site\templates\partials\footer.html:19
 msgid "Created by"
 msgstr ""
 
@@ -103,12 +103,7 @@ msgstr ""
 msgid "Portfolio"
 msgstr ""
 
-#: .\main_site\templates\partials\top_heading.html:10
-#, python-format
-msgid "%(heading)s"
-msgstr ""
-
-#: .\main_site\templates\portfolio.html:15
+#: .\main_site\templates\portfolio.html:16
 msgid "Here are some of my recent projects:"
 msgstr ""
 

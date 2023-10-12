@@ -8,13 +8,13 @@
     <ul class="languages">
         {% for language in languages %}
             <li>
-                <a href="/{{ language.code }}/">
-                    {% if language.code == 'en' %}
-                        <img src="{% static 'images/en.png' %}" alt="en">
-                    {% elif language.code == 'fr' %}
-                        <img src="{% static 'images/fr.png' %}" alt="fr">
-                    {% endif %}
-                </a>
+                {% with request.path|slice:"3:" as trimmed_path %}
+                    <a href="/{{ language.code }}{{ trimmed_path }}">
+                        <img
+                            src="{% static 'images/'|add:language.code|add:'.png' %}"
+                            alt="{{ language.code }}">
+                    </a>
+                {% endwith %}
             </li>
         {% endfor %}
     </ul>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 22:40-0700\n"
+"POT-Creation-Date: 2023-10-12 13:52-0700\n"
 "PO-Revision-Date: 2023-10-10 22:43+0000\n"
 "Last-Translator: Katie Janzen <ktjanzen42@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,27 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: .\main_site\templates\contact.html:15
+#: .\main_site\templates\contact.html:16
 msgid "Feel free to send me a message!"
 msgstr "N'hésitez-pas de m'envoyer un message!"
 
-#: .\main_site\templates\contact.html:29
+#: .\main_site\templates\contact.html:31
 msgid "Name"
 msgstr "Nom"
 
-#: .\main_site\templates\contact.html:33
+#: .\main_site\templates\contact.html:35
 msgid "Email"
 msgstr "E-mail"
 
-#: .\main_site\templates\contact.html:36
+#: .\main_site\templates\contact.html:38
 msgid "I won't share your email with anyone else!"
 msgstr "Je ne partagerai votre e-mail avec personne!"
 
-#: .\main_site\templates\contact.html:40
+#: .\main_site\templates\contact.html:42
 msgid "Message"
 msgstr "Message"
 
-#: .\main_site\templates\contact.html:44
+#: .\main_site\templates\contact.html:49
 msgid "Send"
 msgstr "Envoyer"
 
@@ -76,8 +76,7 @@ msgstr "Projets en vedette"
 msgid "View All"
 msgstr "Voir tout"
 
-#: .\main_site\templates\index.html:150
-#: .\main_site\templates\portfolio.html:46
+#: .\main_site\templates\index.html:150 .\main_site\templates\portfolio.html:49
 msgid "Source Code"
 msgstr "Code source"
 
@@ -85,15 +84,15 @@ msgstr "Code source"
 msgid "Certificates"
 msgstr "Certificats"
 
-#: .\main_site\templates\partials\footer.html:15
+#: .\main_site\templates\partials\footer.html:16
 msgid "Copyright"
 msgstr "Droits d'auteur"
 
-#: .\main_site\templates\partials\footer.html:15
+#: .\main_site\templates\partials\footer.html:18
 msgid "All rights reserved"
 msgstr "Tous droits réservés"
 
-#: .\main_site\templates\partials\footer.html:15
+#: .\main_site\templates\partials\footer.html:19
 msgid "Created by"
 msgstr "Créé par"
 
@@ -105,12 +104,7 @@ msgstr "Accueil"
 msgid "Portfolio"
 msgstr "Portfolio"
 
-#: .\main_site\templates\partials\top_heading.html:10
-#, python-format
-msgid "%(heading)s"
-msgstr ""
-
-#: .\main_site\templates\portfolio.html:15
+#: .\main_site\templates\portfolio.html:16
 msgid "Here are some of my recent projects:"
 msgstr "Voici mes projets récents:"
 
