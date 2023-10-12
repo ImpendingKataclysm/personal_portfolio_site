@@ -12,7 +12,9 @@
                 <div class="row g-4 g-md-3 align-items-center">
                     <div class="col-md-6">
                         <div class="bannerContent">
-                            <h1 class="xlTitle pb-md-3">{% trans 'Feel free to send me a message!' %}</h1>
+                            <h1 class="xlTitle pb-md-3">
+                                {% trans 'Feel free to send me a message!' %}
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -41,7 +43,11 @@
                         {{ form.message }}
                     </div>
                     <div class="form-row">
-                        <input class="btn btnPrimary form-control" type="submit" value="{% trans 'Send' %}" />
+                        <input
+                            class="btn btnPrimary form-control"
+                            type="submit"
+                            value="{% trans 'Send' %}"
+                        />
                     </div>
                 </form>
             </div>
