@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
 from . import models, forms
 
 
@@ -35,7 +36,13 @@ class ContactView(generic.FormView):
     success_url = '/'
 
     def form_valid(self, form):
+        language = self.request.LANGUAGE_CODE
         success_message = 'Thanks, I will be in touch soon!'
+
+        if language == 'fr':
+            success_message = "Merci, je vous contacterai bientôt!"
+            self.success_url = '/fr/'
+
         form.save()
         messages.success(self.request, success_message)
 
