@@ -197,7 +197,7 @@ ul.languages {
     color: #fff;
     display: inline-block;
     position: relative;
-    text-shadow: 1px 1px 8px var(--secondaryDarkColor);
+    text-shadow: 1px 1px 8px var(--primaryColor);
 }
 
 .navCol a:hover {
