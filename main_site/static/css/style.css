@@ -145,17 +145,30 @@ a, .btn {
 /* Language Selection */
 
 .language_wrap {
-    align-self: flex-end;
-    margin-bottom: 0.5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
 }
 
 ul.languages {
+    width: 100%;
     display: flex;
-    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.languages a {
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+}
+
+.tooltip.language-tooltip .tooltip-inner {
+    background-color: var(--baseColor);
+    color: var(--secondaryDarkColor);
+    font-size: 1.2rem;
 }
 
 .languages img {
-    max-width: 2rem;
+    max-width: 60%;
 }
 
 /* Navigation Bar */
@@ -314,7 +327,7 @@ body.navToggleActive {
 /* Sections */
 
 .sectionSpace {
-    padding: 7rem 0;
+    padding: 3rem 0;
 }
 
 .sectionSpaceSm {
@@ -584,7 +597,7 @@ body.navToggleActive {
     }
 
     .sectionSpace {
-        padding: 4rem;
+        padding: 1rem;
     }
 
     .bannerSection {
