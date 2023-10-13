@@ -52,57 +52,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Skills Section -->
-    <section>
-        <div class="sectionSpace pt-0">
-            <div class="container">
-                <div class="skillHeader row">
-                    <div class="col-md-auto">
-                        <div class="keySkillCol">
-                            <div class="skillHeading btnOutline" id="keySkillHeading">
-                                <h4 class="smTitle pb-3">{% trans 'Key Skills' %}</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="keySkillCol">
-                            <div class="skillHeading btnOutline" id="codingSkillHeading">
-                                <h4 class="smTitle pb-3">{% trans 'Coding Skills' %}</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills row">
-                    <div id="keySkills" class="skillCol">
-                        {% for skill in skills %}
-                            {% if skill.is_key and skill.name %}
-                                <div class="keySkillCard">
-                                    <div class="ksIconCol">
-                                        <img src="{{ skill.image.url }}" alt="..." />
-                                    </div>
-                                    <span class="ksText">{{ skill.name }}</span>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                    <div id="codingSkills" class="skillCol">
-                        {% for skill in skills %}
-                            {% if skill.name and not skill.is_key %}
-                                <div class="keySkillCard">
-                                    <span class="ksText">{{ skill.name }}</span>
-                                    <div class="ksIconCol">
-                                        <img src="{{ skill.image.url }}" alt="..." />
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Projects Section -->
     <section>
         <div class="sectionSpaceSm">
@@ -165,7 +114,6 @@
             </div>
         </div>
     </section>
-
     <!-- Certificates Section -->
     <section>
         <div class="sectionSpaceSm">
