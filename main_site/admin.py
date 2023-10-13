@@ -2,6 +2,7 @@ from django.contrib import admin
 from parler.admin import TranslatableAdmin
 from . import models
 
+admin.site.register(models.SiteOwner, TranslatableAdmin)
 admin.site.register(models.Skill, TranslatableAdmin)
 admin.site.register(models.PortfolioProject, TranslatableAdmin)
 admin.site.register(models.Certificate, TranslatableAdmin)
