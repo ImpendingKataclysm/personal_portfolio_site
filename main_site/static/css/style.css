@@ -603,10 +603,6 @@ body.navToggleActive {
         font-size: 1.1rem;
     }
 
-    .navCol a{
-        font-size: 1.12rem;
-    }
-
     .footerCol {
         padding: 1.8rem;
     }
@@ -640,10 +636,6 @@ body.navToggleActive {
 
     .smTitle {
         font-size: 1.2rem;
-    }
-
-    .navCol a {
-        font-size: 1rem;
     }
 
     .innerPageBannerCol {
@@ -727,12 +719,6 @@ body.navToggleActive {
 
     .navCol a::before {
         display: none;
-    }
-
-    .navCol a {
-        font-size: 1rem;
-        color: var(--bs-white);
-        opacity: 0.8;
     }
 
     .navCol a:hover, .navCol a:focus, .navCol a.active {
