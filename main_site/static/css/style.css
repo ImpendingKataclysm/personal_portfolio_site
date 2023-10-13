@@ -7,6 +7,7 @@
     --primaryDarkColor: #3c2d5c;
     --secondaryDarkColor: #142850;
     --baseColor: #cdddff;
+    --shadowColor: rgba(0, 0, 0, 0.2);
     --baseFont: 'Lato', sans-serif;
     --titleFont: 'Signika Negative', sans-serif;
     --regular: 400;
@@ -138,8 +139,8 @@ a, .btn {
 
 .fixedHeader .headerCol {
     padding: 0.6rem 0;
-    -webkit-box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 1.5rem var(--shadowColor);
+    box-shadow: 0 0 1.5rem var(--shadowColor);
 }
 
 /* Language Selection */
@@ -165,10 +166,19 @@ ul.languages {
     background-color: var(--baseColor);
     color: var(--secondaryDarkColor);
     font-size: 1.2rem;
+    transition: all 300ms ease-in-out 0s;
 }
 
 .languages img {
     max-width: 60%;
+    box-shadow: 1px 1px 3px var(--primaryColor),
+                -1px -1px 3px var(--primaryColor);
+    transition: all 300ms ease-in-out 0s;
+}
+
+.languages img:hover, .languages img:focus {
+    box-shadow: 1px 1px 6px var(--baseColor),
+                -1px -1px 6px var(--baseColor);
 }
 
 /* Navigation Bar */
@@ -240,7 +250,7 @@ ul.languages {
     -o-transition: background-color 500ms ease-in-out 250ms;
     transition: background-color 500ms ease-in-out 250ms;
     background-color: #000;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--shadowColor);
     margin-left: auto;
 }
 
@@ -327,7 +337,7 @@ body.navToggleActive {
 /* Sections */
 
 .sectionSpace {
-    padding: 3rem 0;
+    padding: 5rem 0;
 }
 
 .sectionSpaceSm {
