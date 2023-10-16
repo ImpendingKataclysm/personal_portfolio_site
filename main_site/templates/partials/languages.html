@@ -7,19 +7,21 @@
 <div class="language_wrap">
     <ul class="languages">
         {% for language in languages %}
-            <li>
-                {% with request.path|slice:"3:" as trimmed_path %}
-                    <a
-                        href="/{{ language.code }}{{ trimmed_path }}"
-                        data-toggle="tooltip"
-                        title="{{ language.code|upper }}"
-                    >
-                        <img
-                            src="{% static 'images/'|add:language.code|add:'.png' %}"
-                            alt="{{ language.code }}">
-                    </a>
-                {% endwith %}
-            </li>
+            {% if language.code != CURRENT_LANGUAGE %}
+                <li>
+                    {% with request.path|slice:"3:" as trimmed_path %}
+                        <a
+                            href="/{{ language.code }}{{ trimmed_path }}"
+                            data-toggle="tooltip"
+                            title="{{ language.code|upper }}"
+                        >
+                            <img
+                                src="{% static 'images/'|add:language.code|add:'.png' %}"
+                                alt="{{ language.code }}">
+                        </a>
+                    {% endwith %}
+                </li>
+            {% endif %}
         {% endfor %}
     </ul>
 </div>
