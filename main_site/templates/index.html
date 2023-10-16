@@ -9,21 +9,23 @@
     <section>
         <div class="bannerSection">
             <div class="container">
-                <div class="row g-4 g-md-3 align-items-center">
+                <div class="bannerGrid g-4 g-md-3 align-items-center">
                     <!-- User Avatar -->
-                    <div class="col-md-auto order-md-last">
+                    <div class="col-md-auto order-md-last right">
                         <div class="bannerUserImg">
                             <img src="{% static 'images/avatar.jpg' %}" alt="avatar" />
                         </div>
                     </div>
-                    <div class="col-md">
+                    <div class="col-md top-left">
+                        <h1 class="xlTitle pb-3">
+                            {{ me.name }}
+                            <br/>
+                            {{ me.title }}
+                        </h1>
+                    </div>
+                    <div class="col-md bottom-left">
                         <!-- User Info -->
                         <div class="bannerContent">
-                            <h1 class="xlTitle pb-3">
-                                {{ me.name }}
-                                <br/>
-                                {{ me.title }}
-                            </h1>
                             <p>{{ me.bio }}</p>
                             <div class="bannerBtnCol">
                                 <div class="row">

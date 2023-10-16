@@ -353,6 +353,17 @@ body.navToggleActive {
 
 .bannerSection {
     padding: 11.25rem 0 5rem;
+    height: 100vh;
+}
+
+.bannerGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bannerGrid .right {
+    grid-column: 2;
+    grid-row: 1 / span 2;
 }
 
 .bannerUserImg {
@@ -724,6 +735,20 @@ body.navToggleActive {
     .navCol a:hover, .navCol a:focus, .navCol a.active {
         color: var(--bs-white);
         opacity: 1;
+    }
+
+    .bannerGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bannerGrid .right {
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
+    }
+
+    .bannerGrid .bottom-left {
+        grid-row: 2;
+        grid-column: 1 / span 2;
     }
 
     .footerCol {
