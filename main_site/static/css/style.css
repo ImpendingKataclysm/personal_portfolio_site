@@ -390,12 +390,24 @@ body.navToggleActive {
     grid-row: 1 / span 2;
 }
 
+.bannerSection h1, .bannerSection .subtitle {
+    text-shadow: 1px 1px 10px var(--primaryColor);
+}
+
+.bannerContent {
+    text-shadow: 3px 3px 5px var(--bgColor);
+}
+
 .bannerUserImg {
     margin-left: 2rem;
     width: 18rem;
     height: 18rem;
     border-radius: 50%;
     position: relative;
+    box-shadow: 1px 1px 10px var(--primaryDarkColor),
+                -1px -1px 10px var(--primaryDarkColor),
+                -1px 1px 10px var(--primaryDarkColor),
+                1px -1px 10px var(--primaryDarkColor);
 }
 
 .bannerUserImg img {
