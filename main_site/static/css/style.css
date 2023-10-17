@@ -112,7 +112,7 @@ a, .btn {
 }
 
 .btn {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: var(--medium);
     padding: 0.5rem 1.25rem;
     border-radius: 0.1rem;
@@ -371,7 +371,7 @@ body.navToggleActive {
 
 .bannerSection {
     padding: 11.25rem 0 5rem;
-    max-height: 100vh;
+    height: 100vh;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
@@ -651,7 +651,7 @@ body.navToggleActive {
     }
 
     .btn {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .footerCol {
@@ -678,7 +678,7 @@ body.navToggleActive {
     }
 
     .btn {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .xlTitle {
@@ -838,7 +838,7 @@ body.navToggleActive {
 @media screen and (max-width: 575px) {
 
     .btn {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .xlTitle {
