@@ -50,7 +50,7 @@ li, p, dd {
 /* Titles and Text */
 
 .xlTitle {
-    font-size: 2.2rem;
+    font-size: 2.9rem;
     line-height: normal;
     font-family: var(--titleFont);
     font-weight: var(--bold);
@@ -74,6 +74,10 @@ li, p, dd {
     line-height: normal;
     font-family: var(--titleFont);
     font-weight: var(--regular);
+}
+
+.subtitle {
+    font-style: italic;
 }
 
 /* Links and Buttons */
@@ -353,7 +357,13 @@ body.navToggleActive {
 
 .bannerSection {
     padding: 11.25rem 0 5rem;
-    height: 100vh;
+    max-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.bannerSection .container {
+    grid-row: 2 / span 1;
 }
 
 .bannerGrid {
@@ -607,6 +617,10 @@ body.navToggleActive {
 
 @media screen and (max-width: 1199px) {
     .xlTitle {
+        font-size: 2.5rem;
+    }
+
+    .lgTitle {
         font-size: 2.1rem;
     }
 
@@ -642,7 +656,11 @@ body.navToggleActive {
     }
 
     .xlTitle {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+
+    .lgTitle {
+        font-size: 1.8rem;
     }
 
     .smTitle {
@@ -739,6 +757,8 @@ body.navToggleActive {
 
     .bannerGrid {
         grid-template-columns: 1fr 1fr;
+        width: 80%;
+        margin: auto;
     }
 
     .bannerGrid .right {
@@ -749,6 +769,7 @@ body.navToggleActive {
     .bannerGrid .bottom-left {
         grid-row: 2;
         grid-column: 1 / span 2;
+        margin-top: 1.1rem;
     }
 
     .footerCol {
@@ -795,6 +816,10 @@ body.navToggleActive {
     }
 
     .xlTitle {
+        font-size: 1.9rem;
+    }
+
+    .lgTitle {
         font-size: 1.5rem;
     }
 
