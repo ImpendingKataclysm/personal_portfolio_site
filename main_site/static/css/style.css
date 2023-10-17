@@ -425,75 +425,6 @@ body.navToggleActive {
     padding-top: 0.9rem;
 }
 
-/* Skills Section */
-
-.skillHeader .col-md {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.skillHeading {
-    background-color: var(--secondaryDarkColor);
-    border-radius: 0.2rem;
-    text-align: center;
-    max-width: 20rem;
-    cursor: pointer;
-    padding: 0.2rem;
-    margin-bottom: 0.2rem;
-}
-
-.skillHeading h4 {
-    font-size: 1.7rem;
-    font-weight: bold;
-    font-style: italic;
-    line-height: 2.5;
-}
-
-#keySkills, #codingSkills {
-    background-color: var(--lightBg);
-    border-radius: 0.2rem;
-    border-top: var(--baseColor);
-    padding: 1.5rem;
-    max-width: 50%;
-}
-
-#codingSkills {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-#keySkills.show, #codingSkills.show {
-    visibility: visible;
-    max-height: 100%;
-}
-
-.skillCol {
-    visibility: hidden;
-    max-height: 0;
-}
-
-.keySkillCol {
-    width: 17rem;
-}
-
-.keySkillCard {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.keySkillCard + .keySkillCard {
-    padding-top: 1.5rem;
-}
-
-.ksText {
-    display: block;
-    padding-top: 0.7rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-    font-style: italic;
-}
-
 /* Sliders */
 
 .sliderOuter {
@@ -508,7 +439,6 @@ body.navToggleActive {
     padding: 2.1rem;
     background-color: var(--lightBg);
     border-radius: 0.25rem;
-    height: 100%;
     width: 80%;
     margin: auto;
 }
@@ -571,8 +501,6 @@ body.navToggleActive {
 
 .portfolioImgCol img {
     border-radius: 6px;
-    width: 15.375rem;
-    height: 11.5rem;
     -o-object-fit: cover;
     object-fit: cover;
 }
