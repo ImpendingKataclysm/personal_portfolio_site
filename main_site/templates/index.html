@@ -17,10 +17,10 @@
                         </div>
                     </div>
                     <div class="col-md top-left">
-                        <h1 class="xlTitle pb-3">
+                        <h1 class="xlTitle pb-3 shadowHeading">
                             {{ me.name }}
                         </h1>
-                        <p class="lgTitle subtitle">{{ me.title }}</p>
+                        <p class="lgTitle subtitle shadowHeading">{{ me.title }}</p>
                     </div>
                     <div class="col-md bottom-left">
                         <!-- User Info -->
@@ -59,7 +59,7 @@
             <div class="container">
                 <div class="row pb-3">
                     <div class="col">
-                        <h3 class="smTitle">{% trans 'Featured Work' %}</h3>
+                        <h3 class="lgTitle shadowHeading">{% trans 'Featured Work' %}</h3>
                     </div>
                     <div class="col-auto">
                         <a href="{% url 'main_site:portfolio' %}" class="simpleLink">
@@ -80,7 +80,7 @@
                                         </div>
                                         <div class="col-md">
                                             <div class="portfolioContentCol">
-                                                <h4 class="lgTitle">
+                                                <h4 class="mdTitle">
                                                     {% if project.live_url %}
                                                         <a href="{{ project.live_url }}" target="_blank">
                                                             {{ project.name }}

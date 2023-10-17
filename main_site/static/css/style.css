@@ -27,6 +27,7 @@ body {
     color: var(--baseColor);
     line-height: normal;
     position: relative;
+    max-width: 100%;
 }
 
 body::before {
@@ -71,7 +72,7 @@ li, p, dd {
 }
 
 .lgTitle {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: var(--bold);
     font-family: var(--titleFont);
 }
@@ -92,6 +93,10 @@ li, p, dd {
 
 .subtitle {
     font-style: italic;
+}
+
+.shadowHeading {
+    text-shadow: 1px 1px 10px var(--primaryColor);
 }
 
 /* Links and Buttons */
@@ -364,6 +369,7 @@ body.navToggleActive {
 }
 
 .sectionSpaceSm {
+    margin-top: 3.5rem;
     padding: 1.575rem 0;
 }
 
@@ -388,10 +394,6 @@ body.navToggleActive {
 .bannerGrid .right {
     grid-column: 2;
     grid-row: 1 / span 2;
-}
-
-.bannerSection h1, .bannerSection .subtitle {
-    text-shadow: 1px 1px 10px var(--primaryColor);
 }
 
 .bannerContent {
@@ -647,7 +649,7 @@ body.navToggleActive {
     }
 
     .lgTitle {
-        font-size: 2.1rem;
+        font-size: 2.3rem;
     }
 
     .btn {
@@ -686,7 +688,7 @@ body.navToggleActive {
     }
 
     .lgTitle {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .smTitle {
@@ -846,7 +848,7 @@ body.navToggleActive {
     }
 
     .lgTitle {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     .sectionSpace {
