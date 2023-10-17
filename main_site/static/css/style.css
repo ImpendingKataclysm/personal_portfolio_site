@@ -26,6 +26,7 @@ body {
     background-color: var(--shadowColor);
     color: var(--baseColor);
     line-height: normal;
+    position: relative;
 }
 
 body::before {
@@ -38,7 +39,7 @@ body::before {
     height: 100vh;
     background: linear-gradient(to bottom, var(--bgColor), var(--secondaryDarkColor)) no-repeat;
     background-size: cover;
-    z-index: -3;
+    z-index: -2;
 }
 
 img {
