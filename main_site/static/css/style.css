@@ -787,3 +787,21 @@ body.navToggleActive {
         padding: 0.9rem;
     }
 }
+
+@media screen and (max-width: 380px) {
+    .xlTitle {
+        font-size: 1.8rem;
+    }
+
+    .lgTitle {
+        font-size: 1.5rem;
+    }
+
+    p, dd, li {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.9rem;
+    }
+}
