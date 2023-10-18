@@ -96,7 +96,7 @@ li, p, dd {
 }
 
 .shadowHeading {
-    text-shadow: 1px 1px 10px var(--primaryColor);
+    text-shadow: 1px 1px 5px var(--primaryColor);
 }
 
 .underlined {
@@ -116,7 +116,7 @@ a {
 
 a:hover {
     color: var(--primaryColor);
-    text-shadow: 1px 1px 10px var(--secondaryDarkColor);
+    text-shadow: 1px 1px 5px var(--secondaryDarkColor);
 }
 
 a, .btn {
