@@ -80,29 +80,27 @@
                                         </div>
                                         <div class="col-md">
                                             <div class="portfolioContentCol">
-                                                <h4 class="mdTitle">
-                                                    {% if project.live_url %}
-                                                        <a href="{{ project.live_url }}" target="_blank">
-                                                            {{ project.name }}
-                                                        </a>
-                                                    {% else %}
-                                                        <a href="/project/{{ project.slug }}">
-                                                            {{ project.name }}
-                                                        </a>
-                                                    {% endif %}
-                                                </h4>
-                                                <ul class="portfolioOption">
-                                                    <li>
-                                                        <span class="dateLbl">
-                                                            <a
-                                                                href="{{ project.source_code_url }}"
-                                                                target="_blank"
-                                                            >
-                                                                {% trans 'Source Code' %}
+                                                <div class="projectHeading">
+                                                    <h4 class="mdTitle">
+                                                        {% if project.live_url %}
+                                                            <a href="{{ project.live_url }}" target="_blank">
+                                                                {{ project.name }}
                                                             </a>
-                                                        </span>
-                                                    </li>
-                                                </ul>
+                                                        {% else %}
+                                                            <a href="/project/{{ project.slug }}">
+                                                                {{ project.name }}
+                                                            </a>
+                                                        {% endif %}
+                                                    </h4>
+                                                    <span class="dateLbl">
+                                                        <a
+                                                            href="{{ project.source_code_url }}"
+                                                            target="_blank"
+                                                        >
+                                                            {% trans 'Source Code' %}
+                                                        </a>
+                                                    </span>
+                                                </div>
                                                 <p>{{ project.description }}</p>
                                             </div>
                                         </div>

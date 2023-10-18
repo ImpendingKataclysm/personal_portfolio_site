@@ -461,6 +461,15 @@ body.navToggleActive {
     margin-bottom: 0;
 }
 
+.cardStyle1 h4, .cardStyle1 p {
+    text-shadow: 1px 1px 10px var(--secondaryDarkColor);
+}
+
+.cardStyle1 h4 {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
 .cs1Title {
     min-height: 7rem;
 }
@@ -508,9 +517,10 @@ body.navToggleActive {
     right: 0;
 }
 
-.portfolioCard {
-    padding: 1.3rem;
-    border-bottom: 1px solid #e0e0e0;
+.projectHeading {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
 }
 
 .portfolioImgCol img {
@@ -523,23 +533,14 @@ body.navToggleActive {
     margin-bottom: 0;
 }
 
-.portfolioOption {
-    padding: 0.3rem 0 1rem;
-}
-
-.portfolioOption li {
-    display: inline-block;
-    padding-right: 1.3rem;
-}
-
 .dateLbl {
     display: inline-block;
-    padding: 0.25rem 0.75rem;
+    text-align: center;
+    padding: 0.5rem;
     background-color: var(--secondaryDarkColor);
     border-radius: 1.2rem;
     color: #fff;
     font-size: 1.2rem;
-    line-height: 1;
     font-weight: var(--bold);
 }
 
