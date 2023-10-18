@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Signika+Negative:wght@600&display=swap');
 
 :root {
-    --bgColor:  #21243D;
+    --bgColor: #151535;
     --lightBg: #343967;
     --primaryColor: #1a5a92;
     --primaryDarkColor: #312d6e;
-    --secondaryDarkColor: #142850;
+    --secondaryDarkColor: #123172;
     --baseColor: #cdddff;
     --shadowColor: rgba(0, 0, 0, 0.2);
     --baseFont: 'Lato', sans-serif;
