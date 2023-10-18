@@ -461,7 +461,7 @@ body.navToggleActive {
     margin-bottom: 0;
 }
 
-.cardStyle1 h4, .cardStyle1 p {
+.cardStyle1 h4, .cardStyle1 p, .cardStyle1 li {
     text-shadow: 1px 1px 10px var(--secondaryDarkColor);
 }
 
@@ -472,11 +472,6 @@ body.navToggleActive {
 
 .cs1Title {
     min-height: 7rem;
-}
-
-.certImage {
-    width: 80%;
-    margin: 0.9rem auto;
 }
 
 .cardOptionCol {
@@ -523,7 +518,7 @@ body.navToggleActive {
     margin: 1.5rem 0;
 }
 
-.portfolioImgCol img {
+.cardImgCol img {
     border-radius: 6px;
     -o-object-fit: cover;
     object-fit: cover;

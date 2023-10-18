@@ -74,7 +74,7 @@
                                 <div class="swiper-slide">
                                     <div class="cardStyle1 g-4 align-items-center">
                                         <div class="col-md-auto">
-                                            <div class="portfolioImgCol">
+                                            <div class="cardImgCol">
                                                 <img src="{{ project.image.url }}" alt="{{ project.name }}">
                                             </div>
                                         </div>
@@ -119,9 +119,9 @@
     <section>
         <div class="sectionSpaceSm">
             <div class="container">
-                <div class="row pb-3">
+                <div class="row underlined">
                     <div class="col">
-                        <h3 class="smTitle">{% trans 'Certificates' %}</h3>
+                        <h3 class="lgTitle shadowHeading">{% trans 'Certificates' %}</h3>
                     </div>
                 </div>
                 <div class="sliderOuter">
@@ -131,7 +131,7 @@
                                 <div class="swiper-slide">
                                     <div class="cardStyle1">
                                         <h4 class="mdTitle cs1Title">{{ cert.name }}</h4>
-                                        <figure class="certImage">
+                                        <figure class="cardImgCol">
                                             <img src="{{ cert.image.url }}" alt="{{ cert.name }}" />
                                         </figure>
                                         <ul class="cardOptionCol">
@@ -151,5 +151,4 @@
         </div>
     </section>
 
-    <script src="{% static 'js/home_script.js' %}"></script>
 {% endblock %}
