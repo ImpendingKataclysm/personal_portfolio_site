@@ -3,7 +3,6 @@ from parler.admin import TranslatableAdmin
 from . import models
 
 admin.site.register(models.SiteOwner, TranslatableAdmin)
-admin.site.register(models.Skill, TranslatableAdmin)
 admin.site.register(models.PortfolioProject, TranslatableAdmin)
 admin.site.register(models.Certificate, TranslatableAdmin)
 
@@ -16,3 +15,8 @@ class MediaAdmin(admin.ModelAdmin):
 @admin.register(models.ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'timestamp')
+
+
+@admin.register(models.Image)
+class ImageAdmin(admin.ModelAdmin):
+    list_display = ('id', 'image')

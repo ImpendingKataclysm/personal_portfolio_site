@@ -29,16 +29,18 @@
                     <div class="swiper portfolioSlider">
                         <div class="swiper-wrapper">
                             {% for row in object_list %}
-                                <div class="swiper-slide">
+                                <div class="swiper-slide sliderOuter">
                                     <div class="cardStyle1 g-4 align-items-center w-90">
                                         <div class="col-md-auto">
-                                            <figure class="cardImgCol w-100">
-                                                <img
-                                                    src="{{ row.image.url }}"
-                                                    alt="{{ row.name }}"
-                                                    class="w-100"
-                                                />
-                                            </figure>
+                                            {% for image in row.images.all %}
+                                                <figure class="cardImgCol w-100">
+                                                    <img
+                                                        src="{{ image.image.url }}"
+                                                        alt="{{ row.name }}"
+                                                        class="d-block w-100"
+                                                    />
+                                                </figure>
+                                            {% endfor %}
                                         </div>
                                         <div class="col-md">
                                             <div class="portfolioContentCol">

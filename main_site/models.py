@@ -27,29 +27,6 @@ class SiteOwner(TranslatableModel):
     )
 
 
-class Skill(TranslatableModel):
-    """
-    Database table that contains the site user's skills. Contains the following
-    columns:
-    - name
-    - score: Percentage that represents the user's level of proficiency with
-    the skill
-    - image: URL for an image/icon to be displayed with the skill
-    - is_key: Indicates whether this is a key (personal/life) skill
-    or a professional/programming skill
-    """
-
-    class Meta:
-        verbose_name_plural = 'Skills'
-        verbose_name = 'Skill'
-
-    translations = TranslatedFields(
-        name=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
-        image=models.FileField(blank=True, null=True, upload_to='skills'),
-        is_key=models.BooleanField(default=False),
-    )
-
-
 class Media(models.Model):
     """
     DB table that contains media files the user has uploaded to the site. Contains
@@ -109,6 +86,13 @@ class Certificate(TranslatableModel):
     )
 
 
+class Image(models.Model):
+    """
+    DB table for storing project images
+    """
+    image = models.ImageField(upload_to='portfolio')
+
+
 class PortfolioProject(TranslatableModel):
     """
     DB table for portfolio projects displayed on the site. Contains the
@@ -129,12 +113,13 @@ class PortfolioProject(TranslatableModel):
     translations = TranslatedFields(
         name=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
         description=models.CharField(max_length=TEXT_MAX_LEN, blank=True, null=True),
-        image=models.ImageField(blank=True, null=True, upload_to='portfolio'),
         slug=models.SlugField(null=True, blank=True),
         is_active=models.BooleanField(default=True),
         source_code_url=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
         live_url=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
     )
+
+    images = models.ManyToManyField(Image, related_name='portfolio_projects', blank=True)
 
     def save(self, *args, **kwargs):
         """
