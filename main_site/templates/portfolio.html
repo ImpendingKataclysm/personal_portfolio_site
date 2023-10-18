@@ -23,34 +23,52 @@
     </section>
 
     <section>
-        <div class="lightBg p-5">
-            <div class="container">
-                <div class="portfolioContentMain">
-                    <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
-                        {% for row in object_list %}
-                            <div class="col-md-6 pColMain">
-                                <div class="pCol">
-                                    {% if row.live_url %}
-                                        <a href="{{ row.live_url }}" target="_blank">
-                                            <h3 class="smTitle">{{ row.name }}</h3>
-                                        </a>
-                                    {% else %}
-                                        <a href="{% url 'main_site:portfolio_detail' row.slug %}">
-                                            <h3 class="smTitle">{{ row.name }}</h3>
-                                        </a>
-                                    {% endif %}
-                                    <img
-                                        src="{{ row.image.url }}"
-                                        alt="{{ row.name }}"
-                                        class="pImg"
-                                    />
-                                    <p>{{ row.description }}</p>
-                                    <a href="{{ row.source_code_url }}" target="_blank">
-                                        {% trans 'Source Code' %}
-                                    </a>
+        <div class="p-5">
+            <div class="container-fluid">
+                <div class="sliderOuter">
+                    <div class="swiper portfolioSlider">
+                        <div class="swiper-wrapper">
+                            {% for row in object_list %}
+                                <div class="swiper-slide">
+                                    <div class="cardStyle1 g-4 align-items-center w-90">
+                                        <div class="col-md-auto">
+                                            <figure class="cardImgCol w-100">
+                                                <img
+                                                    src="{{ row.image.url }}"
+                                                    alt="{{ row.name }}"
+                                                    class="w-100"
+                                                />
+                                            </figure>
+                                        </div>
+                                        <div class="col-md">
+                                            <div class="portfolioContentCol">
+                                                <div class="projectHeading">
+                                                    <h3 class="mdTitle">
+                                                    {% if row.live_url %}
+                                                        <a href="{{ row.live_url }}" target="_blank">
+                                                            {{ row.name }}
+                                                        </a>
+                                                    {% else %}
+                                                        <a href="{% url 'main_site:portfolio_detail' row.slug %}">
+                                                            {{ row.name }}
+                                                        </a>
+                                                    {% endif %}
+                                                </h3>
+                                                    <span class="dateLbl">
+                                                        <a href="{{ row.source_code_url }}" target="_blank">
+                                                            {% trans 'Source Code' %}
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                                <p>{{ row.description }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        {% endfor %}
+                            {% endfor %}
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
             </div>

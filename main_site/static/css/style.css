@@ -553,10 +553,6 @@ body.navToggleActive {
     height: 100%;
 }
 
-.pImg {
-    width: 100%;
-}
-
 .portfolioRow .pColMain:nth-child(2n-1) .pCol {
     margin-top: 6rem;
 }
