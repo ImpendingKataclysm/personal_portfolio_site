@@ -99,6 +99,15 @@ li, p, dd {
     text-shadow: 1px 1px 10px var(--primaryColor);
 }
 
+.underlined {
+    border-bottom: 2px solid var(--baseColor);
+    margin-bottom: 1.5rem;
+}
+
+.underlined h3 {
+    margin-bottom: 0;
+}
+
 /* Links and Buttons */
 
 a {
@@ -115,6 +124,10 @@ a, .btn {
     -o-transition: all 300ms ease-in-out 0s;
     transition: all 300ms ease-in-out 0s;
     text-decoration: none;
+}
+
+a.simpleLink {
+    font-size: 1.2rem;
 }
 
 .btn {
@@ -800,6 +813,10 @@ body.navToggleActive {
 
     p, dd, li {
         font-size: 0.9rem;
+    }
+
+    a.simpleLink {
+        font-size: 0.8rem;
     }
 
     .btn {
