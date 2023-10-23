@@ -86,13 +86,6 @@ class Certificate(TranslatableModel):
     )
 
 
-class Image(models.Model):
-    """
-    DB table for storing project images
-    """
-    image = models.ImageField(upload_to='portfolio')
-
-
 class PortfolioProject(TranslatableModel):
     """
     DB table for portfolio projects displayed on the site. Contains the
@@ -100,7 +93,6 @@ class PortfolioProject(TranslatableModel):
     - date
     - name
     - description
-    - image
     - slug
     - is_active
     - source_code_url: url for the source code on GitHub
@@ -118,8 +110,6 @@ class PortfolioProject(TranslatableModel):
         source_code_url=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
         live_url=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
     )
-
-    images = models.ManyToManyField(Image, related_name='portfolio_projects', blank=True)
 
     def save(self, *args, **kwargs):
         """
@@ -140,6 +130,19 @@ class PortfolioProject(TranslatableModel):
         filename
         """
         return f'/portfolio/{self.slug}'
+
+
+class Image(models.Model):
+    """
+    DB table for storing project images
+    """
+    image = models.ImageField(upload_to='portfolio')
+    project = models.ForeignKey(
+        PortfolioProject,
+        related_name='images',
+        on_delete=models.CASCADE,
+        null=True
+    )
 
 
 class ContactMessage(models.Model):
