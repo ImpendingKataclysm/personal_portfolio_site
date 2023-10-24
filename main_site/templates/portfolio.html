@@ -21,59 +21,65 @@
             </div>
         </div>
     </section>
-
     <section>
-        <div class="p-5">
-            <div class="container-fluid">
-                <div class="sliderOuter">
-                    <div class="swiper portfolioSlider">
-                        <div class="swiper-wrapper">
-                            {% for row in object_list %}
-                                <div class="swiper-slide sliderOuter">
-                                    <div class="cardStyle1 g-4 align-items-center w-90">
-                                        <div class="col-md-auto">
-                                            {% for image in row.images.all %}
-                                                <figure class="cardImgCol w-100">
-                                                    <img
-                                                        src="{{ image.image.url }}"
-                                                        alt="{{ row.name }}"
-                                                        class="d-block w-100"
-                                                    />
-                                                </figure>
-                                            {% endfor %}
+        <div class="container-fluid">
+            <div class="sliderOuter">
+                <div class="swiper portfolioSlider">
+                    <div class="swiper-wrapper">
+                        {% for row in object_list %}
+                            <div class="swiper-slide">
+                                <div class="cardStyle1 g-4 align-items-center w-90">
+                                    <div class="col-md-auto">
+                                        <div class="swiper imageSlider">
+                                            <div class="swiper-wrapper">
+                                                {% for image in row.images.all %}
+                                                    <div class="swiper-slide align-items-center">
+                                                        <figure class="cardImgCol">
+                                                            <img
+                                                                src="{{ image.image.url }}"
+                                                                alt="{{ row.name }}"
+                                                                class="d-block projectImg"
+                                                            >
+                                                        </figure>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="swiper-button-prev-img swiper-button-prev"></div>
+                                            <div class="swiper-button-next-img swiper-button-next"></div>
+                                            <div class="swiper-pagination-img swiper-pagination"></div>
                                         </div>
-                                        <div class="col-md">
-                                            <div class="portfolioContentCol">
-                                                <div class="projectHeading">
-                                                    <h3 class="mdTitle">
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="portfolioContentCol">
+                                            <div class="projectHeading">
+                                                <h3 class="mdTitle">
                                                     {% if row.live_url %}
                                                         <a href="{{ row.live_url }}" target="_blank">
                                                             {{ row.name }}
                                                         </a>
                                                     {% else %}
-                                                        <a href="{% url 'main_site:portfolio_detail' row.slug %}">
-                                                            {{ row.name }}
-                                                        </a>
+                                                        {{ row.name }}
                                                     {% endif %}
                                                 </h3>
-                                                    <span class="dateLbl">
-                                                        <a href="{{ row.source_code_url }}" target="_blank">
-                                                            {% trans 'Source Code' %}
-                                                        </a>
-                                                    </span>
-                                                </div>
-                                                <p>{{ row.description }}</p>
+                                                <span class="dateLbl">
+                                                    <a href="{{ row.source_code_url }}" target="_blank">
+                                                        {% trans 'Source Code' %}
+                                                    </a>
+                                                </span>
                                             </div>
+                                            <p>{{ row.description }}</p>
                                         </div>
                                     </div>
                                 </div>
-                            {% endfor %}
-                        </div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                            </div>
+                        {% endfor %}
                     </div>
+                    <div class="swiper-button-prev-main swiper-button-prev"></div>
+                    <div class="swiper-button-next-main swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
     </section>
+
 {% endblock %}

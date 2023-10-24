@@ -28,31 +28,53 @@ $(window).scroll(() => {
    }
 });
 
-/* Home Page Sliders */
+/* Sliders */
 
-class MySlider {
-    constructor(selector) {
-        this.selector = selector;
-        this.init();
+const certificatesSlider = new Swiper(
+    '.certificatesSlider',
+    {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: `.swiper-button-next`,
+            prevEl: `.swiper-button-prev`,
+        },
+        pagination: {
+            el: `.swiper-pagination`,
+            clickable: true,
+        },
     }
+);
 
-    init() {
-        const swiperOptions = {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            navigation: {
-                nextEl: `${this.selector} .swiper-button-next`,
-                prevEl: `${this.selector} .swiper-button-prev`,
-            },
-            pagination: {
-                el: `${this.selector} .swiper-pagination`,
-                clickable: true,
-            },
-        };
-
-        this.swiper = new Swiper(this.selector, swiperOptions);
+const portfolioSlider = new Swiper(
+    '.portfolioSlider',
+    {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: `.swiper-button-next-main`,
+            prevEl: `.swiper-button-prev-main`,
+        },
+        pagination: {
+            el: `.swiper-pagination`,
+            clickable: true,
+        },
     }
-}
+);
 
-const certificatesSlider = new MySlider('.certificatesSlider');
-const portfolioSlider = new MySlider('.portfolioSlider');
+const imageSlider = new Swiper(
+    '.imageSlider',
+    {
+        slidesPerView: 1,
+        spaceBetween: 5,
+        navigation: {
+            nextEl: `.swiper-button-next-img`,
+            prevEl: `.swiper-button-prev-img`,
+        },
+        pagination: {
+            el: `.swiper-pagination-img`,
+            clickable: true,
+        },
+        nested: true,
+    }
+);

@@ -1,7 +1,8 @@
-from django.shortcuts import render
+import json
+
 from django.views import generic
 from django.contrib import messages
-from django.utils.translation import gettext_lazy as _
+from django.core.serializers.json import DjangoJSONEncoder
 from . import models, forms
 
 
@@ -13,7 +14,6 @@ class HomeView(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
         me = models.SiteOwner.objects.first()
         certificates = models.Certificate.objects.all()
         projects = models.PortfolioProject.objects.all()
@@ -57,6 +57,18 @@ class PortfolioView(generic.ListView):
     queryset = models.PortfolioProject.objects.all()
     template_name = 'portfolio.html'
     paginate_by = 10
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(PortfolioView, self).get_context_data(**kwargs)
+
+        json_data = json.dumps(
+            list(models.PortfolioProject.objects.values()),
+            cls=DjangoJSONEncoder
+        )
+
+        context['object_list_json'] = json_data
+
+        return context
 
 
 class PortfolioProjectDetailView(generic.DetailView):
