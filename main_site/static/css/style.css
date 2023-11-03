@@ -187,23 +187,6 @@ a.simpleLink {
 
 /* Language Selection */
 
-.language_wrap {
-    width: 100%;
-    margin-bottom: 1.5rem;
-}
-
-ul.languages {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.languages a {
-    display: inline-block;
-    height: 100%;
-    text-align: center;
-}
-
 .tooltip.language-tooltip .tooltip-inner {
     background-color: var(--baseColor);
     color: var(--secondaryDarkColor);
@@ -211,14 +194,14 @@ ul.languages {
     transition: all 300ms ease-in-out 0s;
 }
 
-.languages img {
+.lang-flag {
     max-width: 3rem;
     box-shadow: 1px 1px 3px var(--primaryColor),
                 -1px -1px 3px var(--primaryColor);
     transition: all 300ms ease-in-out 0s;
 }
 
-.languages img:hover, .languages img:focus {
+.lang-flag:hover, .lang-flag:focus {
     box-shadow: 1px 1px 6px var(--baseColor),
                 -1px -1px 6px var(--baseColor);
 }
