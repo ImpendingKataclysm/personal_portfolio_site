@@ -24,9 +24,24 @@
                             <div class="navCollapseCol">
                                 <div class="navCol">
                                     <ul>
-                                        <li><a href="{% url 'main_site:home' %}">{% trans 'Home' %}</a></li>
-                                        <li><a href="{% url 'main_site:portfolio' %}">{% trans 'Portfolio' %}</a></li>
-                                        <li><a href="{% url 'main_site:contact' %}">{% trans 'Contact' %}</a></li>
+                                        <li>
+                                            <a
+                                                href="{% url 'main_site:home' %}"
+                                                class="navLink"
+                                            >
+                                                {% trans 'Home' %}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'main_site:portfolio' %}">
+                                                {% trans 'Portfolio' %}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'main_site:contact' %}">
+                                                {% trans 'Contact' %}
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
