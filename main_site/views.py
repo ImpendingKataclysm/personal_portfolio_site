@@ -69,18 +69,3 @@ class PortfolioView(generic.ListView):
         context['object_list_json'] = json_data
 
         return context
-
-
-class PortfolioProjectDetailView(generic.DetailView):
-    """
-    Display information from the selected Portfolio Project on the Portfolio
-    Detail Page.
-    """
-    model = models.PortfolioProject
-    template_name = 'portfolio_detail.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(PortfolioProjectDetailView, self).get_context_data()
-        context['heading'] = str(self.get_object().name)
-
-        return context
