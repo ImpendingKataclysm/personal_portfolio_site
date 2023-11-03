@@ -334,10 +334,6 @@ body.navToggleActive {
     padding: 3.1rem 0;
 }
 
-.socialCol li {
-    display: inline-block;
-}
-
 .socialCol li + li {
     padding-left: 2.2rem;
 }
