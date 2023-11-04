@@ -385,7 +385,6 @@ body.navToggleActive {
     margin-left: 2rem;
     width: 18rem;
     height: 18rem;
-    position: relative;
     box-shadow: 1px 1px 10px var(--primaryDarkColor),
                 -1px -1px 10px var(--primaryDarkColor),
                 -1px 1px 10px var(--primaryDarkColor),
@@ -397,15 +396,9 @@ body.navToggleActive {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    position: relative;
 }
 
 /* Sliders */
-
-.swiper-slide {
-    width: 100%;
-    height: 100%;
-}
 
 .cardStyle1 {
     padding: 2.1rem;
