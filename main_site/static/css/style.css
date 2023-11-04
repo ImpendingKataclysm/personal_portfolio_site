@@ -396,10 +396,6 @@ body.navToggleActive {
     position: relative;
 }
 
-.bannerBtnCol {
-    padding-top: 0.9rem;
-}
-
 /* Sliders */
 
 .sliderOuter {
@@ -605,10 +601,6 @@ body.navToggleActive {
         margin-left: 1.25rem;
         width: 13rem;
         height: 13rem;
-    }
-
-    .bannerBtnCol {
-        padding-top: 0.6rem;
     }
 
     .keySkillCol {
