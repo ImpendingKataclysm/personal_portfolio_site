@@ -354,10 +354,6 @@ body.navToggleActive {
 
 /* Sections */
 
-.sectionSpace {
-    padding: 5rem 0;
-}
-
 .sectionSpaceSm {
     margin-top: 3.5rem;
     padding: 1.575rem 0;
@@ -581,10 +577,6 @@ body.navToggleActive {
         padding: 1.8rem;
     }
 
-    .sectionSpace {
-        padding: 1rem;
-    }
-
     .bannerSection {
         padding: 9.3rem 0 3.6rem;
     }
@@ -739,10 +731,6 @@ body.navToggleActive {
         font-size: 0.7rem;
     }
 
-    .sectionSpace {
-        padding: 3.5rem;
-    }
-
     .bannerSection {
         padding: 7.5rem 0 3.1rem;
     }
@@ -770,10 +758,6 @@ body.navToggleActive {
 
     .lgTitle {
         font-size: 1.7rem;
-    }
-
-    .sectionSpace {
-        padding: 2.5rem;
     }
 
     .cardStyle1 {
