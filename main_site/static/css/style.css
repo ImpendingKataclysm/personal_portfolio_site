@@ -355,7 +355,6 @@ body.navToggleActive {
 
 .bannerSection {
     padding: 11.25rem 0 5rem;
-    height: 100vh;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
