@@ -191,7 +191,6 @@ a.simpleLink {
     background-color: var(--baseColor);
     color: var(--secondaryDarkColor);
     font-size: 1.2rem;
-    transition: all 300ms ease-in-out 0s;
 }
 
 .lang-flag {
@@ -351,13 +350,6 @@ body.navToggleActive {
 }
 
 /* Home Page */
-
-/* Sections */
-
-.sectionSpaceSm {
-    margin-top: 3.5rem;
-    padding: 1.575rem 0;
-}
 
 /* Banner Section */
 
