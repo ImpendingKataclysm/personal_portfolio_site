@@ -185,6 +185,10 @@ a.simpleLink {
     box-shadow: 0 0 1.5rem var(--shadowColor);
 }
 
+.logoCol {
+    max-width: 6.5rem;
+}
+
 /* Language Selection */
 
 .tooltip.language-tooltip .tooltip-inner {
@@ -397,10 +401,6 @@ body.navToggleActive {
 }
 
 /* Sliders */
-
-.sliderOuter {
-    position: relative;
-}
 
 .swiper-slide {
     width: 100%;
