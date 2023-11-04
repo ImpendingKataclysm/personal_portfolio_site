@@ -76,34 +76,42 @@
                         <div class="swiper-wrapper">
                             {% for project in projects %}
                                 <div class="swiper-slide">
-                                    <div class="cardStyle1 g-4 align-items-center">
+                                    <div class="m-auto g-4 align-items-center p-4 rounded lightBg w-75">
                                         <div class="col-md-auto">
-                                            <div class="cardImgCol">
-                                                <img src="{{ project.images.first.image.url }}" alt="{{ project.name }}">
-                                            </div>
+                                            <figure class="cardImgCol rounded">
+                                                <img
+                                                    src="{{ project.images.first.image.url }}"
+                                                    alt="{{ project.name }}"
+                                                    class="rounded"
+                                                >
+                                            </figure>
                                         </div>
                                         <div class="col-md">
-                                            <div class="portfolioContentCol">
-                                                <div class="projectHeading">
-                                                    <h4 class="mdTitle">
+                                            <div class="portfolioContentCol m-auto">
+                                                <div class="d-flex justify-content-between my-4">
+                                                    <h3 class="mdTitle">
                                                         {% if project.live_url %}
-                                                            <a href="{{ project.live_url }}" target="_blank">
+                                                            <a
+                                                                href="{{ project.live_url }}"
+                                                                target="_blank"
+                                                            >
                                                                 {{ project.name }}
                                                             </a>
                                                         {% else %}
                                                             {{ project.name }}
                                                         {% endif %}
-                                                    </h4>
-                                                    <span class="dateLbl">
+                                                    </h3>
+                                                    <span>
                                                         <a
                                                             href="{{ project.source_code_url }}"
                                                             target="_blank"
+                                                            class="codeLink d-inline-block text-center p-2 ms-1 rounded-pill"
                                                         >
                                                             {% trans 'Source Code' %}
                                                         </a>
                                                     </span>
                                                 </div>
-                                                <p>{{ project.description }}</p>
+                                                <p class="mb-0">{{ project.description }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -134,16 +142,24 @@
                         <div class="swiper-wrapper">
                             {% for cert in certificates %}
                                 <div class="swiper-slide">
-                                    <div class="cardStyle1">
-                                        <h4 class="mdTitle cs1Title">{{ cert.name }}</h4>
-                                        <figure class="cardImgCol">
-                                            <img src="{{ cert.image.url }}" alt="{{ cert.name }}" />
+                                    <div class="p-4 lightBg rounded w-75 m-auto">
+                                        <h3 class="mdTitle">{{ cert.name }}</h3>
+                                        <figure class="cardImgCol rounded">
+                                            <img
+                                                src="{{ cert.image.url }}"
+                                                alt="{{ cert.name }}"
+                                                class="rounded"
+                                            />
                                         </figure>
-                                        <ul class="cardOptionCol">
-                                            <li>{{ cert.date.date }}</li>
-                                            <li>{{ cert.issued_by }}</li>
+                                        <ul class="cardOptionCol pt-3 pb-3">
+                                            <li class="d-inline-block align-middle position-relative">
+                                                {{ cert.date.date }}
+                                            </li>
+                                            <li class="nextItem ps-5 d-inline-block align-middle position-relative">
+                                                { cert.issued_by }}
+                                            </li>
                                         </ul>
-                                        <p>{{ cert.description }}</p>
+                                        <p class="mb-0">{{ cert.description }}</p>
                                     </div>
                                 </div>
                             {% endfor %}

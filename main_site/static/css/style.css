@@ -60,7 +60,6 @@ li, p, dd {
 
 .lightBg {
     background-color: var(--lightBg);
-    padding: 1rem;
 }
 
 /* Titles and Text */
@@ -400,52 +399,19 @@ body.navToggleActive {
 
 /* Sliders */
 
-.cardStyle1 {
-    padding: 2.1rem;
-    background-color: var(--lightBg);
-    border-radius: 0.25rem;
-    width: 75%;
-    margin: auto;
-}
-
-.cardStyle1 > p:last-child {
+.swiper-slide > p:last-child {
     margin-bottom: 0;
 }
 
-.cardStyle1 h4, .cardStyle1 p, .cardStyle1 li {
+.swiper-slide h3, .swiper-slide p, .swiper-slide li {
     text-shadow: 1px 1px 10px var(--secondaryDarkColor);
 }
 
-.cardStyle1 h4 {
-    margin-bottom: 0;
-    line-height: 1.5;
-}
-
-.cs1Title {
-    min-height: 7rem;
-}
-
-.cardOptionCol {
-    padding: 0.2rem 0 0.4rem;
-}
-
-.cardOptionCol > li {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-}
-
-.cardOptionCol > li + li {
-    padding-left: 2.5rem;
-}
-
-.cardOptionCol > li + li:before {
+.nextItem:before {
     content: '|';
     position: absolute;
     left: 1rem;
 }
-
-/* Projects Section */
 
 .swiper-button-prev-main,
 .swiper-button-next-main {
@@ -463,57 +429,24 @@ body.navToggleActive {
     right: 0;
 }
 
-.projectHeading {
-    display: flex;
-    justify-content: space-between;
-    margin: 1.5rem 0;
-}
-
 .cardImgCol img {
-    border-radius: 6px;
     -o-object-fit: cover;
     object-fit: cover;
 }
 
-.portfolioContentCol > p:last-child {
-    margin-bottom: 0;
+.portfolioContentCol {
+    width: 80%;
 }
 
-.dateLbl a {
-    display: inline-block;
-    text-align: center;
-    padding: 0.5rem;
+.codeLink {
     background-color: var(--secondaryDarkColor);
-    border-radius: 1.2rem;
     color: #fff;
     font-size: 1.2rem;
     font-weight: var(--bold);
 }
 
-/* Portfolio Page */
-
-.portfolioContentMain {
-    position: relative;
-    z-index: 1;
-    padding: 3.1rem 0;
-}
-
-.pCol {
-    height: 100%;
-}
-
-.portfolioRow .pColMain:nth-child(2n-1) .pCol {
-    margin-top: 6rem;
-}
-
-.portfolioContentCol {
-    width: 80%;
-    margin: auto;
-}
-
 .projectImg {
     max-height: 20rem;
-    margin: auto;
 }
 
 /* For larger screens */
@@ -558,10 +491,6 @@ body.navToggleActive {
     .bannerSection {
         padding: 9.3rem 0 3.6rem;
     }
-
-    .cs1Title {
-        min-height: 4.5rem;
-    }
 }
 
 @media screen and (max-width: 991px) {
@@ -596,24 +525,8 @@ body.navToggleActive {
         height: 13rem;
     }
 
-    .keySkillCol {
-        width: 14rem;
-    }
-
-    .keySkillCard + .keySkillCard {
-        padding-top: 1.2rem;
-    }
-
-    .cs1Title {
-        min-height: auto;
-    }
-
     .portfolioContentMain {
         padding: 1.8rem;
-    }
-
-    .portfolioRow .pColMain:nth-child(2n-1) .pCol {
-        margin-top: 4.3rem;
     }
 }
 
@@ -714,10 +627,6 @@ body.navToggleActive {
         width: 10rem;
         height: 10rem;
     }
-
-    .portfolioRow .pColMain:nth-child(2n-1) .pCol {
-        margin-top: 0;
-    }
 }
 
 @media screen and (max-width: 575px) {
@@ -732,10 +641,6 @@ body.navToggleActive {
 
     .lgTitle {
         font-size: 1.7rem;
-    }
-
-    .cardStyle1 {
-        padding: 0.9rem;
     }
 
     .projectImg {
@@ -768,8 +673,7 @@ body.navToggleActive {
         padding: 0.9rem;
     }
 
-    .dateLbl a {
-        font-size: 0.9rem;
-        padding: 0.2rem;
+    .codeLink {
+        font-size: 0.8rem;
     }
 }

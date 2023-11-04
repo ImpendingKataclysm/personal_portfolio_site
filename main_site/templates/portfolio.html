@@ -28,17 +28,17 @@
                     <div class="swiper-wrapper">
                         {% for row in object_list %}
                             <div class="swiper-slide">
-                                <div class="cardStyle1 g-4 align-items-center w-90">
+                                <div class="m-auto g-4 align-items-center w-90 p-4 lightBg rounded w-75">
                                     <div class="col-md-auto">
                                         <div class="swiper imageSlider">
                                             <div class="swiper-wrapper">
                                                 {% for image in row.images.all %}
                                                     <div class="swiper-slide align-items-center">
-                                                        <figure class="cardImgCol">
+                                                        <figure class="cardImgCol rounded">
                                                             <img
                                                                 src="{{ image.image.url }}"
                                                                 alt="{{ row.name }}"
-                                                                class="d-block projectImg"
+                                                                class="d-block m-auto projectImg rounded"
                                                             >
                                                         </figure>
                                                     </div>
@@ -50,8 +50,8 @@
                                         </div>
                                     </div>
                                     <div class="col-md">
-                                        <div class="portfolioContentCol">
-                                            <div class="projectHeading">
+                                        <div class="portfolioContentCol m-auto">
+                                            <div class="d-flex justify-content-between my-4">
                                                 <h3 class="mdTitle">
                                                     {% if row.live_url %}
                                                         <a href="{{ row.live_url }}" target="_blank">
@@ -61,13 +61,17 @@
                                                         {{ row.name }}
                                                     {% endif %}
                                                 </h3>
-                                                <span class="dateLbl">
-                                                    <a href="{{ row.source_code_url }}" target="_blank">
+                                                <span>
+                                                    <a
+                                                        href="{{ row.source_code_url }}"
+                                                        target="_blank"
+                                                        class="codeLink d-inline-block text-center p-2 ms-1 rounded-pill"
+                                                    >
                                                         {% trans 'Source Code' %}
                                                     </a>
                                                 </span>
                                             </div>
-                                            <p>{{ row.description }}</p>
+                                            <p class="mb-0">{{ row.description }}</p>
                                         </div>
                                     </div>
                                 </div>
