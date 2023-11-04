@@ -381,7 +381,6 @@ body.navToggleActive {
     margin-left: 2rem;
     width: 18rem;
     height: 18rem;
-    border-radius: 50%;
     position: relative;
     box-shadow: 1px 1px 10px var(--primaryDarkColor),
                 -1px -1px 10px var(--primaryDarkColor),
@@ -394,7 +393,6 @@ body.navToggleActive {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    border-radius: 50%;
     position: relative;
 }
 
