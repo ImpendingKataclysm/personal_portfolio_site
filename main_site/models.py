@@ -1,7 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
-from django.utils.translation import gettext_lazy as _
 from parler.models import TranslatableModel, TranslatedFields
 
 # Maximum character lengths for text field values
@@ -132,16 +130,22 @@ class PortfolioProject(TranslatableModel):
         return f'/portfolio/{self.slug}'
 
 
-class Image(models.Model):
+class Image(TranslatableModel):
     """
     DB table for storing project images
     """
-    image = models.ImageField(upload_to='portfolio')
+    image = models.ImageField(upload_to='portfolio', null=True, blank=True)
+
     project = models.ForeignKey(
         PortfolioProject,
         related_name='images',
         on_delete=models.CASCADE,
+        blank=True,
         null=True
+    )
+
+    translations = TranslatedFields(
+        caption=models.TextField(max_length=TEXT_MAX_LEN, null=True, blank=True),
     )
 
 
