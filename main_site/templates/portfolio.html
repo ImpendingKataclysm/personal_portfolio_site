@@ -30,10 +30,24 @@
                             <div class="swiper-slide">
                                 <div class="m-auto g-4 align-items-center w-90 p-4 lightBg rounded w-75">
                                     <div class="col-md-auto">
-                                        <div class="swiper imageSlider">
-                                            <div class="swiper-wrapper">
+                                        <div class="carousel slide" id="imgSlideshow{{ row.id }}">
+                                            {% if row.images.all|length > 1 %}
+                                                <div class="carousel-indicators">
+                                                    {% for image in row.images.all %}
+                                                        <button
+                                                            type="button"
+                                                            data-bs-target="#imgSlideshow{{ row.id }}"
+                                                            data-bs-slide-to="{{ forloop.counter0 }}"
+                                                            {% if forloop.counter0 == 0 %}
+                                                                class="active"
+                                                            {% endif %}
+                                                        ></button>
+                                                    {% endfor %}
+                                                </div>
+                                            {% endif %}
+                                            <div class="carousel-inner">
                                                 {% for image in row.images.all %}
-                                                    <div class="swiper-slide align-items-center">
+                                                    <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}">
                                                         <figure class="cardImgCol rounded">
                                                             <img
                                                                 src="{{ image.image.url }}"
@@ -44,9 +58,24 @@
                                                     </div>
                                                 {% endfor %}
                                             </div>
-                                            <div class="swiper-button-prev-img swiper-button-prev"></div>
-                                            <div class="swiper-button-next-img swiper-button-next"></div>
-                                            <div class="swiper-pagination-img swiper-pagination"></div>
+                                            {% if row.images.all|length > 1 %}
+                                                <button
+                                                    class="carousel-control-prev"
+                                                    data-bs-slide="prev"
+                                                    type="button"
+                                                    data-bs-target="#imgSlideshow{{ row.id }}"
+                                                >
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </button>
+                                                <button
+                                                    class="carousel-control-next"
+                                                    data-bs-slide="next"
+                                                    type="button"
+                                                    data-bs-target="#imgSlideshow{{ row.id }}"
+                                                >
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </button>
+                                            {% endif %}
                                         </div>
                                     </div>
                                     <div class="col-md">
