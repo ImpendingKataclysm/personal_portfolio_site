@@ -445,10 +445,6 @@ body.navToggleActive {
     font-weight: var(--bold);
 }
 
-.projectImg {
-    max-height: 20rem;
-}
-
 /* For larger screens */
 
 @media screen and (min-width: 992px) {
@@ -641,10 +637,6 @@ body.navToggleActive {
 
     .lgTitle {
         font-size: 1.7rem;
-    }
-
-    .projectImg {
-        max-height: 10rem;
     }
 }
 
