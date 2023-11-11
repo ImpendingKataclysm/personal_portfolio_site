@@ -2,8 +2,27 @@
 
 {% if messages %}
     {% for message in messages %}
+        <div class="modal fade" id="messageModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-primary bg-opacity-50">
+                    <div class="modal-header bg-dark bg-opacity-50">
+                        <button
+                            type="button"
+                            class="btn btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+                    <div class="modal-body p-5">
+                        <p>{{ message }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script>
-            alert('{{ message }}');
+            document.addEventListener('DOMContentLoaded', () => {
+                const messageModal = new bootstrap.Modal(document.getElementById('messageModal'));
+                messageModal.show();
+            })
         </script>
     {% endfor %}
 {% endif %}
