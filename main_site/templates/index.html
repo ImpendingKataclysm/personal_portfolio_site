@@ -83,6 +83,12 @@
                                                     src="{{ project.images.first.image.url }}"
                                                     alt="{{ project.name }}"
                                                     class="rounded"
+                                                    data-bs-toggle="popover"
+                                                    data-bs-placement="bottom"
+                                                    data-bs-trigger="hover"
+                                                    title="{{ project.name }}"
+                                                    data-bs-content="{{ project.description }}"
+                                                    data-bs-template='<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header projectTitle"></h3><div class="popover-body"></div></div>'
                                                 >
                                             </figure>
                                         </div>
@@ -114,7 +120,6 @@
                                                         </a>
                                                     </span>
                                                 </div>
-                                                <p class="mb-0">{{ project.description }}</p>
                                             </div>
                                         </div>
                                     </div>

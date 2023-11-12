@@ -1,9 +1,15 @@
-/* Enable Tooltips */
+/* Enable Tooltips and Popovers */
 
 const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 const tooltipTriggers = Array.from(tooltips);
 const tooltipList = tooltipTriggers.map((tooltipTriggerEl) => (
     new bootstrap.Tooltip(tooltipTriggerEl)
+));
+
+const popovers = document.querySelectorAll('[data-bs-toggle="popover"]');
+const popoverTriggers = Array.from(popovers);
+const popoverList = popoverTriggers.map((popoverTriggerEl) => (
+    new bootstrap.Popover(popoverTriggerEl)
 ));
 
 /* Nav Menu */
