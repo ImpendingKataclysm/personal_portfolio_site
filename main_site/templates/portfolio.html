@@ -88,7 +88,12 @@
                                             <div class="d-flex justify-content-between my-4">
                                                 <h3 class="mdTitle">
                                                     {% if row.live_url %}
-                                                        <a href="{{ row.live_url }}" target="_blank">
+                                                        <a href="{{ row.live_url }}"
+                                                           target="_blank"
+                                                           data-bs-toggle="tooltip"
+                                                           data-bs-placement="bottom"
+                                                           title="{% trans 'Visit site' %}"
+                                                        >
                                                             {{ row.name }}
                                                         </a>
                                                     {% else %}

@@ -1,12 +1,10 @@
-/* Language Options*/
+/* Enable Tooltips */
 
-$(document).ready(function () {
-    $('[data-toggle="tooltip"]').tooltip({
-        placement: 'bottom',
-        template:
-            '<div class="tooltip language-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
-    });
-});
+const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipTriggers = Array.from(tooltips);
+const tooltipList = tooltipTriggers.map((tooltipTriggerEl) => (
+    new bootstrap.Tooltip(tooltipTriggerEl)
+));
 
 /* Nav Menu */
 
@@ -20,7 +18,7 @@ navBtn.addEventListener('click', (e) => {
 
 /* Style Fixed Header on Scroll */
 
-$(window).scroll(() => {
+$(window).scroll(function() {
    if ($(this).scrollTop() > 10) {
        body.classList.add('fixedHeader');
    } else {
@@ -59,22 +57,5 @@ const portfolioSlider = new Swiper(
             el: `.swiper-pagination`,
             clickable: true,
         },
-    }
-);
-
-const imageSlider = new Swiper(
-    '.imageSlider',
-    {
-        slidesPerView: 1,
-        spaceBetween: 5,
-        navigation: {
-            nextEl: `.swiper-button-next-img`,
-            prevEl: `.swiper-button-prev-img`,
-        },
-        pagination: {
-            el: `.swiper-pagination-img`,
-            clickable: true,
-        },
-        nested: true,
     }
 );

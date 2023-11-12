@@ -12,7 +12,9 @@
                     {% with request.path|slice:"3:" as trimmed_path %}
                         <a
                             href="/{{ language.code }}{{ trimmed_path }}"
-                            data-toggle="tooltip"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="bottom"
+                            data-bs-template='<div class="tooltip language-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
                             title="{{ language.code|upper }}"
                         >
                             <img

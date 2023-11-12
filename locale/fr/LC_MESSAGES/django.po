@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 13:52-0700\n"
-"PO-Revision-Date: 2023-10-10 22:43+0000\n"
+"POT-Creation-Date: 2023-11-11 16:48-0800\n"
+"PO-Revision-Date: 2023-11-11 16:49+0000\n"
 "Last-Translator: Katie Janzen <ktjanzen42@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -23,64 +23,53 @@ msgstr ""
 msgid "Feel free to send me a message!"
 msgstr "N'hésitez-pas de m'envoyer un message!"
 
-#: .\main_site\templates\contact.html:31
+#: .\main_site\templates\contact.html:29
 msgid "Name"
 msgstr "Nom"
 
-#: .\main_site\templates\contact.html:35
+#: .\main_site\templates\contact.html:33
 msgid "Email"
 msgstr "E-mail"
 
-#: .\main_site\templates\contact.html:38
+#: .\main_site\templates\contact.html:36
 msgid "I won't share your email with anyone else!"
 msgstr "Je ne partagerai votre e-mail avec personne!"
 
-#: .\main_site\templates\contact.html:42
+#: .\main_site\templates\contact.html:40
 msgid "Message"
 msgstr "Message"
 
-#: .\main_site\templates\contact.html:49
+#: .\main_site\templates\contact.html:47
 msgid "Send"
 msgstr "Envoyer"
 
-#: .\main_site\templates\index.html:25
-msgid "Full-Stack Developer"
-msgstr "Développeuse full-stack"
-
-#: .\main_site\templates\index.html:27
-msgid "This is a test bio."
-msgstr "C'est une biographie démo."
-
-#: .\main_site\templates\index.html:36
+#: .\main_site\templates\index.html:41
 msgid "Download Resume"
 msgstr "Télécharger le CV"
 
-#: .\main_site\templates\index.html:44
-#: .\main_site\templates\partials\nav.html:29
+#: .\main_site\templates\index.html:49
+#: .\main_site\templates\partials\nav.html:42
 msgid "Contact"
 msgstr "Contact"
 
-#: .\main_site\templates\index.html:64
-msgid "Key Skills"
-msgstr "Compétences fondamentales"
-
-#: .\main_site\templates\index.html:71
-msgid "Coding Skills"
-msgstr "Compétences en programmation"
-
-#: .\main_site\templates\index.html:112
+#: .\main_site\templates\index.html:66
 msgid "Featured Work"
 msgstr "Projets en vedette"
 
-#: .\main_site\templates\index.html:116
+#: .\main_site\templates\index.html:70
 msgid "View All"
 msgstr "Voir tout"
 
-#: .\main_site\templates\index.html:150 .\main_site\templates\portfolio.html:49
+#: .\main_site\templates\index.html:99
+msgid "Visit site"
+msgstr "Visiter le site "
+
+#: .\main_site\templates\index.html:113
+#: .\main_site\templates\portfolio.html:104
 msgid "Source Code"
 msgstr "Code source"
 
-#: .\main_site\templates\index.html:175
+#: .\main_site\templates\index.html:140
 msgid "Certificates"
 msgstr "Certificats"
 
@@ -96,11 +85,11 @@ msgstr "Tous droits réservés"
 msgid "Created by"
 msgstr "Créé par"
 
-#: .\main_site\templates\partials\nav.html:27
+#: .\main_site\templates\partials\nav.html:32
 msgid "Home"
 msgstr "Accueil"
 
-#: .\main_site\templates\partials\nav.html:28
+#: .\main_site\templates\partials\nav.html:37
 msgid "Portfolio"
 msgstr "Portfolio"
 
@@ -119,6 +108,18 @@ msgstr "Français"
 #: .\personal_portfolio_site\urls.py:25
 msgid "admin/"
 msgstr "admin/"
+
+#~ msgid "Full-Stack Developer"
+#~ msgstr "Développeuse full-stack"
+
+#~ msgid "This is a test bio."
+#~ msgstr "C'est une biographie démo."
+
+#~ msgid "Key Skills"
+#~ msgstr "Compétences fondamentales"
+
+#~ msgid "Coding Skills"
+#~ msgstr "Compétences en programmation"
 
 #~ msgid "Language"
 #~ msgstr "Langue"
