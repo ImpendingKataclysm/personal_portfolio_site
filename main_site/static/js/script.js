@@ -11,10 +11,9 @@ const tooltipList = tooltipTriggers.map((tooltipTriggerEl) => (
 const navBtn = document.querySelector('.navToggle')
 const body = document.querySelector('body')
 
-navBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    body.classList.toggle('navToggleActive');
-})
+navBtn.addEventListener('click', () => (
+   body.classList.toggle('navToggleActive')
+));
 
 /* Style Fixed Header on Scroll */
 
