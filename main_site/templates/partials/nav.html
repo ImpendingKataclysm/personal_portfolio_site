@@ -17,7 +17,7 @@
                         {% include 'partials/languages.html' %}
                         <div>
                             <div class="d-md-none">
-                                <button class="navToggle">
+                                <button class="navToggle d-block ms-auto">
                                     <span class="navToggle__text">Toggle Menu</span>
                                 </button>
                             </div>
@@ -25,12 +25,7 @@
                                 <div class="navCol">
                                     <ul>
                                         <li>
-                                            <a
-                                                href="{% url 'main_site:home' %}"
-                                                class="navLink"
-                                            >
-                                                {% trans 'Home' %}
-                                            </a>
+                                            <a href="{% url 'main_site:home' %}">{% trans 'Home' %}</a>
                                         </li>
                                         <li>
                                             <a href="{% url 'main_site:portfolio' %}">

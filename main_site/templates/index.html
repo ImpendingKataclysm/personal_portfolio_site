@@ -9,14 +9,14 @@
     <section>
         <div class="bannerSection vh-100">
             <div class="container">
-                <div class="bannerGrid g-4 g-md-3 align-items-center">
+                <div class="bannerGrid g-4 g-md-3 align-items-center mx-auto">
                     <!-- User Avatar -->
                     <div class="col-md-auto order-md-last right">
                         <figure class="bannerUserImg rounded-circle position-relative">
                             <img
                                 src="{% static 'images/avatar.jpg' %}"
                                 alt="avatar"
-                                class="rounded-circle position-relative"
+                                class="rounded-circle position-relative w-100 h-100"
                             />
                         </figure>
                     </div>
@@ -63,7 +63,9 @@
             <div class="container">
                 <div class="row underlined">
                     <div class="col">
-                        <h3 class="lgTitle shadowHeading">{% trans 'Featured Work' %}</h3>
+                        <h3 class="lgTitle shadowHeading mb-0">
+                            {% trans 'Featured Work' %}
+                        </h3>
                     </div>
                     <div class="col-auto">
                         <a href="{% url 'main_site:portfolio' %}" class="simpleLink">
@@ -93,7 +95,7 @@
                                             </figure>
                                         </div>
                                         <div class="col-md">
-                                            <div class="portfolioContentCol m-auto">
+                                            <div class="w-80 m-auto">
                                                 <div class="d-flex justify-content-between my-4">
                                                     <h3 class="mdTitle">
                                                         {% if project.live_url %}
@@ -142,7 +144,9 @@
             <div class="container">
                 <div class="row underlined">
                     <div class="col">
-                        <h3 class="lgTitle shadowHeading">{% trans 'Certificates' %}</h3>
+                        <h3 class="lgTitle shadowHeading mb-0">
+                            {% trans 'Certificates' %}
+                        </h3>
                     </div>
                 </div>
                 <div class="position-relative">
