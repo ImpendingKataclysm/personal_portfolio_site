@@ -25,20 +25,23 @@
         <div class="container lightBg rounded p-3">
             <form id="contactForm" method="POST" action="{% url 'main_site:contact' %}">
                 {% csrf_token %}
-                <div class="form-row">
-                    <label for="name" class="form-label">{% trans 'Name' %}</label>
+                <div class="form-row form-floating my-3">
                     {{ form.name }}
+                    <label for="name" class="form-label">
+                        {% trans 'Name' %}
+                    </label>
                 </div>
-                <div class="form-row">
-                    <label for="email" class="form-label">{% trans 'Email' %}</label>
+                <div class="form-row form-floating my-3">
                     {{ form.email }}
-                    <small id="emailHelp" class="form-text text-muted">
-                        {% trans "I won't share your email with anyone else!" %}
-                    </small>
+                    <label for="email" class="form-label">
+                        {% trans 'Email' %}
+                    </label>
                 </div>
-                <div class="form-row">
-                    <label for="message" class="form-label">{% trans 'Message' %}</label>
+                <div class="form-row form-floating my-3">
                     {{ form.message }}
+                    <label for="message" class="form-label">
+                        {% trans 'Message' %}
+                    </label>
                 </div>
                 <div class="form-row">
                     <input

@@ -431,6 +431,13 @@ body.navToggleActive {
     font-weight: var(--bold);
 }
 
+/* Contact Page */
+
+label {
+    color: var(--primaryDarkColor);
+    opacity: 1;
+}
+
 /* For larger screens */
 
 @media screen and (min-width: 992px) {
