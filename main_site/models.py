@@ -4,7 +4,7 @@ from parler.models import TranslatableModel, TranslatedFields
 
 # Maximum character lengths for text field values
 NAME_MAX_LEN = 100
-TEXT_MAX_LEN = 200
+TEXT_MAX_LEN = 1000
 
 # Default integer field value
 DEFAULT_INT = 80

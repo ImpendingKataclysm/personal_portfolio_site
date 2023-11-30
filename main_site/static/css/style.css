@@ -517,6 +517,10 @@ label {
     .portfolioContentMain {
         padding: 1.8rem;
     }
+
+    .projects {
+        margin-top: 100vh;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -614,6 +618,10 @@ label {
         margin-left: 0;
         width: 10rem;
         height: 10rem;
+    }
+
+    .projects {
+        margin-top: 3rem;
     }
 }
 
