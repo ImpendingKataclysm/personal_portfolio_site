@@ -373,9 +373,6 @@ body.navToggleActive {
 }
 
 .bannerUserImg {
-    margin-left: 2rem;
-    width: 18rem;
-    height: 18rem;
     box-shadow: 1px 1px 10px var(--primaryDarkColor),
                 -1px -1px 10px var(--primaryDarkColor),
                 -1px 1px 10px var(--primaryDarkColor),
@@ -510,20 +507,20 @@ label {
 
     .bannerUserImg {
         margin-left: 1.25rem;
-        width: 13rem;
-        height: 13rem;
     }
 
     .portfolioContentMain {
         padding: 1.8rem;
     }
+}
 
+@media screen and (max-width: 932px) {
     .projects {
         margin-top: 100vh;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
 
     .headerCol, .fixedHeader .headerCol {
         padding: 0.3rem 0;
@@ -616,12 +613,10 @@ label {
 
     .bannerUserImg {
         margin-left: 0;
-        width: 10rem;
-        height: 10rem;
     }
 
     .projects {
-        margin-top: 3rem;
+        margin-top: 20rem;
     }
 }
 
@@ -637,6 +632,10 @@ label {
 
     .lgTitle {
         font-size: 1.7rem;
+    }
+
+    .projects {
+        margin-top: 10rem;
     }
 }
 
@@ -667,5 +666,9 @@ label {
 
     .codeLink {
         font-size: 0.8rem;
+    }
+
+    .projects {
+        margin-top: 5rem;
     }
 }
