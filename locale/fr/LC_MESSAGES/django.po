@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-01 13:09-0800\n"
-"PO-Revision-Date: 2023-12-01 13:10+0000\n"
+"POT-Creation-Date: 2023-12-01 15:07-0800\n"
+"PO-Revision-Date: 2023-12-01 15:08+0000\n"
 "Last-Translator: Katie Janzen <ktjanzen42@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -48,29 +48,34 @@ msgstr "Télécharger le CV"
 msgid "Contact"
 msgstr "Contact"
 
-#: .\main_site\templates\index.html:63
+#: .\main_site\templates\index.html:65
 msgid "Languages and Technologies"
 msgstr "Langages et technologies"
 
-#: .\main_site\templates\index.html:76
+#: .\main_site\templates\index.html:97
 msgid "Featured Work"
 msgstr "Projets en vedette"
 
-#: .\main_site\templates\index.html:81
+#: .\main_site\templates\index.html:102
 msgid "View All"
 msgstr "Voir tout"
 
-#: .\main_site\templates\index.html:116
+#: .\main_site\templates\index.html:108
+#| msgid "Here are some of my recent projects:"
+msgid "Here are some more of my projects"
+msgstr "Voici encore un peu de mes projets"
+
+#: .\main_site\templates\index.html:141
 #: .\main_site\templates\portfolio.html:95
 msgid "Visit site"
 msgstr "Visiter le site "
 
-#: .\main_site\templates\index.html:130
+#: .\main_site\templates\index.html:155
 #: .\main_site\templates\portfolio.html:109
 msgid "Source Code"
 msgstr "Code source"
 
-#: .\main_site\templates\index.html:157
+#: .\main_site\templates\index.html:177
 msgid "Certificates"
 msgstr "Certificats"
 

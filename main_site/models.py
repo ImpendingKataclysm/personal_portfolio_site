@@ -17,11 +17,13 @@ class SiteOwner(TranslatableModel):
     - name
     - title
     - bio
+    - site description
     """
     translations = TranslatedFields(
         name=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
         title=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
         bio=models.TextField(max_length=TEXT_MAX_LEN, blank=True, null=True),
+        site_blurb=models.TextField(max_length=TEXT_MAX_LEN, blank=True, null=True),
     )
 
 
