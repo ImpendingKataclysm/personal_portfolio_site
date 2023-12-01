@@ -13,6 +13,11 @@ class MediaAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
 
 
+@admin.register(models.Technology)
+class TechnologyAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
+
+
 @admin.register(models.ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'timestamp')

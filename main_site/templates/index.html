@@ -57,134 +57,157 @@
             </div>
         </div>
     </section>
-    <!-- Projects Section -->
-    <section>
-        <div class="projects pt-5">
-            <div class="container">
-                <div class="row underlined">
-                    <div class="col">
-                        <h3 class="lgTitle shadowHeading mb-0">
-                            {% trans 'Featured Work' %}
-                        </h3>
+    <div class="home_content pt-5">
+        <!-- Technologies -->
+        <section class="container">
+            <div class="underlined">
+                <h3 class="lgTitle shadowHeading mb-0">
+                    {% trans 'Languages and Technologies' %}
+                </h3>
+            </div>
+            <div class="card primaryDark w-75 mx-auto">
+                {% for tech in technologies %}
+                    {% if forloop.counter0|divisibleby:4 %}
+                        <div class="d-flex align-items-center">
+                    {% endif %}
+                    <div class="col-3 p-3">
+                        <figure>
+                            <img
+                                src="{{ tech.image.url }}"
+                                alt="{{ tech.name }}"
+                                class="d-block mx-auto tech-img shadow"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="bottom"
+                                title="{{ tech.name }}"
+                            >
+                        </figure>
                     </div>
-                    <div class="col-auto">
-                        <a href="{% url 'main_site:portfolio' %}" class="simpleLink">
-                            {% trans 'View All' %}
-                        </a>
-                    </div>
+                    {% if forloop.last and not forloop.counter0|divisibleby:4 %}
+                        </div>
+                    {% elif forloop.counter|divisibleby:4 or forloop.last %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+        </section>
+        <!-- Projects Section -->
+        <section class="mt-5 py-5 container">
+            <div class="row underlined">
+                <div class="col">
+                    <h3 class="lgTitle shadowHeading mb-0">
+                        {% trans 'Featured Work' %}
+                    </h3>
                 </div>
-                <div class="position-relative">
-                    <div class="swiper portfolioSlider">
-                        <div class="swiper-wrapper">
-                            {% for project in projects %}
-                                <div class="swiper-slide">
-                                    <div class="m-auto g-4 align-items-center p-4 rounded lightBg w-75">
-                                        <div class="col-md-auto">
-                                            <figure class="cardImgCol rounded">
-                                                <img
-                                                    src="{{ project.images.first.image.url }}"
-                                                    alt="{{ project.name }}"
-                                                    class="rounded"
-                                                    data-bs-toggle="popover"
-                                                    data-bs-placement="bottom"
-                                                    data-bs-trigger="hover"
-                                                    title="{{ project.name }}"
-                                                    data-bs-content="{{ project.description }}"
-                                                    data-bs-template='<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header projectTitle"></h3><div class="popover-body"></div></div>'
-                                                >
-                                            </figure>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="w-80 m-auto">
-                                                <div class="d-flex justify-content-between my-4">
-                                                    <h3 class="mdTitle">
-                                                        {% if project.live_url %}
-                                                            <a
-                                                                href="{{ project.live_url }}"
-                                                                target="_blank"
-                                                                data-bs-toggle="tooltip"
-                                                                data-bs-placement="bottom"
-                                                                title="{% trans 'Visit site' %}"
-                                                            >
-                                                                {{ project.name }}
-                                                            </a>
-                                                        {% else %}
-                                                            {{ project.name }}
-                                                        {% endif %}
-                                                    </h3>
-                                                    <span>
+                <div class="col-auto">
+                    <a href="{% url 'main_site:portfolio' %}" class="simpleLink">
+                        {% trans 'View All' %}
+                    </a>
+                </div>
+            </div>
+            <div class="position-relative">
+                <div class="swiper portfolioSlider">
+                    <div class="swiper-wrapper">
+                        {% for project in projects %}
+                            <div class="swiper-slide">
+                                <div class="m-auto g-4 align-items-center p-4 rounded primaryDark w-75">
+                                    <div class="col-md-auto">
+                                        <figure class="cardImgCol rounded">
+                                            <img
+                                                src="{{ project.images.first.image.url }}"
+                                                alt="{{ project.name }}"
+                                                class="rounded"
+                                                data-bs-toggle="popover"
+                                                data-bs-placement="bottom"
+                                                data-bs-trigger="hover"
+                                                title="{{ project.name }}"
+                                                data-bs-content="{{ project.description }}"
+                                                data-bs-template='<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header projectTitle"></h3><div class="popover-body"></div></div>'
+                                            >
+                                        </figure>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="w-80 m-auto">
+                                            <div class="d-flex justify-content-between my-4">
+                                                <h3 class="mdTitle">
+                                                    {% if project.live_url %}
                                                         <a
-                                                            href="{{ project.source_code_url }}"
+                                                            href="{{ project.live_url }}"
                                                             target="_blank"
-                                                            class="codeLink d-inline-block text-center p-2 ms-1 rounded-pill"
+                                                            data-bs-toggle="tooltip"
+                                                            data-bs-placement="bottom"
+                                                            title="{% trans 'Visit site' %}"
                                                         >
-                                                            {% trans 'Source Code' %}
+                                                            {{ project.name }}
                                                         </a>
-                                                    </span>
-                                                </div>
+                                                    {% else %}
+                                                        {{ project.name }}
+                                                    {% endif %}
+                                                </h3>
+                                                <span>
+                                                    <a
+                                                        href="{{ project.source_code_url }}"
+                                                        target="_blank"
+                                                        class="codeLink d-inline-block text-center p-2 ms-1 rounded-pill"
+                                                    >
+                                                        {% trans 'Source Code' %}
+                                                    </a>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            {% endfor %}
-                        </div>
-                        {% if projects|length > 1 %}
-                            <div class="swiper-button-prev swiper-button-prev-main"></div>
-                            <div class="swiper-button-next swiper-button-next-main"></div>
-                            <div class="swiper-pagination"></div>
-                        {% endif %}
+                            </div>
+                        {% endfor %}
                     </div>
+                    {% if projects|length > 1 %}
+                        <div class="swiper-button-prev swiper-button-prev-main"></div>
+                        <div class="swiper-button-next swiper-button-next-main"></div>
+                        <div class="swiper-pagination"></div>
+                    {% endif %}
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Certificates Section -->
-    <section>
-        <div class="mt-5 py-5">
-            <div class="container">
-                <div class="row underlined">
-                    <div class="col">
-                        <h3 class="lgTitle shadowHeading mb-0">
-                            {% trans 'Certificates' %}
-                        </h3>
-                    </div>
-                </div>
-                <div class="position-relative">
-                    <div class="swiper certificatesSlider">
-                        <div class="swiper-wrapper">
-                            {% for cert in certificates %}
-                                <div class="swiper-slide">
-                                    <div class="p-4 lightBg rounded w-75 m-auto">
-                                        <h3 class="mdTitle">{{ cert.name }}</h3>
-                                        <figure class="cardImgCol rounded">
-                                            <img
-                                                src="{{ cert.image.url }}"
-                                                alt="{{ cert.name }}"
-                                                class="rounded"
-                                            />
-                                        </figure>
-                                        <ul class="cardOptionCol pt-3 pb-3">
-                                            <li class="d-inline-block align-middle position-relative">
-                                                {{ cert.date.date }}
-                                            </li>
-                                            <li class="nextItem ps-5 d-inline-block align-middle position-relative">
-                                                { cert.issued_by }}
-                                            </li>
-                                        </ul>
-                                        <p class="mb-0">{{ cert.description }}</p>
-                                    </div>
+        </section>
+        <!-- Certificates Section -->
+        <section class="mt-5 py-5 container">
+            <div class="underlined">
+                <h3 class="lgTitle shadowHeading mb-0">
+                    {% trans 'Certificates' %}
+                </h3>
+            </div>
+            <div class="position-relative">
+                <div class="swiper certificatesSlider">
+                    <div class="swiper-wrapper">
+                        {% for cert in certificates %}
+                            <div class="swiper-slide">
+                                <div class="p-4 primaryDark rounded w-75 m-auto">
+                                    <h3 class="mdTitle">{{ cert.name }}</h3>
+                                    <figure class="cardImgCol rounded">
+                                        <img
+                                            src="{{ cert.image.url }}"
+                                            alt="{{ cert.name }}"
+                                            class="rounded"
+                                        />
+                                    </figure>
+                                    <ul class="cardOptionCol pt-3 pb-3">
+                                        <li class="d-inline-block align-middle position-relative">
+                                            {{ cert.date.date }}
+                                        </li>
+                                        <li class="nextItem ps-5 d-inline-block align-middle position-relative">
+                                            { cert.issued_by }}
+                                        </li>
+                                    </ul>
+                                    <p class="mb-0">{{ cert.description }}</p>
                                 </div>
-                            {% endfor %}
-                        </div>
-                        {% if certificates|length > 1 %}
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-pagination"></div>
-                        {% endif %}
+                            </div>
+                        {% endfor %}
                     </div>
+                    {% if certificates|length > 1 %}
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    {% endif %}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
 {% endblock %}

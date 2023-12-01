@@ -14,13 +14,11 @@ class HomeView(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        me = models.SiteOwner.objects.first()
-        certificates = models.Certificate.objects.all()
-        projects = models.PortfolioProject.objects.all()
 
-        context['me'] = me
-        context['certificates'] = certificates
-        context['projects'] = projects
+        context['me'] = models.SiteOwner.objects.first()
+        context['certificates'] = models.Certificate.objects.all()
+        context['projects'] = models.PortfolioProject.objects.all()
+        context['technologies'] = models.Technology.objects.all()
 
         return context
 

@@ -60,6 +60,10 @@ li, p, dd {
     background-color: var(--lightBg);
 }
 
+.primaryDark {
+    background-color: var(--primaryDarkColor);
+}
+
 /* Titles and Text */
 
 .xlTitle {
@@ -384,6 +388,14 @@ body.navToggleActive {
     object-fit: cover;
 }
 
+/* Technologies Section */
+
+.tech-img {
+    display: block;
+    max-width: 7rem;
+    max-height: 5rem;
+}
+
 /* Sliders */
 
 .swiper-slide > p:last-child {
@@ -515,8 +527,14 @@ label {
 }
 
 @media screen and (max-width: 932px) {
-    .projects {
+    .home_content {
         margin-top: 100vh;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .home_content {
+        margin-top: 15rem;
     }
 }
 
@@ -615,8 +633,8 @@ label {
         margin-left: 0;
     }
 
-    .projects {
-        margin-top: 20rem;
+    .home_content {
+        margin-top: 10rem;
     }
 }
 
@@ -634,8 +652,8 @@ label {
         font-size: 1.7rem;
     }
 
-    .projects {
-        margin-top: 10rem;
+    .home_content {
+        margin-top: 5rem;
     }
 }
 
@@ -666,9 +684,5 @@ label {
 
     .codeLink {
         font-size: 0.8rem;
-    }
-
-    .projects {
-        margin-top: 5rem;
     }
 }

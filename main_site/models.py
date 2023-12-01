@@ -25,6 +25,16 @@ class SiteOwner(TranslatableModel):
     )
 
 
+class Technology(models.Model):
+    """
+    DB table that contains programming languages and technologies. Columns:
+    - name
+    - image: official icon for the technology
+    """
+    name = models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True)
+    image = models.ImageField(blank=True, null=True, upload_to='media')
+
+
 class Media(models.Model):
     """
     DB table that contains media files the user has uploaded to the site. Contains
