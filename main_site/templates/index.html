@@ -84,10 +84,14 @@
                     </div>
                     {% if forloop.last and not forloop.counter0|divisibleby:4 %}
                         </div>
-                    {% elif forloop.counter|divisibleby:4 or forloop.last %}
+                    {% elif forloop.counter|divisibleby:4 %}
                         </div>
                     {% endif %}
                 {% endfor %}
+            </div>
+            <div class="mt-3 p-2">
+                <p>{{ me.site_blurb }}</p>
+            </div>
         </section>
         <!-- Projects Section -->
         <section class="mt-5 py-5 container">
@@ -103,7 +107,6 @@
                     </a>
                 </div>
             </div>
-            <p>{{ me.site_blurb }}</p>
             <p>
                 {% trans 'Here are some more of my projects' %}:
             </p>
@@ -165,48 +168,6 @@
                     {% if projects|length > 1 %}
                         <div class="swiper-button-prev swiper-button-prev-main"></div>
                         <div class="swiper-button-next swiper-button-next-main"></div>
-                        <div class="swiper-pagination"></div>
-                    {% endif %}
-                </div>
-            </div>
-        </section>
-        <!-- Certificates Section -->
-        <section class="mt-5 py-5 container">
-            <div class="underlined">
-                <h3 class="lgTitle shadowHeading mb-0">
-                    {% trans 'Certificates' %}
-                </h3>
-            </div>
-            <div class="position-relative">
-                <div class="swiper certificatesSlider">
-                    <div class="swiper-wrapper">
-                        {% for cert in certificates %}
-                            <div class="swiper-slide">
-                                <div class="p-4 primaryDark rounded w-75 m-auto">
-                                    <h3 class="mdTitle">{{ cert.name }}</h3>
-                                    <figure class="cardImgCol rounded">
-                                        <img
-                                            src="{{ cert.image.url }}"
-                                            alt="{{ cert.name }}"
-                                            class="rounded"
-                                        />
-                                    </figure>
-                                    <ul class="cardOptionCol pt-3 pb-3">
-                                        <li class="d-inline-block align-middle position-relative">
-                                            {{ cert.date.date }}
-                                        </li>
-                                        <li class="nextItem ps-5 d-inline-block align-middle position-relative">
-                                            { cert.issued_by }}
-                                        </li>
-                                    </ul>
-                                    <p class="mb-0">{{ cert.description }}</p>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                    {% if certificates|length > 1 %}
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
                         <div class="swiper-pagination"></div>
                     {% endif %}
                 </div>
