@@ -1,10 +1,11 @@
 /* Style Fixed Header on Scroll */
 
 window.addEventListener('scroll', () => {
+    let fixedHeader = 'fixedHeader'
     if(window.scrollY > 10) {
-        body.classList.add('fixedHeader');
+        body.classList.add(fixedHeader);
     } else {
-        body.classList.remove('fixedHeader');
+        body.classList.remove(fixedHeader);
     }
 });
 
@@ -48,3 +49,20 @@ const portfolioSlider = new Swiper(
         },
     }
 );
+
+/* LinkedIn Badge */
+
+const linkedInLink = document.getElementById('linkedin-link');
+const linkedInBadge = document.getElementById('linkedin-badge');
+
+linkedInLink.addEventListener('mouseenter', () => {
+    linkedInBadge.classList.toggle('show');
+});
+
+linkedInBadge.addEventListener('mouseenter', () => {
+    linkedInBadge.classList.add('show');
+});
+
+linkedInBadge.addEventListener('mouseleave', () => {
+    linkedInBadge.classList.remove('show');
+})

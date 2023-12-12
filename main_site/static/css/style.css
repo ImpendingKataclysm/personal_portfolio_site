@@ -333,12 +333,11 @@ body.navToggleActive {
 }
 
 .socialCol li + li {
-    padding-left: 2.2rem;
+    padding-left: 0.7rem;
 }
 
 .socialCol img {
-    max-width: 1.8rem;
-    max-height: 1.8rem;
+    max-width: 3rem;
     -o-object-fit: contain;
     object-fit: contain;
 }
@@ -346,6 +345,20 @@ body.navToggleActive {
 .copyrightCol {
     padding: 1.2rem 0 0;
     font-size: 0.8rem;
+}
+
+/* Toggle Visibility */
+
+#linkedin-badge {
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
 }
 
 /* Home Page */
