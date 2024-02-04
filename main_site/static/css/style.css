@@ -403,10 +403,15 @@ body.navToggleActive {
 
 /* Technologies Section */
 
+.tech-grid {
+    display: flex;
+    gap: 0.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
 .tech-img {
-    display: block;
-    max-width: 7rem;
-    max-height: 5rem;
+    min-width: 2rem;
 }
 
 /* Sliders */
@@ -533,10 +538,6 @@ label {
     .bannerUserImg {
         margin-left: 1.25rem;
     }
-
-    .portfolioContentMain {
-        padding: 1.8rem;
-    }
 }
 
 @media screen and (max-width: 932px) {
@@ -648,6 +649,10 @@ label {
 
     .home_content {
         margin-top: 10rem;
+    }
+
+    .tech-grid {
+        display: block;
     }
 }
 

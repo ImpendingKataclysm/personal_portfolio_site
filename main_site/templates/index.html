@@ -64,33 +64,21 @@
     <div class="home_content pt-5">
         <!-- Technologies -->
         <section class="container">
-            <div class="underlined">
-                <h3 class="lgTitle shadowHeading mb-0">
-                    {% trans 'Languages and Technologies' %}
-                </h3>
-            </div>
-            <div class="card primaryDark w-75 mx-auto">
+            <h3 class="lgTitle shadowHeading d-block underlined">
+                {% trans 'Languages and Technologies' %}
+            </h3>
+            <div class="primaryDark w-75 mx-auto p-3 tech-grid">
                 {% for tech in technologies %}
-                    {% if forloop.counter0|divisibleby:4 %}
-                        <div class="d-flex align-items-center">
-                    {% endif %}
-                    <div class="col-3 p-3">
-                        <figure>
-                            <img
-                                src="{{ tech.image.url }}"
-                                alt="{{ tech.name }}"
-                                class="d-block mx-auto tech-img shadow"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="bottom"
-                                title="{{ tech.name }}"
-                            >
-                        </figure>
+                    <div class="p-2">
+                        <img
+                            src="{{ tech.image.url }}"
+                            alt="{{ tech.name }}"
+                            class="d-block m-auto shadow tech-img"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="bottom"
+                            title="{{ tech.name }}"
+                        />
                     </div>
-                    {% if forloop.last and not forloop.counter0|divisibleby:4 %}
-                        </div>
-                    {% elif forloop.counter|divisibleby:4 %}
-                        </div>
-                    {% endif %}
                 {% endfor %}
             </div>
             <div class="mt-3 p-2">
