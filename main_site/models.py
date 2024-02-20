@@ -24,6 +24,7 @@ class SiteOwner(TranslatableModel):
         title=models.CharField(max_length=NAME_MAX_LEN, blank=True, null=True),
         bio=models.TextField(max_length=TEXT_MAX_LEN, blank=True, null=True),
         site_blurb=models.TextField(max_length=TEXT_MAX_LEN, blank=True, null=True),
+        resume=models.FileField(upload_to='mediafiles/resumes', blank=True, null=True),
     )
 
 
